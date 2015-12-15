@@ -1,0 +1,305 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/trip-paginate.js"></script>
+
+    <!-- Load Footer -->
+    <script>
+        $(function () {
+            $("#footerQuery").load("/footer.html");
+        });
+    </script>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Our Trips || TripBuddy.SG</title>
+</head>
+
+<body>
+    <div class="overflowWrap">
+
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-fixed-top custom-navbar" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/index.html" class="pull-left"><img class="navbar-img" src="/img/logo_inv_small.png"></a>
+                </div>
+                <div id="navbarCollapse" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">SIGN IN</a>
+                        </li>
+                        <li><a href="#">SIGN UP</a>
+                        </li>
+                        <li><a href="/new-trip.html" id="nav_host_trip"><i class="fa fa-plus-circle"></i> HOST TRIP</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- JUMBOTRON -->
+        <div class="container-fluid trips-jumbotron">
+            <h1>OUR HANDCRAFTED TRIPS</h1>
+            <h2>Pick an adventure, any adventure.</h2>
+        </div>
+
+        <!-- MAIN GRID -->
+        <div class="trips-view">
+            <div class="container-fluid row trips-filters">
+                <form class="form-inline" role="form" action="" method="get">
+                    <div class="col-md-2 col-md-offset-3 form-group">
+                        <select class="form-control" id="theme" name="theme" onchange="this.form.submit()">
+                            <!-- KEEP THE FIRST ONE -->
+                            <option>Any Theme</option>
+                            <option>Theme 1</option>
+                            <option>Theme 2</option>
+                            <option>Theme 3</option>
+                        </select>
+                        <noscript>
+                            <input type="submit" value="Submit">
+                        </noscript>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <select class="form-control" id="price" name="price" onchange="this.form.submit()">
+                            <!-- KEEP THE FIRST ONE -->
+                            <option>Any Price</option>
+                            <option>Price Range 1</option>
+                            <option>Price Range 2</option>
+                            <option>Price Range 3</option>
+                        </select>
+                        <noscript>
+                            <input type="submit" value="Submit">
+                        </noscript>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <select class="form-control" id="date" name="date" onchange="this.form.submit()">
+                            <!-- KEEP THE FIRST ONE -->
+                            <option>Any Date</option>
+                            <option>Date 1</option>
+                            <option>Date 2</option>
+                            <option>Date 3</option>
+                        </select>
+                        <noscript>
+                            <input type="submit" value="Submit">
+                        </noscript>
+                    </div>
+                </form>
+            </div>
+
+            <input type='hidden' id='current_page' />
+            <input type='hidden' id='show_per_page' />
+
+            <div class="container-fluid row" id="trips-grid">
+                <div class="col-md-4">
+                    <a href="/trip.html">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="trip-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-trip.png) no-repeat center center; background-size: cover;">
+                                    <p class="theme">Nightlife</p>
+                                    <p class="title">East vs West</p>
+                                    <p class="tagline">A night where the question of who are better drinkers will forever be answered.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/trip.html">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="trip-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-trip.png) no-repeat center center; background-size: cover;">
+                                    <p class="theme">Nightlife</p>
+                                    <p class="title">East vs West</p>
+                                    <p class="tagline">A night where the question of who are better drinkers will forever be answered.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/trip.html">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="trip-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-trip.png) no-repeat center center; background-size: cover;">
+                                    <p class="theme">Nightlife</p>
+                                    <p class="title">East vs West</p>
+                                    <p class="tagline">A night where the question of who are better drinkers will forever be answered.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/trip.html">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="trip-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-trip.png) no-repeat center center; background-size: cover;">
+                                    <p class="theme">Nightlife</p>
+                                    <p class="title">East vs West</p>
+                                    <p class="tagline">A night where the question of who are better drinkers will forever be answered.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/trip.html">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="trip-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-trip.png) no-repeat center center; background-size: cover;">
+                                    <p class="theme">Nightlife</p>
+                                    <p class="title">East vs West</p>
+                                    <p class="tagline">A night where the question of who are better drinkers will forever be answered.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/trip.html">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="trip-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-trip.png) no-repeat center center; background-size: cover;">
+                                    <p class="theme">Nightlife</p>
+                                    <p class="title">East vs West</p>
+                                    <p class="tagline">A night where the question of who are better drinkers will forever be answered.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/trip.html">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="trip-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-trip.png) no-repeat center center; background-size: cover;">
+                                    <p class="theme">Nightlife</p>
+                                    <p class="title">East vs West</p>
+                                    <p class="tagline">A night where the question of who are better drinkers will forever be answered.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/trip.html">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="trip-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-trip.png) no-repeat center center; background-size: cover;">
+                                    <p class="theme">Nightlife</p>
+                                    <p class="title">East vs West</p>
+                                    <p class="tagline">A night where the question of who are better drinkers will forever be answered.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/trip.html">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="trip-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-trip.png) no-repeat center center; background-size: cover;">
+                                    <p class="theme">Nightlife</p>
+                                    <p class="title">East vs West</p>
+                                    <p class="tagline">A night where the question of who are better drinkers will forever be answered.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/trip.html">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="trip-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-trip.png) no-repeat center center; background-size: cover;">
+                                    <p class="theme">Nightlife</p>
+                                    <p class="title">East vs West</p>
+                                    <p class="tagline">A night where the question of who are better drinkers will forever be answered.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/trip.html">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="trip-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-trip.png) no-repeat center center; background-size: cover;">
+                                    <p class="theme">Nightlife</p>
+                                    <p class="title">East vs West</p>
+                                    <p class="tagline">A night where the question of who are better drinkers will forever be answered.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/trip.html">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="trip-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-trip.png) no-repeat center center; background-size: cover;">
+                                    <p class="theme">Nightlife</p>
+                                    <p class="title">East vs West</p>
+                                    <p class="tagline">A night where the question of who are better drinkers will forever be answered.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/trip.html">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="trip-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-trip.png) no-repeat center center; background-size: cover;">
+                                    <p class="theme">Nightlife</p>
+                                    <p class="title">East vs West</p>
+                                    <p class="tagline">A night where the question of who are better drinkers will forever be answered.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="container-fluid row trip-nav-row">
+                <div class="col-md-6 col-md-offset-3" id="trip_page_nav"></div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div id="footerQuery"></div>
+    </div>
+</body>
