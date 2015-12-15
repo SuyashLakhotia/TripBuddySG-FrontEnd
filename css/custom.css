@@ -316,7 +316,7 @@ Main Content/Grid Styles
     top: 100%;
 }
 
-.home-grid .grid-weekend,
+.home-grid .grid-trips-soon,
 .home-grid .grid-themes,
 .home-grid .grid-hosts,
 .home-grid #youtube_embed {
@@ -375,7 +375,7 @@ Main Content/Grid Styles
     .home-grid h1 {
         margin-top: 50px;
     }
-    .home-grid .grid-weekend,
+    .home-grid .grid-trips-soon,
     .home-grid .grid-themes,
     .home-grid .grid-hosts,
     .home-grid #youtube_embed {
