@@ -12,6 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="js/jquery.scrollTo.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/validate-registration.js"></script>
 
     <!-- Load Footer -->
     <script>
@@ -77,7 +78,7 @@
         <!-- REGISTRATION FORM -->
         <div class="container-fluid row registration-content">
             <div class="col-md-10 col-md-offset-1">
-                <form class="form-horizontal" role="form" action="" method="post">
+                <form name="registrationForm" class="form-horizontal" role="form" onsubmit="return validateForm()" action="" method="post" novalidate>
                     <div class="form-group">
                         <label class="control-label col-md-2" for="name">Name:</label>
                         <div class="col-md-9">
@@ -87,7 +88,9 @@
                     <div class="form-group">
                         <label class="control-label col-md-2" for="university">University:</label>
                         <div class="col-md-9">
-                            <select class="form-control" id="university" name="university">
+                            <select class="form-control" id="university" name="university" required>
+                                <!-- KEEP THE FIRST BLANK OPTION FOR VALIDATION -->
+                                <option></option>
                                 <option>Nanyang Technological University</option>
                                 <option>National University of Singapore</option>
                                 <option>Singapore Management University</option>
@@ -97,13 +100,15 @@
                     <div class="form-group">
                         <label class="control-label col-md-2" for="course">Course:</label>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" id="course" name="course" placeholder="e.g. B.Engg in Computer Science">
+                            <input type="text" class="form-control" id="course" name="course" placeholder="e.g. B.Engg in Computer Science" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-md-2" for="study_year">Study Year:</label>
                         <div class="col-md-9">
-                            <select class="form-control" id="study_year" name="study_year">
+                            <select class="form-control" id="study_year" name="study_year" required>
+                                <!-- KEEP THE FIRST BLANK OPTION FOR VALIDATION -->
+                                <option></option>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -116,31 +121,40 @@
                     <div class="form-group">
                         <label class="control-label col-md-2" for="univ_email">E-Mail (.edu.sg):</label>
                         <div class="col-md-9">
-                            <input type="email" class="form-control" id="univ_email" name="univ_email" placeholder="e.g. john@e.ntu.edu.sg">
+                            <input type="email" class="form-control" id="univ_email" name="univ_email" placeholder="e.g. john@e.ntu.edu.sg" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-md-2" for="univ_matric">Matriculation ID:</label>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" id="univ_matric" name="univ_matric" placeholder="e.g. U1492389K">
+                            <input type="text" class="form-control" id="univ_matric" name="univ_matric" placeholder="e.g. U1492389K" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-md-2" for="tagline">Personal Tagline:</label>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" id="tagline" name="tagline" placeholder="A short tagline for yourself! e.g. I'm an avid reader, love playing the guitar and dabble in the arts.">
+                            <input type="text" class="form-control" id="tagline" name="tagline" placeholder="A short tagline for yourself! e.g. I'm an avid reader, love playing the guitar and dabble in the arts." required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-md-2" for="descr">Short Description About Yourself:</label>
                         <div class="col-md-9">
-                            <textarea type="text" rows="7" class="form-control" id="descr" name="descr" placeholder="Write a bit about yourself here for people looking at your trips! Your interests, hobbies, passions etc. Maybe even include what makes you the unique individual that you are!"></textarea>
+                            <textarea type="text" rows="7" class="form-control" id="descr" name="descr" placeholder="Write a bit about yourself here for people looking at your trips! Your interests, hobbies, passions etc. Maybe even include what makes you the unique individual that you are!" required></textarea>
                         </div>
                     </div>
                     <div class="container-fluid row registration-button">
                         <button type="submit" class="btn btn-success btn-register">REGISTER</button>
                     </div>
                 </form>
+                <div class="alert alert-danger form-empty">
+                    <strong>Oops!</strong> All fields are required.
+                </div>
+                <div class="alert alert-warning form-invalid-email">
+                    <strong>Oops!</strong> Not a valid .edu.sg e-mail address.
+                </div>
+                <div class="alert alert-success form-success" role="alert">
+                    <strong>Success!</strong> You have been registered as a host.
+                </div>
             </div>
         </div>
 

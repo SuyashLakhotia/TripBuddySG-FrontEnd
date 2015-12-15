@@ -70,6 +70,18 @@ textarea {
     resize: vertical;
 }
 
+.form-empty,
+div[class^="form-invalid-"],
+div[class*="form-invalid-"],
+.form-success {
+    margin-top: 30px;
+    text-align: center;
+    display: none;
+}
+
+.form-error {
+    border: 1px solid #ff0000;
+}
 
 /************************************************************************
 
@@ -757,6 +769,11 @@ NEW TRIP PAGE STYLES
     padding-bottom: 30px;
 }
 
+#trip_form .form-group .col-md-1 {
+    text-align: center;
+    padding-top: 0.5%;
+}
+
 #trip_form .includes-arr,
 #trip_form .excludes-arr {
     list-style: none;
@@ -1210,12 +1227,6 @@ FEEDBACK PAGE STYLES
 
 .feedback-content .col-md-4 {
     padding-left: 30px;
-}
-
-.feedback-content p {
-    text-align: justify;
-    font-family: 'Raleway', sans-serif;
-    font-size: 16px;
 }
 
 .feedback-content h1 {
