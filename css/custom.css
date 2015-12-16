@@ -109,6 +109,10 @@ NAVBAR STYLES
     transition: background .3s ease-in-out;
 }
 
+.custom-navbar .nav li.open a:focus {
+    background-color: #159cd1;
+}
+
 .navbar-img {
     height: 55px;
     padding: 5px 10px 5px 0px;
@@ -119,6 +123,10 @@ NAVBAR STYLES
 .custom-navbar .navbar-toggle:link,
 .custom-navbar .navbar-toggle:hover,
 .custom-navbar .navbar-toggle:active {
+    background: #25b0e9;
+}
+
+.custom-navbar .dropdown-menu {
     background: #25b0e9;
 }
 
