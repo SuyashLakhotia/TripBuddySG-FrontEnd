@@ -83,6 +83,7 @@ div[class*="form-invalid-"],
     border: 1px solid #ff0000;
 }
 
+
 /************************************************************************
 
 NAVBAR STYLES
@@ -517,7 +518,8 @@ Trip Success Page
 
 
 /************************************************************************
-Trips Grid, Hosts Grid, About Us, Why Host, Legal & Feedback Page(s)
+Trips Grid, Hosts Grid, About Us, Why Host, Legal, Feedback
+& Testimonial Page(s)
 ************************************************************************/
 
 .trips-jumbotron,
@@ -526,8 +528,7 @@ Trips Grid, Hosts Grid, About Us, Why Host, Legal & Feedback Page(s)
 .why-host-jumbotron,
 .legal-jumbotron,
 .feedback-jumbotron,
-.testimonials-jumbotron,
-.hosting-tips-jumbotron {
+.testimonials-jumbotron {
     padding-top: 12%;
     padding-left: 60px;
     padding-right: 60px;
@@ -546,8 +547,7 @@ Trips Grid, Hosts Grid, About Us, Why Host, Legal & Feedback Page(s)
 .why-host-jumbotron h1,
 .legal-jumbotron h1,
 .feedback-jumbotron h1,
-.testimonials-jumbotron h1,
-.hosting-tips-jumbotron h1 {
+.testimonials-jumbotron h1 {
     font-size: 75px;
     letter-spacing: 4px;
 }
@@ -558,8 +558,7 @@ Trips Grid, Hosts Grid, About Us, Why Host, Legal & Feedback Page(s)
 .why-host-jumbotron h2,
 .legal-jumbotron h2,
 .feedback-jumbotron h2,
-.testimonials-jumbotron h2,
-.hosting-tips-jumbotron h2 {
+.testimonials-jumbotron h2 {
     font-size: 30px;
 }
 
@@ -572,8 +571,7 @@ Trips Grid, Hosts Grid, About Us, Why Host, Legal & Feedback Page(s)
     .why-host-jumbotron,
     .legal-jumbotron,
     .feedback-jumbotron,
-    .testimonials-jumbotron,
-    .hosting-tips-jumbotron {
+    .testimonials-jumbotron {
         padding-top: 32%;
     }
     .trips-jumbotron h1,
@@ -582,8 +580,7 @@ Trips Grid, Hosts Grid, About Us, Why Host, Legal & Feedback Page(s)
     .why-host-jumbotron h1,
     .legal-jumbotron h1,
     .feedback-jumbotron h1,
-    .testimonials-jumbotron h1,
-    .hosting-tips-jumbotron h1 {
+    .testimonials-jumbotron h1 {
         font-size: 45px;
         letter-spacing: 1px;
     }
@@ -593,18 +590,16 @@ Trips Grid, Hosts Grid, About Us, Why Host, Legal & Feedback Page(s)
     .why-host-jumbotron h2,
     .legal-jumbotron h2,
     .feedback-jumbotron h2,
-    .testimonials-jumbotron h2,
-    .hosting-tips-jumbotron h2 {
+    .testimonials-jumbotron h2 {
         font-size: 25px;
     }
 }
 
 
 /************************************************************************
-Sign In & Registration Page(s)
+Registration Page
 ************************************************************************/
 
-.sign-in-jumbotron,
 .registration-jumbotron {
     padding-top: 11%;
     color: #ffffff;
@@ -616,18 +611,15 @@ Sign In & Registration Page(s)
     background-size: cover;
 }
 
-.sign-in-jumbotron h1,
 .registration-jumbotron h1 {
     font-size: 75px;
     letter-spacing: 4px;
 }
 
 @media (max-width: 768px) {
-    .sign-in-jumbotron,
     .registration-jumbotron {
         padding-top: 27%;
     }
-    .sign-in-jumbotron h1,
     .registration-jumbotron h1 {
         font-size: 45px;
         letter-spacing: 1px;
@@ -1285,27 +1277,79 @@ SIGN IN PAGE STYLES
 
 .sign-in-content {
     padding: 30px 30px 30px 30px;
-    margin-bottom: -30px;
+    height: 100%;
     background: #e8f7fd;
 }
 
-.sign-in-content .sign-in-button {
+.sign-in-content .sign-in-logo {
+    padding-top: 12%;
+}
+
+.sign-in-content .sign-in-logo img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sign-in-content .sign-in-buttons {
+    margin-top: 40px;
+    padding: 50px 0px;
     text-align: center;
-    padding: 40px 0px 40px 0px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #888888;
 }
 
-.sign-in-content .sign-in-button .btn-sign-in {
+.sign-in-content .sign-in-buttons .row {
+    margin-top: 20px;
+}
+
+.sign-in-content .sign-in-buttons .btn {
+    width: 70%;
+    font-size: 18px;
+    padding: 10px 0px;
+}
+
+.sign-in-content .sign-in-buttons .btn-sign-in-fb {
+    margin-top: -20px;
     background: #3B5998;
-    padding: 15px 40px;
-    font-size: 20px;
 }
 
-.sign-in-content .sign-in-button .btn-sign-in:hover {
+.sign-in-content .sign-in-buttons .btn-sign-in-tw {
+    background: #4099FF;
+}
+
+.sign-in-content .sign-in-buttons .btn-sign-in-go {
+    background: #EA4335;
+}
+
+.sign-in-content .sign-in-buttons .btn-sign-in-fb:hover {
     background: #2f4779;
     -webkit-transition: background .2s ease-in-out;
     -moz-transition: background .2s ease-in-out;
     -o-transiton: background .2s ease-in-out;
     transition: background .2s ease-in-out;
+}
+
+.sign-in-content .sign-in-buttons .btn-sign-in-tw:hover {
+    background: #1f87ff;
+    -webkit-transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -o-transiton: background .2s ease-in-out;
+    transition: background .2s ease-in-out;
+}
+
+.sign-in-content .sign-in-buttons .btn-sign-in-go:hover {
+    background: #d92717;
+    -webkit-transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -o-transiton: background .2s ease-in-out;
+    transition: background .2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .sign-in-content .sign-in-buttons .btn {
+        font-size: 15px;
+    }
 }
 
 
