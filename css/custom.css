@@ -370,6 +370,8 @@ Main Content/Grid Styles
     .home-grid {
         margin-top: 10px;
         margin-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
         top: 80%;
     }
     .home-grid h1 {
