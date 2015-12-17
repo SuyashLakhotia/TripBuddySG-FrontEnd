@@ -90,36 +90,73 @@ NAVBAR STYLES
 
 ************************************************************************/
 
-.custom-navbar {
+.navbar {
     text-transform: uppercase;
     background-color: #25b0e9;
     border-bottom: 1px solid #ffffff;
 }
 
-.custom-navbar .nav li a {
+.navbar-default .navbar-nav > li > a {
     color: #ffffff;
     line-height: 25px;
 }
 
-.custom-navbar .nav li a:hover {
+.navbar-default .navbar-nav > li > a:hover {
     background-color: #159cd1;
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    -o-transiton: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
+    color: #ffffff;
+    -webkit-transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -o-transition: background .2s ease-in-out;
+    transition: background .2s ease-in-out;
 }
 
-.custom-navbar .nav li a:focus,
-.custom-navbar .nav li a:active {
+.navbar-default .navbar-nav > li > a:focus {
+    color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > .dropdown-menu {
     background-color: #25b0e9;
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    -o-transiton: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
+    border: #159cd1;
 }
 
-.custom-navbar .nav li.open a:focus {
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+    color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+    color: #ffffff;
     background-color: #159cd1;
+    -webkit-transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -o-transition: background .2s ease-in-out;
+    transition: background .2s ease-in-out;
+}
+
+.navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
+    background-color: #25b0e9;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: #159cd1;
+    -webkit-transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -o-transition: background .2s ease-in-out;
+    transition: background .2s ease-in-out;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #ffffff;
+    background-color: #159cd1;
+    -webkit-transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -o-transition: background .2s ease-in-out;
+    transition: background .2s ease-in-out;
 }
 
 .navbar-img {
@@ -127,19 +164,16 @@ NAVBAR STYLES
     padding: 5px 10px 5px 0px;
 }
 
-.custom-navbar .navbar-toggle,
-.custom-navbar .navbar-toggle:visited,
-.custom-navbar .navbar-toggle:link,
-.custom-navbar .navbar-toggle:hover,
-.custom-navbar .navbar-toggle:active {
-    background: #25b0e9;
+.navbar-default .navbar-toggle {
+    border-color: #159cd1;
 }
 
-.custom-navbar .dropdown-menu {
-    background: #25b0e9;
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #25b0e9;
 }
 
-.custom-navbar .navbar-toggle .icon-bar {
+.navbar .navbar-toggle .icon-bar {
     background: #ffffff;
 }
 
@@ -171,6 +205,19 @@ NAVBAR STYLES
 }
 
 @media (max-width: 768px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #ffffff;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #ffffff;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #ffffff;
+        background-color: #159cd1;
+    }
     .nav .fa {
         display: none;
     }
@@ -191,7 +238,6 @@ FOOTER STYLES
     background: #25b0e9;
     width: 100%;
     color: #ffffff;
-    line-height: 30px;
     text-align: center;
     padding: 15px 15px 0px 15px;
     margin-top: 30px;
@@ -203,17 +249,20 @@ FOOTER STYLES
 }
 
 .footer h7 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
-    line-height: 55px;
+    line-height: 45px;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
 .footer .footer-links a p {
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 30px;
     text-decoration: none;
     color: #ffffff;
+    padding: 0px 0px;
+    margin: 0px 0px;
 }
 
 .footer .footer-links a:hover {
@@ -288,8 +337,9 @@ FOOTER STYLES
 }
 
 .footer > p {
+    font-size: 12px;
     letter-spacing: 2px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 @media (max-width: 768px) {
@@ -392,11 +442,11 @@ Home Page
 ************************************************************************/
 
 .home-jumbotron {
-    padding-top: 15%;
+    padding-top: 10%;
     color: #ffffff;
     text-align: center;
     display: block;
-    height: 100%;
+    height: 75%;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/jumbotron_img.jpg) no-repeat;
     background-size: cover;
 }
@@ -421,7 +471,7 @@ Home Page
 
 @media (max-width: 768px) {
     .home-jumbotron {
-        height: 80%;
+        height: 70%;
     }
     .home-jumbotron h1 {
         padding-top: 20px;
@@ -613,7 +663,7 @@ Trips Grid, Hosts Grid, About Us, Why Host, Legal, Feedback
     .legal-jumbotron,
     .feedback-jumbotron,
     .testimonials-jumbotron {
-        padding-top: 32%;
+        padding-top: 30%;
     }
     .trips-jumbotron h1,
     .hosts-jumbotron h1,
@@ -622,7 +672,7 @@ Trips Grid, Hosts Grid, About Us, Why Host, Legal, Feedback
     .legal-jumbotron h1,
     .feedback-jumbotron h1,
     .testimonials-jumbotron h1 {
-        font-size: 45px;
+        font-size: 42px;
         letter-spacing: 1px;
     }
     .trips-jumbotron h2,
@@ -679,7 +729,7 @@ HOME PAGE STYLES
 ************************************************************************/
 
 .home-grid {
-    margin-top: 30px;
+    margin-top: -20px;
     margin-bottom: 50px;
     top: 100%;
 }
@@ -1161,7 +1211,7 @@ HOST PROFILE PAGE STYLES
 ************************************************************************/
 
 .host-profile {
-    padding: 50px 0px 50px 0px;
+    padding: 50px 30px 50px 30px;
     margin-bottom: -30px;
     background: #e8f7fd;
 }
@@ -1343,7 +1393,7 @@ WHY HOST PAGE STYLES
 .why-host-instructions [class^="flaticon-"]:after,
 .why-host-instructions [class*=" flaticon-"]:after {
     font-family: Flaticon;
-    font-size: 80px;
+    font-size: 70px;
     color: #25b0e9;
     background: #e8f7fd;
     border-radius: 100%;
