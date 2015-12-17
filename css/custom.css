@@ -886,7 +886,8 @@ TRIP PAGE STYLES
     width: auto;
 }
 
-.trip-host h1 {
+.trip-host h1,
+.trip-join h1 {
     padding-bottom: 20px;
 }
 
@@ -894,6 +895,10 @@ TRIP PAGE STYLES
     font-size: 15px;
     text-align: justify;
     padding-top: 20px;
+}
+
+.trip-join {
+    text-align: center;
 }
 
 #trip_overview,
