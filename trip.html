@@ -44,8 +44,10 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    
+    <!-- TODO: Add FB Share metadata for individual trips. -->
 
-    <title>Trip X || TripBuddy.SG</title>
+    <title>Trip X | TripBuddy.SG</title>
 </head>
 
 <body>
@@ -73,7 +75,7 @@
                         </li>
                         <li><a href="#trip_host">ABOUT THE HOST</a>
                         </li>
-                        <li><a href="#" id="nav_join_trip"><i class="fa fa-plus-circle"></i> JOIN TRIP</a>
+                        <li><a href="#trip_join" id="nav_join_trip"><i class="fa fa-plus-circle"></i> JOIN TRIP</a>
                         </li>
                     </ul>
                 </div>
@@ -87,6 +89,7 @@
             <h3>A night where the question of who are better drinkers will forever be answered.</h3>
             <h4>Hosted by Olivia Wilde</h4>
             <button class="btn btn-success btn-join"><i class="fa fa-plus-circle"></i> JOIN</button>
+            <!-- TODO: Add FB Share button for individual trips. -->
         </div>
 
 
@@ -232,15 +235,22 @@
         <!-- TRIP HOST DETAILS -->
         <div class="container-fluid row trip-host" id="trip_host">
             <h1>ABOUT THE HOST</h1>
-            <div class="col-md-3 col-md-offset-2 host-pic">
+            <div class="col-md-2 col-md-offset-2 host-pic">
                 <img src="/img/sample-host.png" class="img-responsive img-thumbnail">
             </div>
-            <div class="col-md-5">
+            <div class="col-md-6">
                 <h3>Olivia Wilde</h3>
                 <h4>B.Engg. Computer Science Year 2</h4>
                 <h4>Nanyang Technological University</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
+        </div>
+        
+        
+        <!-- JOIN TRIP PAYMENT -->
+        <div class="container-fluid row trip-join" id="trip_join">
+            <h1>JOIN THIS TRIP</h1>
+            <!-- NOTE: Add payment button here. -->
         </div>
 
 

@@ -1,9 +1,9 @@
-/************************************************************************
+/*************************************************************************
 TripBuddy.sg (c) 2015. All rights reserved.
-************************************************************************/
+*************************************************************************/
 
 
-/**************** Values Used ******************
+/**************************** Values Used ********************************
 Blue: #25b0e9;
 Dark Blue (for button hover): #159cd1;
 Light Blue (for background): #e8f7fd;
@@ -11,7 +11,7 @@ Green: #78be5d;
 Dark Green (for button hover): #5da441;
 Font 1: 'Open Sans', sans-serif;
 Font 2: 'Raleway', sans-serif;
-**********************************************/
+*************************************************************************/
 
 
 /************************************************************************
@@ -109,6 +109,15 @@ NAVBAR STYLES
     transition: background .3s ease-in-out;
 }
 
+.custom-navbar .nav li a:focus,
+.custom-navbar .nav li a:active {
+    background-color: #25b0e9;
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    -o-transiton: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+
 .custom-navbar .nav li.open a:focus {
     background-color: #159cd1;
 }
@@ -168,6 +177,124 @@ NAVBAR STYLES
     .navbar-img {
         height: 50px;
         margin-left: 15px;
+    }
+}
+
+
+/************************************************************************
+
+FOOTER STYLES
+
+************************************************************************/
+
+.footer {
+    background: #25b0e9;
+    width: 100%;
+    color: #ffffff;
+    line-height: 30px;
+    text-align: center;
+    padding: 15px 15px 0px 15px;
+    margin-top: 30px;
+}
+
+.footer hr {
+    width: 80%;
+    border: 1.5px solid #ffffff;
+}
+
+.footer h7 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 55px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.footer .footer-links a p {
+    font-size: 15px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.footer .footer-links a:hover {
+    text-decoration: none;
+}
+
+.footer .icon-button {
+    background-color: #ffffff;
+    border-radius: 100%;
+    font-size: 24px;
+    height: 50px;
+    width: 50px;
+}
+
+.footer .icon-button .fa-facebook {
+    color: #3B5998;
+}
+
+.footer .icon-button .fa-twitter {
+    color: #4099ff;
+}
+
+.footer .icon-button .fa-instagram {
+    color: #125688;
+}
+
+.footer .icon-button .fa-youtube-play {
+    color: #e52d27;
+}
+
+.footer .icon-button:hover .fa-facebook,
+.footer .icon-button:hover .fa-twitter,
+.footer .icon-button:hover .fa-instagram,
+.footer .icon-button:hover .fa-youtube-play {
+    color: #ffffff;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transiton: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.footer .icon-button:hover.facebook {
+    background-color: #3B5998;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transiton: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.footer .icon-button:hover.twitter {
+    background-color: #4099ff;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transiton: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.footer .icon-button:hover.instagram {
+    background-color: #125688;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transiton: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.footer .icon-button:hover.youtube {
+    background-color: #e52d27;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transiton: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.footer > p {
+    letter-spacing: 2px;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .footer .icon-button {
+        margin-bottom: 15px;
     }
 }
 
@@ -255,13 +382,13 @@ Host Grid Link
 
 /************************************************************************
 
-HOME PAGE STYLES
+JUMBOTRON STYLES
 
 ************************************************************************/
 
 
 /************************************************************************
-Jumbotron Styles
+Home Page
 ************************************************************************/
 
 .home-jumbotron {
@@ -316,7 +443,239 @@ Jumbotron Styles
 
 
 /************************************************************************
-Main Content/Grid Styles
+Trip & New Trip Pages
+************************************************************************/
+
+.trip-banner,
+.new-trip-banner {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/trip_main.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.trip-banner {
+    padding-top: 14%;
+}
+
+.new-trip-banner {
+    padding-top: 15%;
+}
+
+.trip-banner h1,
+.new-trip-banner h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 85px;
+    letter-spacing: 4.5px;
+}
+
+.trip-banner h3,
+.new-trip-banner h3 {
+    font-size: 34px;
+    line-height: 50px;
+}
+
+.trip-banner h4 {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.trip-banner .btn-join,
+.new-trip-banner .btn-join {
+    font-size: 20px;
+    padding: 10px 30px;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .trip-banner,
+    .new-trip-banner {
+        padding-top: 40%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .trip-banner h1,
+    .new-trip-banner h1 {
+        font-size: 45px;
+    }
+    .trip-banner h3,
+    .new-trip-banner h3 {
+        font-size: 20px;
+        line-height: normal;
+    }
+    .trip-banner h4 {
+        font-size: 18px;
+    }
+}
+
+
+/************************************************************************
+Trip Added Page
+************************************************************************/
+
+.trip-added-banner {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/trip_main.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    padding-top: 16%;
+    color: #ffffff;
+    text-align: center;
+}
+
+.trip-added-banner h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 95px;
+    letter-spacing: 4.5px;
+}
+
+.trip-added-banner .btn {
+    font-size: 20px;
+    padding: 15px 40px;
+    margin-top: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .trip-added-banner {
+        padding-top: 30%;
+    }
+    .trip-added-banner h1 {
+        font-size: 70px;
+        letter-spacing: 3px;
+        margin-bottom: 30px;
+    }
+    .trip-added-banner .btn {
+        padding: 12px 25px;
+        margin-top: 30px;
+    }
+}
+
+
+/************************************************************************
+Trips Grid, Hosts Grid, About Us, Why Host, Legal, Feedback
+& Testimonial Pages
+************************************************************************/
+
+.trips-jumbotron,
+.hosts-jumbotron,
+.about-us-jumbotron,
+.why-host-jumbotron,
+.legal-jumbotron,
+.feedback-jumbotron,
+.testimonials-jumbotron {
+    padding-top: 12%;
+    padding-left: 60px;
+    padding-right: 60px;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: center;
+    display: block;
+    height: 65%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/jumbotron_img.jpg) no-repeat;
+    background-size: cover;
+}
+
+.trips-jumbotron h1,
+.hosts-jumbotron h1,
+.about-us-jumbotron h1,
+.why-host-jumbotron h1,
+.legal-jumbotron h1,
+.feedback-jumbotron h1,
+.testimonials-jumbotron h1 {
+    font-size: 75px;
+    letter-spacing: 4px;
+}
+
+.trips-jumbotron h2,
+.hosts-jumbotron h2,
+.about-us-jumbotron h2,
+.why-host-jumbotron h2,
+.legal-jumbotron h2,
+.feedback-jumbotron h2,
+.testimonials-jumbotron h2 {
+    font-size: 30px;
+}
+
+@media (max-width: 768px) {
+    .trips-jumbotron,
+    .hosts-jumbotron {
+        padding-top: 24%;
+    }
+    .about-us-jumbotron,
+    .why-host-jumbotron,
+    .legal-jumbotron,
+    .feedback-jumbotron,
+    .testimonials-jumbotron {
+        padding-top: 32%;
+    }
+    .trips-jumbotron h1,
+    .hosts-jumbotron h1,
+    .about-us-jumbotron h1,
+    .why-host-jumbotron h1,
+    .legal-jumbotron h1,
+    .feedback-jumbotron h1,
+    .testimonials-jumbotron h1 {
+        font-size: 45px;
+        letter-spacing: 1px;
+    }
+    .trips-jumbotron h2,
+    .hosts-jumbotron h2,
+    .about-us-jumbotron h2,
+    .why-host-jumbotron h2,
+    .legal-jumbotron h2,
+    .feedback-jumbotron h2,
+    .testimonials-jumbotron h2 {
+        font-size: 25px;
+    }
+}
+
+
+/************************************************************************
+Registration & Host Profile Pages
+************************************************************************/
+
+.registration-jumbotron,
+.host-profile-jumbotron {
+    padding-top: 11%;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: center;
+    display: block;
+    height: 50%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/jumbotron_img.jpg) no-repeat;
+    background-size: cover;
+}
+
+.registration-jumbotron h1,
+.host-profile-jumbotron h1 {
+    font-size: 75px;
+    letter-spacing: 4px;
+}
+
+@media (max-width: 768px) {
+    .registration-jumbotron,
+    .host-profile-jumbotron {
+        padding-top: 27%;
+    }
+    .registration-jumbotron h1,
+    .host-profile-jumbotron h1 {
+        font-size: 45px;
+        letter-spacing: 1px;
+    }
+}
+
+
+/************************************************************************
+
+HOME PAGE STYLES
+
 ************************************************************************/
 
 .home-grid {
@@ -404,250 +763,21 @@ Main Content/Grid Styles
 
 /************************************************************************
 
-JUMBOTRON STYLES
+TRIP PAGE STYLES
 
 ************************************************************************/
 
-
-/************************************************************************
-Individual Trip + New Trip Page(s)
-************************************************************************/
-
-.trip-banner,
-.new-trip-banner {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/trip_main.jpg) no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    height: 100%;
-    padding-left: 40px;
-    padding-right: 40px;
-    margin-bottom: 30px;
-    color: #ffffff;
-    text-align: center;
-}
-
-.trip-banner {
-    padding-top: 14%;
-}
-
-.new-trip-banner {
-    padding-top: 15%;
-}
-
-.trip-banner h1,
-.new-trip-banner h1 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 85px;
-    letter-spacing: 4.5px;
-}
-
-.trip-banner h3,
-.new-trip-banner h3 {
-    font-size: 34px;
-    line-height: 50px;
-}
-
-.trip-banner h4 {
-    margin-top: 20px;
-    font-size: 24px;
-}
-
-.trip-banner .btn-join,
-.new-trip-banner .btn-join {
-    font-size: 20px;
-    padding: 10px 30px;
-    margin-top: 30px;
-}
-
-@media (max-width: 768px) {
-    .trip-banner,
-    .new-trip-banner {
-        padding-top: 40%;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-    .trip-banner h1,
-    .new-trip-banner h1 {
-        font-size: 45px;
-    }
-    .trip-banner h3,
-    .new-trip-banner h3 {
-        font-size: 20px;
-        line-height: normal;
-    }
-    .trip-banner h4 {
-        font-size: 18px;
-    }
-}
-
-
-/************************************************************************
-Trip Success Page
-************************************************************************/
-
-.trip-added-banner {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/trip_main.jpg) no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    height: 100%;
-    padding-top: 16%;
-    color: #ffffff;
-    text-align: center;
-}
-
-.trip-added-banner h1 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 95px;
-    letter-spacing: 4.5px;
-}
-
-.trip-added-banner .btn {
-    font-size: 20px;
-    padding: 15px 40px;
-    margin-top: 60px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-@media (max-width: 768px) {
-    .trip-added-banner {
-        padding-top: 30%;
-    }
-    .trip-added-banner h1 {
-        font-size: 70px;
-        letter-spacing: 3px;
-        margin-bottom: 30px;
-    }
-    .trip-added-banner .btn {
-        padding: 12px 25px;
-        margin-top: 30px;
-    }
-}
-
-
-/************************************************************************
-Trips Grid, Hosts Grid, About Us, Why Host, Legal, Feedback
-& Testimonial Page(s)
-************************************************************************/
-
-.trips-jumbotron,
-.hosts-jumbotron,
-.about-us-jumbotron,
-.why-host-jumbotron,
-.legal-jumbotron,
-.feedback-jumbotron,
-.testimonials-jumbotron {
-    padding-top: 12%;
-    padding-left: 60px;
-    padding-right: 60px;
-    color: #ffffff;
-    text-align: center;
-    vertical-align: center;
-    display: block;
-    height: 65%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/jumbotron_img.jpg) no-repeat;
-    background-size: cover;
-}
-
-.trips-jumbotron h1,
-.hosts-jumbotron h1,
-.about-us-jumbotron h1,
-.why-host-jumbotron h1,
-.legal-jumbotron h1,
-.feedback-jumbotron h1,
-.testimonials-jumbotron h1 {
-    font-size: 75px;
-    letter-spacing: 4px;
-}
-
-.trips-jumbotron h2,
-.hosts-jumbotron h2,
-.about-us-jumbotron h2,
-.why-host-jumbotron h2,
-.legal-jumbotron h2,
-.feedback-jumbotron h2,
-.testimonials-jumbotron h2 {
-    font-size: 30px;
-}
-
-@media (max-width: 768px) {
-    .trips-jumbotron,
-    .hosts-jumbotron {
-        padding-top: 24%;
-    }
-    .about-us-jumbotron,
-    .why-host-jumbotron,
-    .legal-jumbotron,
-    .feedback-jumbotron,
-    .testimonials-jumbotron {
-        padding-top: 32%;
-    }
-    .trips-jumbotron h1,
-    .hosts-jumbotron h1,
-    .about-us-jumbotron h1,
-    .why-host-jumbotron h1,
-    .legal-jumbotron h1,
-    .feedback-jumbotron h1,
-    .testimonials-jumbotron h1 {
-        font-size: 45px;
-        letter-spacing: 1px;
-    }
-    .trips-jumbotron h2,
-    .hosts-jumbotron h2,
-    .about-us-jumbotron h2,
-    .why-host-jumbotron h2,
-    .legal-jumbotron h2,
-    .feedback-jumbotron h2,
-    .testimonials-jumbotron h2 {
-        font-size: 25px;
-    }
-}
-
-
-/************************************************************************
-Registration Page
-************************************************************************/
-
-.registration-jumbotron {
-    padding-top: 11%;
-    color: #ffffff;
-    text-align: center;
-    vertical-align: center;
-    display: block;
-    height: 50%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/jumbotron_img.jpg) no-repeat;
-    background-size: cover;
-}
-
-.registration-jumbotron h1 {
-    font-size: 75px;
-    letter-spacing: 4px;
-}
-
-@media (max-width: 768px) {
-    .registration-jumbotron {
-        padding-top: 27%;
-    }
-    .registration-jumbotron h1 {
-        font-size: 45px;
-        letter-spacing: 1px;
-    }
-}
-
-
-/************************************************************************
-
-INDIVIDUAL TRIP PAGE STYLES
-
-************************************************************************/
-
-.trip-overview {
-    padding-bottom: 30px;
+.trip-overview,
+.trip-details,
+.trip-host,
+.trip-join {
+    padding-bottom: 20px;
 }
 
 .trip-overview h1,
 .trip-itinerary h1,
-.trip-host h1 {
+.trip-host h1,
+.trip-join h1 {
     text-align: center;
     letter-spacing: 3px;
     padding-bottom: 10px;
@@ -706,11 +836,6 @@ INDIVIDUAL TRIP PAGE STYLES
     width: auto;
 }
 
-.trip-details,
-.trip-host {
-    padding-bottom: 20px;
-}
-
 .trip-host h1 {
     padding-bottom: 20px;
 }
@@ -722,7 +847,8 @@ INDIVIDUAL TRIP PAGE STYLES
 }
 
 #trip_overview,
-#trip_itinerary {
+#trip_itinerary,
+#trip_join {
     padding-top: 60px;
     margin-top: -60px;
 }
@@ -736,7 +862,8 @@ INDIVIDUAL TRIP PAGE STYLES
 @media (max-width: 768px) {
     .trip-overview h1,
     .trip-itinerary h1,
-    .trip-host h1 {
+    .trip-host h1,
+    .trip-join h1 {
         font-size: 30px;
     }
     .trip-details .field-content h3 {
@@ -812,7 +939,7 @@ NEW TRIP PAGE STYLES
 
 /************************************************************************
 
-TRIPS GRID PAGE STYLES
+VIEW TRIPS PAGE STYLES
 
 ************************************************************************/
 
@@ -843,7 +970,7 @@ TRIPS GRID PAGE STYLES
 
 /************************************************************************
 
-HOSTS GRID PAGE STYLES
+VIEW HOSTS PAGE STYLES
 
 ************************************************************************/
 
@@ -916,6 +1043,138 @@ HOSTS GRID PAGE STYLES
 
 .hosts-view .host-nav-row {
     text-align: center;
+}
+
+
+/************************************************************************
+
+SIGN IN PAGE STYLES
+
+************************************************************************/
+
+.sign-in-content {
+    padding: 30px 30px 30px 30px;
+    height: 100%;
+    background: #e8f7fd;
+}
+
+.sign-in-content .sign-in-logo {
+    padding-top: 12%;
+}
+
+.sign-in-content .sign-in-logo img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sign-in-content .sign-in-buttons {
+    margin-top: 40px;
+    padding: 50px 0px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #888888;
+}
+
+.sign-in-content .sign-in-buttons .row {
+    margin-top: 20px;
+}
+
+.sign-in-content .sign-in-buttons .btn {
+    width: 70%;
+    font-size: 18px;
+    padding: 10px 0px;
+}
+
+.sign-in-content .sign-in-buttons .btn-sign-in-fb {
+    margin-top: -20px;
+    background: #3B5998;
+}
+
+.sign-in-content .sign-in-buttons .btn-sign-in-tw {
+    background: #4099FF;
+}
+
+.sign-in-content .sign-in-buttons .btn-sign-in-go {
+    background: #EA4335;
+}
+
+.sign-in-content .sign-in-buttons .btn-sign-in-fb:hover {
+    background: #2f4779;
+    -webkit-transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -o-transiton: background .2s ease-in-out;
+    transition: background .2s ease-in-out;
+}
+
+.sign-in-content .sign-in-buttons .btn-sign-in-tw:hover {
+    background: #1f87ff;
+    -webkit-transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -o-transiton: background .2s ease-in-out;
+    transition: background .2s ease-in-out;
+}
+
+.sign-in-content .sign-in-buttons .btn-sign-in-go:hover {
+    background: #d92717;
+    -webkit-transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -o-transiton: background .2s ease-in-out;
+    transition: background .2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .sign-in-content .sign-in-buttons .btn {
+        font-size: 15px;
+    }
+}
+
+
+/************************************************************************
+
+HOST REGISTRATION PAGE STYLES
+
+************************************************************************/
+
+.registration-content {
+    padding: 30px 30px 30px 30px;
+    margin-bottom: -30px;
+    background: #e8f7fd;
+}
+
+.registration-content .registration-button {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.registration-content .registration-button .btn-register {
+    padding: 10px 35px;
+    font-size: 18px;
+    font: 'Raleway', sans-serif;
+}
+
+
+/************************************************************************
+
+HOST PROFILE PAGE STYLES
+
+************************************************************************/
+
+.host-profile {
+    padding: 50px 0px 50px 0px;
+    margin-bottom: -30px;
+    background: #e8f7fd;
+}
+
+.host-profile .update-profile-button {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.host-profile .update-profile-button .btn-update-profile {
+    padding: 10px 35px;
+    font-size: 18px;
+    font: 'Raleway', sans-serif;
 }
 
 
@@ -1279,114 +1538,6 @@ FEEDBACK PAGE STYLES
 
 /************************************************************************
 
-SIGN IN PAGE STYLES
-
-************************************************************************/
-
-.sign-in-content {
-    padding: 30px 30px 30px 30px;
-    height: 100%;
-    background: #e8f7fd;
-}
-
-.sign-in-content .sign-in-logo {
-    padding-top: 12%;
-}
-
-.sign-in-content .sign-in-logo img {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.sign-in-content .sign-in-buttons {
-    margin-top: 40px;
-    padding: 50px 0px;
-    text-align: center;
-    background: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px #888888;
-}
-
-.sign-in-content .sign-in-buttons .row {
-    margin-top: 20px;
-}
-
-.sign-in-content .sign-in-buttons .btn {
-    width: 70%;
-    font-size: 18px;
-    padding: 10px 0px;
-}
-
-.sign-in-content .sign-in-buttons .btn-sign-in-fb {
-    margin-top: -20px;
-    background: #3B5998;
-}
-
-.sign-in-content .sign-in-buttons .btn-sign-in-tw {
-    background: #4099FF;
-}
-
-.sign-in-content .sign-in-buttons .btn-sign-in-go {
-    background: #EA4335;
-}
-
-.sign-in-content .sign-in-buttons .btn-sign-in-fb:hover {
-    background: #2f4779;
-    -webkit-transition: background .2s ease-in-out;
-    -moz-transition: background .2s ease-in-out;
-    -o-transiton: background .2s ease-in-out;
-    transition: background .2s ease-in-out;
-}
-
-.sign-in-content .sign-in-buttons .btn-sign-in-tw:hover {
-    background: #1f87ff;
-    -webkit-transition: background .2s ease-in-out;
-    -moz-transition: background .2s ease-in-out;
-    -o-transiton: background .2s ease-in-out;
-    transition: background .2s ease-in-out;
-}
-
-.sign-in-content .sign-in-buttons .btn-sign-in-go:hover {
-    background: #d92717;
-    -webkit-transition: background .2s ease-in-out;
-    -moz-transition: background .2s ease-in-out;
-    -o-transiton: background .2s ease-in-out;
-    transition: background .2s ease-in-out;
-}
-
-@media (max-width: 768px) {
-    .sign-in-content .sign-in-buttons .btn {
-        font-size: 15px;
-    }
-}
-
-
-/************************************************************************
-
-REGISTRATION PAGE STYLES
-
-************************************************************************/
-
-.registration-content {
-    padding: 30px 30px 30px 30px;
-    margin-bottom: -30px;
-    background: #e8f7fd;
-}
-
-.registration-content .registration-button {
-    margin-top: 40px;
-    text-align: center;
-}
-
-.registration-content .registration-button .btn-register {
-    padding: 10px 35px;
-    font-size: 18px;
-    font: 'Raleway', sans-serif;
-}
-
-
-/************************************************************************
-
 TESTIMONIALS PAGE STYLES
 
 ************************************************************************/
@@ -1428,122 +1579,4 @@ TESTIMONIALS PAGE STYLES
 .testimonials-content .testimonial-user h6 {
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
-}
-
-
-/************************************************************************
-
-FOOTER STYLES
-
-************************************************************************/
-
-.footer {
-    background: #25b0e9;
-    width: 100%;
-    color: #ffffff;
-    line-height: 30px;
-    text-align: center;
-    padding: 15px 15px 0px 15px;
-    margin-top: 30px;
-}
-
-.footer hr {
-    width: 80%;
-    border: 1.5px solid #ffffff;
-}
-
-.footer h7 {
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 55px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.footer .footer-links a p {
-    font-size: 15px;
-    text-decoration: none;
-    color: #ffffff;
-}
-
-.footer .footer-links a:hover {
-    text-decoration: none;
-}
-
-.footer .icon-button {
-    background-color: #ffffff;
-    border-radius: 100%;
-    font-size: 24px;
-    height: 50px;
-    width: 50px;
-}
-
-.footer .icon-button .fa-facebook {
-    color: #3B5998;
-}
-
-.footer .icon-button .fa-twitter {
-    color: #4099ff;
-}
-
-.footer .icon-button .fa-instagram {
-    color: #125688;
-}
-
-.footer .icon-button .fa-youtube-play {
-    color: #e52d27;
-}
-
-.footer .icon-button:hover .fa-facebook,
-.footer .icon-button:hover .fa-twitter,
-.footer .icon-button:hover .fa-instagram,
-.footer .icon-button:hover .fa-youtube-play {
-    color: #ffffff;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transiton: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-}
-
-.footer .icon-button:hover.facebook {
-    background-color: #3B5998;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -o-transiton: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-}
-
-.footer .icon-button:hover.twitter {
-    background-color: #4099ff;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -o-transiton: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-}
-
-.footer .icon-button:hover.instagram {
-    background-color: #125688;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -o-transiton: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-}
-
-.footer .icon-button:hover.youtube {
-    background-color: #e52d27;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -o-transiton: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-}
-
-.footer > p {
-    letter-spacing: 2px;
-    margin-top: 30px;
-}
-
-@media (max-width: 768px) {
-    .footer .icon-button {
-        margin-bottom: 15px;
-    }
 }

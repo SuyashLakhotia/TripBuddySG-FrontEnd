@@ -12,7 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="js/jquery.scrollTo.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/validate-registration.js"></script>
+    <script src="js/validate-editprofile.js"></script>
 
     <!-- Load Navbar & Footer -->
     <script>
@@ -40,7 +40,7 @@
     <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <title>Register as Host | TripBuddy.SG</title>
+    <title>Edit Profile | TripBuddy.SG</title>
 </head>
 
 <body>
@@ -50,16 +50,16 @@
         <div id="navbarQuery"></div>
 
 
-        <!-- JUMBOTRON -->
-        <div class="container-fluid registration-jumbotron">
-            <h1>REGISTER AS A HOST</h1>
+        <!-- HOST PROFILE JUMBOTRON -->
+        <div class="container-fluid host-profile-jumbotron">
+            <h1>EDIT YOUR PROFILE</h1>
         </div>
 
 
-        <!-- REGISTRATION FORM -->
-        <div class="container-fluid row registration-content">
+        <!-- EDIT PROFILE FORM -->
+        <div class="container-fluid row host-profile">
             <div class="col-md-10 col-md-offset-1">
-                <form name="registrationForm" class="form-horizontal" role="form" onsubmit="return validateForm()" action="" method="post" novalidate>
+                <form name="editProfileForm" class="form-horizontal" role="form" onsubmit="return validateForm()" action="" method="post" novalidate>
                     <div class="form-group">
                         <label class="control-label col-md-2" for="name">Name:</label>
                         <div class="col-md-9">
@@ -72,7 +72,7 @@
                             <select class="form-control" id="university" name="university" required>
                                 <!-- NOTE: Keep the first blank option for validation. -->
                                 <option></option>
-                                <option>Nanyang Technological University</option>
+                                <option selected>Nanyang Technological University</option>
                                 <option>National University of Singapore</option>
                                 <option>Singapore Management University</option>
                             </select>
@@ -81,7 +81,7 @@
                     <div class="form-group">
                         <label class="control-label col-md-2" for="course">Course:</label>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" id="course" name="course" placeholder="e.g. B.Engg in Computer Science" required>
+                            <input type="text" value="B.A. in Fine Arts" class="form-control" id="course" name="course" placeholder="e.g. B.Engg in Computer Science" required>
                         </div>
                     </div>
                     <div class="form-group">
@@ -91,7 +91,7 @@
                                 <!-- NOTE: Keep the first blank option for validation. -->
                                 <option></option>
                                 <option>1</option>
-                                <option>2</option>
+                                <option selected>2</option>
                                 <option>3</option>
                                 <option>4</option>
                                 <option>5</option>
@@ -102,29 +102,29 @@
                     <div class="form-group">
                         <label class="control-label col-md-2" for="univ_email">E-Mail (.edu.sg):</label>
                         <div class="col-md-9">
-                            <input type="email" class="form-control" id="univ_email" name="univ_email" placeholder="e.g. john@e.ntu.edu.sg" required>
+                            <input type="email" value="olivia@e.ntu.edu.sg" class="form-control" id="univ_email" name="univ_email" placeholder="e.g. john@e.ntu.edu.sg" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-md-2" for="univ_matric">Matriculation ID:</label>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" id="univ_matric" name="univ_matric" placeholder="e.g. U1492389K" required>
+                            <input type="text" value="U1423086J" class="form-control" id="univ_matric" name="univ_matric" placeholder="e.g. U1492389K" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-md-2" for="tagline">Personal Tagline:</label>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" id="tagline" name="tagline" placeholder="A short tagline for yourself! e.g. I'm an avid reader, love playing the guitar and dabble in the arts." required>
+                            <input type="text" value="As an avid reader, I spend my time painting and playing the guitar." class="form-control" id="tagline" name="tagline" placeholder="A short tagline for yourself! e.g. I'm an avid reader, love playing the guitar and dabble in the arts." required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-md-2" for="descr">Short Description About Yourself:</label>
                         <div class="col-md-9">
-                            <textarea type="text" rows="7" class="form-control" id="descr" name="descr" placeholder="Write a bit about yourself here for people looking at your trips! Your interests, hobbies, passions etc. Maybe even include what makes you the unique individual that you are!" required></textarea>
+                            <textarea type="text" rows="7" class="form-control" id="descr" name="descr" placeholder="Write a bit about yourself here for people looking at your trips! Your interests, hobbies, passions etc. Maybe even include what makes you the unique individual that you are!" required>I love to host exchange students!</textarea>
                         </div>
                     </div>
-                    <div class="container-fluid row registration-button">
-                        <button type="submit" class="btn btn-success btn-register">REGISTER</button>
+                    <div class="container-fluid row update-profile-button">
+                        <button type="submit" class="btn btn-success btn-update-profile">UPDATE PROFILE</button>
                     </div>
                 </form>
                 <div class="alert alert-danger form-empty">
