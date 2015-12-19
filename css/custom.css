@@ -83,6 +83,27 @@ div[class*="form-invalid-"],
     border: 1px solid #ff0000;
 }
 
+.err-search {
+    margin-top: 50px;
+}
+
+.err-search p {
+    text-align: center;
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: 1px;
+    color: rgba(82, 82, 82, 0.75)
+}
+
+@media (max-width: 768px) {
+    .err-search {
+        margin-top: 0px;
+    }
+    .err-search p {
+        font-size: 20px;
+    }
+}
+
 
 /************************************************************************
 
@@ -442,7 +463,7 @@ Home Page
 ************************************************************************/
 
 .home-jumbotron {
-    padding-top: 10%;
+    padding-top: 11%;
     color: #ffffff;
     text-align: center;
     display: block;
@@ -656,7 +677,7 @@ Trips Grid, Hosts Grid, About Us, Why Host, Legal, Feedback
 @media (max-width: 768px) {
     .trips-jumbotron,
     .hosts-jumbotron {
-        padding-top: 24%;
+        padding-top: 18%;
     }
     .about-us-jumbotron,
     .why-host-jumbotron,
@@ -1043,6 +1064,14 @@ VIEW HOSTS PAGE STYLES
     margin-left: 30px;
 }
 
+#hostModal .err-host p {
+    text-align: center;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: rgba(82, 82, 82, 0.75);
+}
+
 #hostModal .trip-grid-link {
     margin-top: -10px;
     margin-bottom: 0px;
@@ -1176,6 +1205,20 @@ SIGN IN PAGE STYLES
     -moz-transition: background .2s ease-in-out;
     -o-transiton: background .2s ease-in-out;
     transition: background .2s ease-in-out;
+}
+
+.sign-in-content .sign-in-footer {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.sign-in-content .sign-in-footer a,
+.sign-in-content .sign-in-footer p {
+    color: #737373;
+}
+
+.sign-in-content .sign-in-footer a:hover {
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
