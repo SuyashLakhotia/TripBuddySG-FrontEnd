@@ -12,7 +12,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="js/jquery.scrollTo.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/validate-registration.js"></script>
+    <script src="js/populate-schools.js"></script>
+    <script src="js/validate-host.js"></script>
 
     <!-- Load Navbar & Footer -->
     <script>
@@ -56,25 +57,41 @@
         </div>
 
 
-        <!-- REGISTRATION FORM -->
+        <!-- REGISTRATION CONTENT -->
         <div class="container-fluid row registration-content">
-            <div class="col-md-10 col-md-offset-1">
-                <form name="registrationForm" class="form-horizontal" role="form" onsubmit="return validateForm()" action="" method="post" novalidate>
-                    <div class="form-group">
-                        <label class="control-label col-md-2" for="name">Name:</label>
-                        <div class="col-md-9">
-                            <input type="text" value="Olivia Wilde" class="form-control" id="name" name="name" readonly>
-                        </div>
+            <!-- User Details -->
+            <div class="regUser">
+                <div class="col-md-2 col-md-offset-5">
+                    <img src="img/sample-avatar.png" class="img-responsive img-thumbnail">
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-4">
+                        <h1>Olivia Wilde</h1>
                     </div>
+                </div>
+            </div>
+
+            <!-- Registration Form -->
+            <div class="col-md-10 col-md-offset-1 regForm">
+                <form name="registrationForm" class="form-horizontal" role="form" onsubmit="return validateForm('registrationForm')" action="" method="post" novalidate>
                     <div class="form-group">
                         <label class="control-label col-md-2" for="university">University:</label>
                         <div class="col-md-9">
-                            <select class="form-control" id="university" name="university" required>
+                            <select class="form-control" id="university" name="university" onchange="configureDropDownLists(this, document.getElementById('school'))" required>
                                 <!-- NOTE: Keep the first blank option for validation. -->
                                 <option></option>
                                 <option>Nanyang Technological University</option>
                                 <option>National University of Singapore</option>
                                 <option>Singapore Management University</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="school">School:</label>
+                        <div class="col-md-9">
+                            <select class="form-control" id="school" name="school" required>
+                                <!-- NOTE: Keep the first blank option for validation. -->
+                                <option></option>
                             </select>
                         </div>
                     </div>

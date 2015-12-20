@@ -78,21 +78,21 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-2 col-md-offset-2" for="overview">Overview of Trip:</label>
-                        <div class="col-md-6">
-                            <textarea type="text" rows="5" class="form-control" id="overview" name="overview" placeholder="Why should someone join this trip? What are you going to do? Make this as attractive as possible!" required></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group">
                         <label class="control-label col-md-2 col-md-offset-2" for="pic">Any Related Image:</label>
                         <div class="col-md-6">
                             <input type="file" class="form-control" id="pic" name="pic" accept="image/*" required>
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="control-label col-md-2 col-md-offset-2" for="overview">Overview of Trip:</label>
+                        <div class="col-md-6">
+                            <textarea type="text" rows="5" class="form-control" id="overview" name="overview" placeholder="Why should someone join this trip? What are you going to do? Make this as attractive as possible!" required></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label class="control-label col-md-2 col-md-offset-2" for="itinerary">Itinerary of Trip:</label>
                         <div class="col-md-6">
-                            <textarea type="text" rows="8" class="form-control" id="itinerary" name="itinerary" placeholder="Provide as many details as possible about what you're going to do, where you're going to do it and how you're going to get there. Remember that people tend to like a more detailed itinerary as compared to a vague one!" required></textarea>
+                            <textarea type="text" rows="8" class="form-control" id="itinerary" name="itinerary" placeholder="Provide as many details as possible about what you're going to do, where you're going to do it and how you're going to get there. Remember that people tend to like a more detailed itinerary as compared to a vague one! e.g. 12:00 - 14:00: Lunch at Gardens by the Bay." required></textarea>
                         </div>
                     </div>
                 </div>
@@ -106,14 +106,14 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-2 col-md-offset-2" for="time">Time of Trip:</label>
-                        <div class="col-md-2">
+                        <label class="control-label col-md-2 col-md-offset-2 col-xs-12" for="time">Time of Trip:</label>
+                        <div class="col-md-2 col-xs-5">
                             <input type="time" class="form-control" id="time_start" name="time_start" placeholder="Start Time" required>
                         </div>
-                        <div class="col-md-1">
+                        <div class="col-md-1 col-xs-2 mid-label">
                             <p>to</p>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-xs-5">
                             <input type="time" class="form-control" id="time_end" name="time_end" placeholder="End Time" required>
                         </div>
                     </div>
@@ -124,14 +124,14 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-2 col-md-offset-2" for="group_size">Group Size:</label>
-                        <div class="col-md-2">
+                        <label class="control-label col-md-2 col-md-offset-2 col-xs-12" for="group_size">Group Size:</label>
+                        <div class="col-md-2 col-xs-5">
                             <input type="number" class="form-control" id="min_group" name="min_group" placeholder="Minimum Pax" required>
                         </div>
-                        <div class="col-md-1">
+                        <div class="col-md-1 col-xs-2 mid-label">
                             <p>-</p>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-xs-5">
                             <input type="number" class="form-control" id="max_group" name="max_group" placeholder="Maximum Pax" required>
                         </div>
                     </div>

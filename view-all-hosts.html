@@ -147,13 +147,23 @@
         <div class="hosts-view">
             <div class="container-fluid row hosts-filters">
                 <form class="form-inline" role="form" action="" method="get">
-                    <div class="col-md-4 col-md-offset-4 form-group">
-                        <select class="form-control" id="theme" name="theme" onchange="this.form.submit()">
+                    <div class="col-md-3 col-md-offset-3 form-group">
+                        <select class="form-control" id="university" name="university" onchange="this.form.submit()">
                             <!-- NOTE: Keep the first option. -->
                             <option>Any University</option>
                             <option>University 1</option>
                             <option>University 2</option>
                             <option>University 3</option>
+                        </select>
+                        <noscript>
+                            <input type="submit" value="Submit">
+                        </noscript>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <select class="form-control" id="school" name="school" onchange="this.form.submit()">
+                            <!-- NOTE: Populate this dropdown with the list of schools according to the selected university filter. The list of schools can be found in 'populate-schools.js'. -->
+                            <!-- NOTE: Keep the first option. -->
+                            <option>Any School</option>
                         </select>
                         <noscript>
                             <input type="submit" value="Submit">

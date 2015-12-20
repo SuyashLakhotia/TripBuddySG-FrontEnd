@@ -12,7 +12,7 @@ $(document).ready(function () {
     var navigation_html = '<ul class="pagination pagination-lg">';
     var current_link = 0;
     while (number_of_pages > current_link) {
-        navigation_html += '<li longdesc="' + current_link + '"><a class="page_link" href="javascript:go_to_page(' + current_link + ')">' + (current_link + 1) + '</a></li>';
+        navigation_html += '<li longdesc="' + current_link + '"><a class="page-link" href="javascript:go_to_page(' + current_link + ')">' + (current_link + 1) + '</a></li>';
         current_link = current_link + 1;
     }
     navigation_html += '</ul>';

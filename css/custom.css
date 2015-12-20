@@ -92,7 +92,7 @@ div[class*="form-invalid-"],
     font-weight: 700;
     font-size: 50px;
     letter-spacing: 1px;
-    color: rgba(82, 82, 82, 0.75)
+    color: rgba(82, 82, 82, 0.75);
 }
 
 @media (max-width: 768px) {
@@ -256,7 +256,7 @@ FOOTER STYLES
 ************************************************************************/
 
 .footer {
-    background: #25b0e9;
+    background: #25b0e9 url("/img/footprints.png") repeat;
     width: 100%;
     color: #ffffff;
     text-align: center;
@@ -463,7 +463,7 @@ Home Page
 ************************************************************************/
 
 .home-jumbotron {
-    padding-top: 11%;
+    padding-top: 10.5%;
     color: #ffffff;
     text-align: center;
     display: block;
@@ -522,7 +522,7 @@ Trip & New Trip Pages
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/trip_main.jpg) no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 100%;
+    height: 80%;
     padding-left: 40px;
     padding-right: 40px;
     margin-bottom: 30px;
@@ -530,12 +530,9 @@ Trip & New Trip Pages
     text-align: center;
 }
 
-.trip-banner {
-    padding-top: 14%;
-}
-
+.trip-banner,
 .new-trip-banner {
-    padding-top: 15%;
+    padding-top: 11%;
 }
 
 .trip-banner h1,
@@ -545,10 +542,14 @@ Trip & New Trip Pages
     letter-spacing: 4.5px;
 }
 
-.trip-banner h3,
 .new-trip-banner h3 {
     font-size: 34px;
     line-height: 50px;
+}
+
+.trip-banner h3 {
+    font-size: 28px;
+    line-height: 35px;
 }
 
 .trip-banner h4 {
@@ -557,16 +558,21 @@ Trip & New Trip Pages
 }
 
 .trip-banner .btn-join,
-.new-trip-banner .btn-join {
+.new-trip-banner .btn-join,
+.trip-banner .btn-joined {
     font-size: 20px;
     padding: 10px 30px;
     margin-top: 30px;
 }
 
+.trip-banner .btn-joined {
+    background: #5da441;
+}
+
 @media (max-width: 768px) {
     .trip-banner,
     .new-trip-banner {
-        padding-top: 40%;
+        padding-top: 24%;
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -845,18 +851,19 @@ TRIP PAGE STYLES
     padding-bottom: 20px;
 }
 
-.trip-overview h1,
-.trip-itinerary h1,
-.trip-host h1,
-.trip-join h1 {
-    text-align: center;
+.trip-overview img {
+    margin-bottom: 30px;
+}
+
+.trip-overview h1 {
+    margin-top: 0px;
+    text-align: left;
     letter-spacing: 3px;
     padding-bottom: 10px;
 }
 
-.trip-overview p,
-.trip-itinerary p {
-    font-size: 17px;
+.trip-overview p {
+    font-size: 15px;
     padding-bottom: 20px;
     text-align: justify;
 }
@@ -866,8 +873,39 @@ TRIP PAGE STYLES
     width: 85%;
 }
 
-.trip-details .field-name h3 {
+.trip-details .row > h3 {
     text-align: center;
+    font-size: 28px;
+    line-height: 16px;
+    font-weight: 200;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.trip-details .err-search p {
+    font-size: 20px;
+}
+
+.trip-details .err-search p a {
+    color: inherit;
+    border-bottom: 2px solid rgba(82, 82, 82, 0.75);
+}
+
+.trip-details .trip-user-list {
+    margin-bottom: 30px;
+}
+
+.trip-details .trip-user-list .col-md-3 {
+    margin-top: 15px;
+}
+
+.trip-details .trip-user-list img {
+    height: 50px;
+    width: 50px;
+}
+
+.trip-details .field-name h3 {
+    text-align: left;
     font-size: 14px;
     line-height: 16px;
     font-weight: 600;
@@ -886,29 +924,10 @@ TRIP PAGE STYLES
     padding-bottom: 10px;
 }
 
-.trip-details .trip-user-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.trip-details .trip-user-list li {
-    width: 70px;
-    height: 70px;
-    overflow: hidden;
-    margin: 10px 10px 10px 0px;
-    display: inline-block;
-    vertical-align: top;
-}
-
-.trip-details .trip-user-list li img {
-    max-width: 100%;
-    height: auto;
-    width: auto;
-}
-
 .trip-host h1,
 .trip-join h1 {
+    text-align: center;
+    letter-spacing: 3px;
     padding-bottom: 20px;
 }
 
@@ -922,11 +941,20 @@ TRIP PAGE STYLES
     text-align: center;
 }
 
-#trip_overview,
-#trip_itinerary,
+#trip_overview {
+    padding-top: 70px;
+    margin-top: -30px;
+}
+
+#trip_itinerary {
+    padding-top: 70px;
+    margin-top: -70px;
+}
+
 #trip_join {
-    padding-top: 60px;
-    margin-top: -60px;
+    padding-top: 70px;
+    margin-top: -50px;
+    margin-bottom: 20px;
 }
 
 #trip_details,
@@ -940,7 +968,11 @@ TRIP PAGE STYLES
     .trip-itinerary h1,
     .trip-host h1,
     .trip-join h1 {
+        text-align: center;
         font-size: 30px;
+    }
+    .trip-details .field-name h3 {
+        text-align: center;
     }
     .trip-details .field-content h3 {
         text-align: center;
@@ -974,18 +1006,13 @@ NEW TRIP PAGE STYLES
     padding-bottom: 30px;
 }
 
-#trip_form .form-group .col-md-1 {
+#trip_form .mid-label {
     text-align: center;
     padding-top: 0.5%;
 }
 
 #trip_form .includes-arr,
-#trip_form .excludes-arr {
-    list-style: none;
-    padding: 0 0;
-    margin: 0 0;
-}
-
+#trip_form .excludes-arr,
 #trip_form .includes-arr li,
 #trip_form .excludes-arr li {
     list-style: none;
@@ -1009,6 +1036,9 @@ NEW TRIP PAGE STYLES
     #trip_form {
         padding-left: 40px;
         padding-right: 40px;
+    }
+    #trip_form h1 {
+        font-size: 27px;
     }
 }
 
@@ -1043,6 +1073,16 @@ VIEW TRIPS PAGE STYLES
     text-align: center;
 }
 
+.trip-nav-row .pagination li a {
+    border-radius: 20px;
+    margin: 0px 5px;
+}
+
+.trip-nav-row .pagination li.active a {
+    background: #25b0e9;
+    border: #25b0e9;
+}
+
 
 /************************************************************************
 
@@ -1050,21 +1090,21 @@ VIEW HOSTS PAGE STYLES
 
 ************************************************************************/
 
-#hostModal .modal-body p {
+[id^="hostModal"] .modal-body p {
     margin-top: 25px;
     text-align: justify;
 }
 
-#hostModal .modal-body hr {
+[id^="hostModal"] .modal-body hr {
     margin: 20px 0px 10px 0px;
 }
 
-#hostModal .modal-body h6 {
+[id^="hostModal"] .modal-body h6 {
     font-size: 20px;
     margin-left: 30px;
 }
 
-#hostModal .err-host p {
+[id^="hostModal"] .err-host p {
     text-align: center;
     font-weight: 800;
     font-size: 20px;
@@ -1072,35 +1112,35 @@ VIEW HOSTS PAGE STYLES
     color: rgba(82, 82, 82, 0.75);
 }
 
-#hostModal .trip-grid-link {
+[id^="hostModal"] .trip-grid-link {
     margin-top: -10px;
     margin-bottom: 0px;
 }
 
-#hostModal .trip-grid-link p {
+[id^="hostModal"] .trip-grid-link p {
     color: #ffffff;
     text-align: center;
 }
 
-#hostModal .trip-grid-link .theme {
+[id^="hostModal"] .trip-grid-link .theme {
     font-size: 12px;
     background: #25b0e9;
     padding: 10px 0px 10px 0px;
 }
 
-#hostModal .trip-grid-link .title {
+[id^="hostModal"] .trip-grid-link .title {
     margin-top: 60px;
     font-size: 24px;
     padding: 10px 0px 10px 0px;
 }
 
-#hostModal .trip-grid-link .tagline {
+[id^="hostModal"] .trip-grid-link .tagline {
     margin-top: 60px;
     font-size: 14px;
     padding: 10px 10px 20px 10px;
 }
 
-#hostModal .btn-primary {
+[id^="hostModal"] .btn-primary {
     padding: 5px 20px;
 }
 
@@ -1127,6 +1167,16 @@ VIEW HOSTS PAGE STYLES
 
 .hosts-view .host-nav-row {
     text-align: center;
+}
+
+.host-nav-row .pagination li a {
+    border-radius: 20px;
+    margin: 0px 5px;
+}
+
+.host-nav-row .pagination li.active a {
+    background: #25b0e9;
+    border: #25b0e9;
 }
 
 
@@ -1240,6 +1290,17 @@ HOST REGISTRATION PAGE STYLES
     background: #e8f7fd;
 }
 
+.regUser h1 {
+    text-align: center;
+    color: #25b0e9;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.regForm {
+    margin-top: 20px;
+}
+
 .registration-content .registration-button {
     margin-top: 40px;
     text-align: center;
@@ -1259,9 +1320,20 @@ HOST PROFILE PAGE STYLES
 ************************************************************************/
 
 .host-profile {
-    padding: 50px 30px 50px 30px;
+    padding: 30px 30px 30px 30px;
     margin-bottom: -30px;
     background: #e8f7fd;
+}
+
+.hostUser h1 {
+    text-align: center;
+    color: #25b0e9;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.hostForm {
+    margin-top: 20px;
 }
 
 .host-profile .update-profile-button {
@@ -1398,6 +1470,19 @@ WHY HOST PAGE STYLES
     text-align: center;
 }
 
+.why-host-incentives h1 {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    color: #78be5d;
+    font-weight: 800;
+    padding-bottom: 20px;
+}
+
+.why-host-incentives .why-host-awesome {
+    border-bottom: 4px solid #78be5d;
+    padding-bottom: 2px;
+}
+
 .why-host-incentives [class^="flaticon-"]:before,
 .why-host-incentives [class*=" flaticon-"]:before,
 .why-host-incentives [class^="flaticon-"]:after,
@@ -1410,12 +1495,12 @@ WHY HOST PAGE STYLES
 
 .why-host-incentives h2 {
     color: #000;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
 }
 
 .why-host-incentives .btn-success {
-    margin-top: 40px;
+    margin-top: 50px;
     margin-bottom: 10px;
     padding: 15px 0px;
     font-size: 16px;
@@ -1451,7 +1536,7 @@ WHY HOST PAGE STYLES
 
 .why-host-instructions h2 {
     color: #000;
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
     margin-top: 60px;
     margin-bottom: 60px;
@@ -1646,8 +1731,36 @@ TESTIMONIALS PAGE STYLES
     margin-bottom: -30px;
 }
 
-.testimonials-content .col-md-6 {
-    margin-top: 55px;
+.testimonials-content .testimonial-pic {
+    display: block;
+    width: 90px;
+    height: 90px;
+    margin: 1em 0 1em 1em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-border-radius: 99em;
+    -moz-border-radius: 99em;
+    border-radius: 99em;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+.testimonials-content .testimonial-user {
+    margin-top: 50px;
+}
+
+.testimonials-content .testimonial-user h5 {
+    padding-top: 15px;
+    color: #25b0e9;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-weight: 200;
+}
+
+.testimonials-content .testimonial-user h6 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
 }
 
 .testimonials-content .testimonial-text {
@@ -1662,19 +1775,13 @@ TESTIMONIALS PAGE STYLES
     text-align: justify;
 }
 
-.testimonials-content .testimonial-user {
-    margin-top: 15px;
-}
-
-.testimonials-content .testimonial-user h5 {
-    color: #25b0e9;
-    font-family: 'Raleway', sans-serif;
-    font-size: 30px;
-    letter-spacing: 2px;
-    font-weight: 200;
-}
-
-.testimonials-content .testimonial-user h6 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
+@media (max-width: 768px) {
+    .testimonials-content .testimonial-user {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .testimonials-content .testimonial-user h5,
+    .testimonials-content .testimonial-user h6 {
+        text-align: center;
+    }
 }

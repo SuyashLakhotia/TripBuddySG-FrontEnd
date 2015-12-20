@@ -1,7 +1,8 @@
-function validateForm() {
+function validateForm(formName) {
     $('.form-empty').css('display', 'none');
     $('.form-invalid-email').css('display', 'none');
     $('#university').removeClass('form-error');
+    $('#school').removeClass('form-error');
     $('#course').removeClass('form-error');
     $('#study_year').removeClass('form-error');
     $('#univ_email').removeClass('form-error');
@@ -9,15 +10,16 @@ function validateForm() {
     $('#tagline').removeClass('form-error');
     $('#descr').removeClass('form-error');
 
-    var university = document.forms["registrationForm"]["university"].value;
-    var course = document.forms["registrationForm"]["course"].value;
-    var study_year = document.forms["registrationForm"]["study_year"].value;
-    var email = document.forms["registrationForm"]["univ_email"].value;
+    var university = document.forms[formName]["university"].value;
+    var school = document.forms[formName]["school"].value;
+    var course = document.forms[formName]["course"].value;
+    var study_year = document.forms[formName]["study_year"].value;
+    var email = document.forms[formName]["univ_email"].value;
     var email_atpos = email.indexOf("@");
     var email_dotpos = email.lastIndexOf(".");
-    var matric = document.forms["registrationForm"]["univ_matric"].value;
-    var tagline = document.forms["registrationForm"]["tagline"].value;
-    var descr = document.forms["registrationForm"]["descr"].value;
+    var matric = document.forms[formName]["univ_matric"].value;
+    var tagline = document.forms[formName]["tagline"].value;
+    var descr = document.forms[formName]["descr"].value;
     var valid = true;
 
 
@@ -26,7 +28,12 @@ function validateForm() {
         $('.form-empty').css('display', 'block');
         valid = false;
     }
-
+    
+    if (school == null || school == "") {
+        $('#school').addClass('form-error');
+        $('.form-empty').css('display', 'block');
+        valid = false;
+    }
 
     if (course == null || course == "") {
         $('#course').addClass('form-error');
