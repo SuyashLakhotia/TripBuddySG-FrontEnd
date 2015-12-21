@@ -12,6 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="js/jquery.scrollTo.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/validate-email.js"></script>
 
     <!-- Load Navbar & Footer -->
     <script>
@@ -41,10 +42,12 @@
 
     <meta property="og:url" content="http://www.tripbuddy.sg" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="TripBuddy.sg" />
+    <meta property="og:site_name" content="TripBuddy.sg" />
+    <meta property="og:title" content="Join Us!" />
     <meta property="og:description" content="A truly local experience with local student guides, see Singapore like it was meant to be seen." />
-    <!-- TODO: Add image (final) URL for Facebook shares for "content". -->
+    <!-- TODO: Add image's absolute URL for Facebook shares under 'content'. -->
     <meta property="og:image" content="" />
+    <meta property="fb:app_id" content="1681340718812167" />
 
     <title>TripBuddy.SG</title>
 </head>
@@ -54,6 +57,65 @@
 
         <!-- NAVBAR -->
         <div id="navbarQuery"></div>
+
+
+        <!-- E-MAIL CHANGE MODAL -->
+        <div id="emailModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="emailModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Olivia Wilde</h4>
+                    </div>
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-2 col-md-offset-5">
+                                <img src="/img/sample-avatar.png" class="img-responsive img-thumbnail">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <h1>Welcome, Olivia Wilde!</h1>
+                                <h2>Your current e-mail address is olivia@wilde.com. Would you like to change it?</h2>
+                                <form name="emailForm" class="form-horizontal" role="form" onsubmit="return validateForm()" action="" method="post" novalidate>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2" for="email">E-Mail:</label>
+                                        <div class="col-md-8">
+                                            <input type="email" class="form-control" id="email" name="email" value="olivia@wilde.com" placeholder="e.g. john@doe.com" required>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <button type="submit" class="btn btn-success">CHANGE</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="alert alert-danger form-empty" role="alert">
+                                    <strong>Oops!</strong> You haven't entered an e-mail address.
+                                </div>
+                                <div class="alert alert-warning form-invalid-email" role="alert">
+                                    <strong>Oops!</strong> Not a valid e-mail address.
+                                </div>
+                                <div class="alert alert-success form-success" role="alert">
+                                    <strong>Success!</strong> E-mail successfully changed.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal Footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- NOTE: Script to activate e-mail modal. -->
+        <!--
+        <script>
+            $('#emailModal').modal('show');
+        </script>
+        -->
 
 
         <!-- JUMBOTRON -->
@@ -71,6 +133,12 @@
                 <h1>HAPPENING SOON <i class="fa fa-plus"></i></h1>
 
                 <div class="container-fluid row">
+                    <!-- NOTE: When there are no trips happening soon. -->
+                    <!--
+                    <div class="err-search">
+                        <p>Sorry, no trips happening soon.</p>
+                    </div>
+                    -->
                     <div class="col-md-4">
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1">
@@ -210,6 +278,12 @@
                 <a href="/view-all-hosts.html"><h1>OUR HOSTS <i class="fa fa-plus"></i></h1></a>
 
                 <div class="container-fluid row">
+                    <!-- NOTE: When there are no hosts registered. -->
+                    <!--
+                    <div class="err-search">
+                        <p>Sorry, we have no active hosts at the moment.</p>
+                    </div>
+                    -->
                     <div class="col-md-4">
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1">
