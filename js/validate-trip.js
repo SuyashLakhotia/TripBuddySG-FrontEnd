@@ -4,17 +4,19 @@ TripBuddy.sg (c) 2015. All rights reserved.
 
 function validateForm() {
     $('.form-empty').css('display', 'none');
-    $('.form-invalid-checkbox').css('display', 'none');
+    $('.form-invalid-title').css('display', 'none');
+    $('.form-invalid-tagline').css('display', 'none');
     $('.form-invalid-date').css('display', 'none');
     $('.form-invalid-time').css('display', 'none');
     $('.form-invalid-group-size').css('display', 'none');
     $('.form-invalid-price').css('display', 'none');
+    $('.form-invalid-checkbox').css('display', 'none');
 
     $('#title').removeClass('form-error');
     $('#tagline').removeClass('form-error');
     $('#overview').removeClass('form-error');
+    $('#pic').removeClass('form-error');
     $('#itinerary').removeClass('form-error');
-
     $('#date').removeClass('form-error');
     $('#time_start').removeClass('form-error');
     $('#time_end').removeClass('form-error');
@@ -32,7 +34,6 @@ function validateForm() {
     var overview = document.forms["tripForm"]["overview"].value;
     var pic = document.forms["tripForm"]["pic"].value;
     var itinerary = document.forms["tripForm"]["itinerary"].value;
-
     var date = document.forms["tripForm"]["date"].value;
     var time_start = document.forms["tripForm"]["time_start"].value;
     var time_end = document.forms["tripForm"]["time_end"].value;
@@ -140,8 +141,14 @@ function validateForm() {
     }
 
     if (valid == true) {
-        if ($('input[type=checkbox]:checked').length <= 0) {
-            $('.form-invalid-checkbox').css('display', 'block');
+        if (title.length > 30) {
+            $('#title').addClass('form-error');
+            $('.form-invalid-title').css('display', 'block');
+            valid = false;
+        }
+        if (tagline.length > 100) {
+            $('#tagline').addClass('form-error');
+            $('.form-invalid-tagline').css('display', 'block');
             valid = false;
         }
         if (Date.parse(date) <= today) {
@@ -164,6 +171,10 @@ function validateForm() {
         if (price > 500) {
             $('#price').addClass('form-error');
             $('.form-invalid-price').css('display', 'block');
+            valid = false;
+        }
+        if ($('input[type=checkbox]:checked').length <= 0) {
+            $('.form-invalid-checkbox').css('display', 'block');
             valid = false;
         }
     }

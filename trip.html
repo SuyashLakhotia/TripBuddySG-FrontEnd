@@ -84,7 +84,14 @@
                         </li>
                         <li><a href="#trip_join" id="nav_join_trip"><i class="fa fa-plus-circle"></i> JOIN TRIP</a>
                         </li>
-                        <!-- NOTE: When the user has already joined the trip. -->
+                        
+                        <!-- NOTE: When user is hosting the trip. -->
+                        <!--
+                        <li><a href="#trip_join" id="nav_join_trip"><i class="fa fa-group"></i> HOSTING</a>
+                        </li>
+                        -->
+                        
+                        <!-- NOTE: When user has already joined the trip. -->
                         <!--
                         <li><a href="#trip_join" id="nav_join_trip"><i class="fa fa-check-circle"></i> JOINED</a>
                         </li>
@@ -103,11 +110,17 @@
             <a href="#trip_join">
                 <button class="btn btn-success btn-join"><i class="fa fa-plus-circle"></i> JOIN</button>
             </a>
-            <!-- NOTE: When the user has already joined the trip. -->
+            <!-- TODO: Add FB Share button. -->
+            
+            <!-- NOTE: When user is hosting the trip. -->
+            <!--
+            <button class="btn btn-success btn-joined"><i class="fa fa-group"></i> HOSTING</button>
+            -->
+            
+            <!-- NOTE: When user has already joined the trip. -->
             <!--
             <button class="btn btn-success btn-joined"><i class="fa fa-check-circle"></i> JOINED</button>
             -->
-            <!-- TODO: Add FB Share button. -->
         </div>
 
 
@@ -284,16 +297,23 @@
             <h1>JOIN THIS TRIP</h1>
             <!-- NOTE: Add payment button here. -->
             
-            <!-- NOTE: When user is not signed in yet. -->
+            
+            <!-- NOTE: When user has not signed in yet. -->
             <!--
             <a href="sign-in.html">
                 <button class="btn btn-primary">SIGN IN</button>
             </a>
             -->
             
-            <!-- NOTE: When the user has already joined the trip. -->
+            <!-- NOTE: When user is hosting the trip. -->
             <!--
-            <h1>YOU HAVE JOINED THIS TRIP</h1>
+            <h1>YOU ARE HOSTING THIS TRIP!</h1>
+            <h4>If you can't make it and would like to cancel this trip, please <a href="mailto:tripbuddysg@gmail.com?Subject=Cancellation%20of%20Trip">contact us</a><strong>immediately</strong>.</h4>
+            -->
+            
+            <!-- NOTE: When user has already joined the trip. -->
+            <!--
+            <h1>YOU HAVE ALREADY JOINED THIS TRIP!</h1>
             <h4>If you can't make it and would like a partial refund, please <a href="feedback.html">contact us</a>.</h4>
             -->
         </div>

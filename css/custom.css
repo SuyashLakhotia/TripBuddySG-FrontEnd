@@ -382,6 +382,9 @@ Trip Grid Link
 ************************************************************************/
 
 .trip-grid-link {
+    width: 100%;
+    height: 0;
+    padding-bottom: 120%;
     margin-bottom: 40px;
 }
 
@@ -782,7 +785,7 @@ HOME PAGE STYLES
 
 .home-grid .err-search {
     margin-top: 0px;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
 }
 
 .home-grid .err-search p {
