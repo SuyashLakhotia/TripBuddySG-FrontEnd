@@ -45,7 +45,14 @@
     <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- TODO: Add FB Share metadata for individual trips. -->
+    <!-- NOTE: Add 'content' for meta tags below. -->
+    <meta property="og:url" content="<<Trip URL>>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="TripBuddy.sg" />
+    <meta property="og:title" content="<<Trip Name>>" />
+    <meta property="og:description" content="<<Trip Tagline>>" />
+    <meta property="og:image" content="<<Trip Image Absolute URL>>" />
+    <meta property="fb:app_id" content="1681340718812167" />
 
     <title>Trip X | TripBuddy.SG</title>
 </head>
@@ -100,7 +107,7 @@
             <!--
             <button class="btn btn-success btn-joined"><i class="fa fa-check-circle"></i> JOINED</button>
             -->
-            <!-- TODO: Add FB Share button for individual trips. -->
+            <!-- TODO: Add FB Share button. -->
         </div>
 
 
@@ -276,6 +283,13 @@
         <div class="container-fluid row trip-join" id="trip_join">
             <h1>JOIN THIS TRIP</h1>
             <!-- NOTE: Add payment button here. -->
+            
+            <!-- NOTE: When user is not signed in yet. -->
+            <!--
+            <a href="sign-in.html">
+                <button class="btn btn-primary">SIGN IN</button>
+            </a>
+            -->
             
             <!-- NOTE: When the user has already joined the trip. -->
             <!--

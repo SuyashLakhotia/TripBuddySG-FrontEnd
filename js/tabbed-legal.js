@@ -1,3 +1,7 @@
+/*************************************************************************
+TripBuddy.sg (c) 2015. All rights reserved.
+*************************************************************************/
+
 jQuery(document).ready(function () {
     jQuery('.legal-pills .nav-pills a').on('click', function (e) {
         var currentAttrValue = jQuery(this).attr('href');

@@ -1,6 +1,10 @@
+/*************************************************************************
+TripBuddy.sg (c) 2015. All rights reserved.
+*************************************************************************/
+
 function configureDropDownLists(university, school) {
     var NTU = ['Nanyang Business School', 'School of Chemical and Biomedical Engineering', 'School of Civil and Environmental Engineering', 'School of Computer Engineering', 'School of Electrical and Electronic Engineering', 'School of Materials Science and Engineering', 'School of Mechanical and Aerospace Engineering', 'School of Art, Design and Media', 'School of Humanities and Social Sciences', 'Wee Kim Wee School of Communication and Information', 'School of Biological Sciences', 'School of Physical and Mathematical Sciences', 'Lee Kong Chian School of Medicine'];
-    var NUS = ['Faculty of Arts & Social Sciences','NUS Business School', 'School of Computing', 'Faculty of Dentistry', 'School of Design & Environment', 'Faculty of Engineering', 'Yong Loo Lin School of Medicine', 'Faculty of Science', 'Lee Kuan Yew School of Public Policy', 'Faculty of Law'];
+    var NUS = ['Faculty of Arts & Social Sciences', 'NUS Business School', 'School of Computing', 'Faculty of Dentistry', 'School of Design & Environment', 'Faculty of Engineering', 'Yong Loo Lin School of Medicine', 'Faculty of Science', 'Lee Kuan Yew School of Public Policy', 'Faculty of Law'];
     var SMU = ['School of Accountancy', 'Lee Kong Chian School of Business', 'School of Economics', 'School of Information Systems', 'School of Law', 'School of Social Sciences'];
 
     switch (university.value) {
@@ -30,7 +34,6 @@ function configureDropDownLists(university, school) {
         createOption(school, "", "");
         break;
     }
-
 }
 
 function createOption(ddl, text, value) {

@@ -1,3 +1,7 @@
+/*************************************************************************
+TripBuddy.sg (c) 2015. All rights reserved.
+*************************************************************************/
+
 // jQuery to Collapse Navbar on Scroll:
 $(window).scroll(function() {
     if ($(".navbar").offset().top > 70) {

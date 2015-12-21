@@ -1,3 +1,7 @@
+/*************************************************************************
+TripBuddy.sg (c) 2015. All rights reserved.
+*************************************************************************/
+
 $(document).ready(function () {
     var show_per_page = 9; // items to show per page
     var number_of_items = $('#hosts-grid').find('.host-grid-link').size(); // total number of items

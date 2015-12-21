@@ -1,3 +1,7 @@
+/*************************************************************************
+TripBuddy.sg (c) 2015. All rights reserved.
+*************************************************************************/
+
 function validateForm() {
     $('.form-empty').css('display', 'none');
     $('.form-invalid-checkbox').css('display', 'none');
