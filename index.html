@@ -82,11 +82,17 @@
                                 <form name="emailForm" class="form-horizontal" role="form" onsubmit="return validateForm()" action="" method="post" novalidate>
                                     <div class="form-group">
                                         <label class="control-label col-md-2" for="email">E-Mail:</label>
-                                        <div class="col-md-8">
+                                        <div class="col-md-10">
                                             <input type="email" class="form-control" id="email" name="email" value="olivia@wilde.com" placeholder="e.g. john@doe.com" required>
                                         </div>
-                                        <div class="col-md-2">
-                                            <button type="submit" class="btn btn-success">CHANGE</button>
+                                        <hr>
+                                        <div class="row btn-row">
+                                            <div class="col-md-3 col-md-offset-3">
+                                                <button type="submit" class="btn btn-success">CHANGE</button>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <button class="btn btn-success" data-dismiss="modal">NOPE</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </form>
@@ -102,14 +108,10 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Modal Footer -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                    </div>
                 </div>
             </div>
         </div>
-        
+
         <!-- NOTE: Script to activate e-mail modal. -->
         <!--
         <script>
@@ -130,7 +132,9 @@
         <div class="home-grid">
             <!-- Trips Happening Soon Grid -->
             <div class="grid-trips-soon">
-                <h1>HAPPENING SOON <i class="fa fa-plus"></i></h1>
+                <a href="view-all-trips.html">
+                    <h1>HAPPENING SOON <i class="fa fa-plus"></i></h1>
+                </a>
 
                 <div class="container-fluid row">
                     <!-- NOTE: When there are no trips happening soon. -->
@@ -263,7 +267,9 @@
 
             <!-- Promotional Video -->
             <div id="promotional_video">
-                <h1>PAST EVENTS <i class="fa fa-plus"></i></h1>
+                <a href="testimonials.html">
+                    <h1>PAST EVENTS <i class="fa fa-plus"></i></h1>
+                </a>
                 <div class="container-fluid row">
                     <div class="col-md-10 col-md-offset-1">
                         <div class="embed-responsive embed-responsive-16by9">
@@ -316,6 +322,15 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                
+                <!-- View All Hosts Button -->
+                <div class="container-fluid row view-all">
+                    <div class="col-md-6 col-md-offset-3">
+                        <a href="/view-all-hosts.html">
+                            <button class="btn btn-primary btn-view-all">VIEW ALL HOSTS</button>
+                        </a>
                     </div>
                 </div>
             </div>

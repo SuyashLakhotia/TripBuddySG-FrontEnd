@@ -90,7 +90,7 @@ div[class*="form-invalid-"],
 .err-search p {
     text-align: center;
     font-weight: 700;
-    font-size: 50px;
+    font-size: 30px;
     letter-spacing: 1px;
     color: rgba(82, 82, 82, 0.75);
 }
@@ -773,8 +773,13 @@ HOME PAGE STYLES
     margin-bottom: 10px;
 }
 
+#emailModal .btn-row {
+    padding-top: 30px;
+}
+
 #emailModal .btn-success {
     text-align: center;
+    width: 100%;
 }
 
 .home-grid {
@@ -836,10 +841,6 @@ HOME PAGE STYLES
 .home-grid #promotional_video iframe {
     display: block;
     margin: 0 auto;
-}
-
-.home-grid .grid-hosts {
-    margin-bottom: -30px;
 }
 
 @media (max-width: 768px) {
@@ -930,11 +931,6 @@ TRIP PAGE STYLES
     margin-top: 15px;
 }
 
-.trip-details .trip-user-list img {
-    height: 50px;
-    width: 50px;
-}
-
 .trip-details .field-name h3 {
     text-align: left;
     font-size: 14px;
@@ -974,6 +970,10 @@ TRIP PAGE STYLES
 
 .trip-join h1 {
     margin-bottom: 10px;
+}
+
+.trip-join h3 {
+    margin-bottom: 18px;
 }
 
 .trip-join .btn-primary {
@@ -1174,12 +1174,6 @@ VIEW HOSTS PAGE STYLES
     padding: 10px 0px 10px 0px;
 }
 
-[id^="hostModal"] .trip-grid-link .tagline {
-    margin-top: 60px;
-    font-size: 14px;
-    padding: 10px 10px 20px 10px;
-}
-
 [id^="hostModal"] .btn-primary {
     padding: 5px 20px;
 }
@@ -1233,7 +1227,7 @@ SIGN IN PAGE STYLES
 }
 
 .sign-in-content .sign-in-logo {
-    padding-top: 12%;
+    padding-top: 10%;
 }
 
 .sign-in-content .sign-in-logo img {
@@ -1297,6 +1291,10 @@ SIGN IN PAGE STYLES
     transition: background .2s ease-in-out;
 }
 
+.sign-in-content .sign-in-buttons p {
+    padding: 50px 10px 0px;
+}
+
 .sign-in-content .sign-in-footer {
     margin-top: 40px;
     text-align: center;
@@ -1344,7 +1342,7 @@ HOST REGISTRATION PAGE STYLES
 }
 
 .regForm {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .registration-content .registration-button {
@@ -1385,7 +1383,7 @@ HOST PROFILE PAGE STYLES
 }
 
 .hostForm {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .host-profile .update-profile-button {
