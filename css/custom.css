@@ -321,7 +321,7 @@ FOOTER STYLES
     color: #ffffff;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
-    -o-transiton: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
 
@@ -329,7 +329,7 @@ FOOTER STYLES
     background-color: #3B5998;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
-    -o-transiton: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
 
@@ -337,7 +337,7 @@ FOOTER STYLES
     background-color: #4099ff;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
-    -o-transiton: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
 
@@ -345,7 +345,7 @@ FOOTER STYLES
     background-color: #125688;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
-    -o-transiton: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
 
@@ -353,7 +353,7 @@ FOOTER STYLES
     background-color: #e52d27;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
-    -o-transiton: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
 
@@ -466,7 +466,7 @@ Home Page
 ************************************************************************/
 
 .home-jumbotron {
-    padding-top: 10%;
+    padding-top: 9%;
     color: #ffffff;
     text-align: center;
     display: block;
@@ -1227,7 +1227,7 @@ SIGN IN PAGE STYLES
 }
 
 .sign-in-content .sign-in-logo {
-    padding-top: 10%;
+    padding-top: 7.5%;
 }
 
 .sign-in-content .sign-in-logo img {
@@ -1271,7 +1271,7 @@ SIGN IN PAGE STYLES
     background: #2f4779;
     -webkit-transition: background .2s ease-in-out;
     -moz-transition: background .2s ease-in-out;
-    -o-transiton: background .2s ease-in-out;
+    -o-transition: background .2s ease-in-out;
     transition: background .2s ease-in-out;
 }
 
@@ -1279,7 +1279,7 @@ SIGN IN PAGE STYLES
     background: #1f87ff;
     -webkit-transition: background .2s ease-in-out;
     -moz-transition: background .2s ease-in-out;
-    -o-transiton: background .2s ease-in-out;
+    -o-transition: background .2s ease-in-out;
     transition: background .2s ease-in-out;
 }
 
@@ -1287,12 +1287,12 @@ SIGN IN PAGE STYLES
     background: #d92717;
     -webkit-transition: background .2s ease-in-out;
     -moz-transition: background .2s ease-in-out;
-    -o-transiton: background .2s ease-in-out;
+    -o-transition: background .2s ease-in-out;
     transition: background .2s ease-in-out;
 }
 
 .sign-in-content .sign-in-buttons p {
-    padding: 50px 10px 0px;
+    padding: 50px 15px 0px;
 }
 
 .sign-in-content .sign-in-footer {
@@ -1842,3 +1842,12 @@ TESTIMONIALS PAGE STYLES
         text-align: center;
     }
 }
+
+
+/*********************************************
+* {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+}
+**********************************************/
