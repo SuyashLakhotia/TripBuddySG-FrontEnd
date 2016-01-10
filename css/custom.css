@@ -1,5 +1,5 @@
 /*************************************************************************
-TripBuddy.sg (c) 2015. All rights reserved.
+TripBuddy.sg (c) 2016. All rights reserved.
 *************************************************************************/
 
 
@@ -120,6 +120,7 @@ NAVBAR STYLES
 .navbar-default .navbar-nav > li > a {
     color: #ffffff;
     line-height: 25px;
+    font-size: 15px;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
@@ -314,10 +315,15 @@ FOOTER STYLES
     color: #e52d27;
 }
 
+.footer .icon-button .fa-envelope {
+    color: #ffa500;
+}
+
 .footer .icon-button:hover .fa-facebook,
 .footer .icon-button:hover .fa-twitter,
 .footer .icon-button:hover .fa-instagram,
-.footer .icon-button:hover .fa-youtube-play {
+.footer .icon-button:hover .fa-youtube-play,
+.footer .icon-button:hover .fa-envelope {
     color: #ffffff;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
@@ -354,6 +360,14 @@ FOOTER STYLES
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.footer .icon-button:hover.email {
+    background-color: #ffa500;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transiton: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
 
@@ -1404,20 +1418,20 @@ ABOUT US PAGE STYLES
 
 ************************************************************************/
 
-.about-us-intro {
-    padding: 50px 30px 30px 30px;
+.about-us-intro,
+.about-us-mission {
+    padding: 20px 30px 30px 30px;
     background: #e8f7fd;
+}
+
+.about-us-intro {
+    padding-top: 50px;
 }
 
 .about-us-origin,
 .about-us-team {
     padding: 20px 30px 30px 30px;
     background: #ffffff;
-}
-
-.about-us-mission {
-    padding: 20px 30px 30px 30px;
-    background: #e8f7fd;
 }
 
 .about-us-intro p,
@@ -1824,7 +1838,7 @@ TESTIMONIALS PAGE STYLES
     background: #ffffff;
     padding: 15px 15px 15px 15px;
     border: 1px solid #C4C4C4;
-    border-radius: 5%;
+    border-radius: 10px;
 }
 
 .testimonials-content .testimonial-text p {

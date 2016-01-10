@@ -1,5 +1,5 @@
 /*************************************************************************
-TripBuddy.sg (c) 2015. All rights reserved.
+TripBuddy.sg (c) 2016. All rights reserved.
 *************************************************************************/
 
 function configureDropDownLists(university, school) {

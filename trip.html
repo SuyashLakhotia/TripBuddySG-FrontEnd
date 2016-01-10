@@ -60,7 +60,7 @@
     <div class="overflowWrap">
 
         <!-- NAVBAR -->
-        <nav class="navbar navbar-default navbar-fixed-top custom-navbar" role="navigation">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
@@ -83,13 +83,13 @@
                         </li>
                         <li><a href="#trip_join" id="nav_join_trip"><i class="fa fa-plus-circle"></i> JOIN TRIP</a>
                         </li>
-                        
+
                         <!-- NOTE: When user is hosting the trip. -->
                         <!--
                         <li><a href="#trip_join" id="nav_join_trip"><i class="fa fa-group"></i> HOSTING</a>
                         </li>
                         -->
-                        
+
                         <!-- NOTE: When user has already joined the trip. -->
                         <!--
                         <li><a href="#trip_join" id="nav_join_trip"><i class="fa fa-check-circle"></i> JOINED</a>
@@ -157,25 +157,25 @@
                     <div class="col-md-3 col-xs-3">
                         <a href="http://www.facebook.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Olivia Wilde"><img src="/img/sample-avatar.png" class="img-responsive trip-user-img"></a>
                     </div>
-                     <div class="col-md-3 col-xs-3">
+                    <div class="col-md-3 col-xs-3">
                         <a href="http://www.facebook.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Olivia Wilde"><img src="/img/sample-avatar.png" class="img-responsive trip-user-img"></a>
                     </div>
-                     <div class="col-md-3 col-xs-3">
+                    <div class="col-md-3 col-xs-3">
                         <a href="http://www.facebook.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Olivia Wilde"><img src="/img/sample-avatar.png" class="img-responsive trip-user-img"></a>
                     </div>
-                     <div class="col-md-3 col-xs-3">
+                    <div class="col-md-3 col-xs-3">
                         <a href="http://www.facebook.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Olivia Wilde"><img src="/img/sample-avatar.png" class="img-responsive trip-user-img"></a>
                     </div>
-                     <div class="col-md-3 col-xs-3">
+                    <div class="col-md-3 col-xs-3">
                         <a href="http://www.facebook.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Olivia Wilde"><img src="/img/sample-avatar.png" class="img-responsive trip-user-img"></a>
                     </div>
-                     <div class="col-md-3 col-xs-3">
+                    <div class="col-md-3 col-xs-3">
                         <a href="http://www.facebook.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Olivia Wilde"><img src="/img/sample-avatar.png" class="img-responsive trip-user-img"></a>
                     </div>
-                     <div class="col-md-3 col-xs-3">
+                    <div class="col-md-3 col-xs-3">
                         <a href="http://www.facebook.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Olivia Wilde"><img src="/img/sample-avatar.png" class="img-responsive trip-user-img"></a>
                     </div>
-                     <div class="col-md-3 col-xs-3">
+                    <div class="col-md-3 col-xs-3">
                         <a href="http://www.facebook.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Olivia Wilde"><img src="/img/sample-avatar.png" class="img-responsive trip-user-img"></a>
                     </div>
                 </div>
@@ -296,33 +296,33 @@
         <div class="container-fluid row trip-join" id="trip_join">
             <h1>JOIN THIS TRIP</h1>
             <!-- NOTE: Add payment button here. -->
-            
-            
+
+
             <!-- NOTE: When user has not signed in yet. -->
             <!--
             <a href="sign-in.html">
                 <button class="btn btn-primary">SIGN IN</button>
             </a>
             -->
-            
+
             <!-- NOTE: When it is less than 6 hours for the trip to start. -->
             <!--
             <h3>Sorry, you can no longer join this trip.</h3>
             <h4>It is less than eight hours before the trip starts. You can check out more trips <a href="view-all-trips.html">here</a>, though!</h4>
             -->
-            
+
             <!-- NOTE: When the max group size is exceeded. -->
             <!--
             <h3>Sorry, you can no longer join this trip.</h3>
             <h4>The maximum group size has been met. You can check out more trips <a href="view-all-trips.html">here</a>, though!</h4>
             -->
-            
+
             <!-- NOTE: When user is hosting the trip. -->
             <!--
             <h3>YOU ARE HOSTING THIS TRIP!</h3>
             <h4>If you can't make it and would like to cancel this trip, please <a href="mailto:contact@tripbuddy.sg?Subject=Cancellation%20of%20Trip">contact us</a><strong>immediately</strong>.</h4>
             -->
-            
+
             <!-- NOTE: When user has already joined the trip. -->
             <!-- NOTE: Refund only applicable if earlier than 00:00 day before trip. -->
             <!--
@@ -339,10 +339,10 @@
 
     <!-- NAVBAR COLLAPSE FIX ON MOBILE FOR #LINKS -->
     <script>
-        $(document).on('click', '.navbar-collapse.in', function (e) {
-            if ($(e.target).is('a')) {
-                $(this).collapse('hide');
-            }
+        $(document).ready(function () {
+            $(".navbar-nav li a").click(function (event) {
+                $(".navbar-collapse").collapse('hide');
+            });
         });
     </script>
 </body>
