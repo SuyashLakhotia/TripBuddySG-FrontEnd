@@ -1065,8 +1065,10 @@ NEW TRIP PAGE STYLES
     padding-top: 0.5%;
 }
 
+#trip_form .items-list,
 #trip_form .includes-arr,
 #trip_form .excludes-arr,
+#trip_form .items-list li,
 #trip_form .includes-arr li,
 #trip_form .excludes-arr li {
     list-style: none;

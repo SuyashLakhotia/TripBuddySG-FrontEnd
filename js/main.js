@@ -12,7 +12,21 @@ $(window).scroll(function () {
 });
 
 
-// jQuery to Add More Textboxes for Includes/Excludes
+// jQuery to Add More Textboxes for Items to Bring, Includes & Excludes Lists:
+$(function () {
+    $('#addItems').click(function () {
+        var li = $('.items-list li:first').clone().appendTo($('.items-list'));
+
+        // empty the value if something is already filled in the cloned copy
+        li.children('input').val('');
+
+        // disable button if its the 10th that was added
+        if ($('.items-list').children().length == 10) {
+            $(this).attr('disabled', true);
+        }
+    });
+});
+
 $(function () {
     $('#addIncludes').click(function () {
         var li = $('.includes-arr li:first').clone().appendTo($('.includes-arr'));
