@@ -2,7 +2,7 @@
 TripBuddy.sg (c) 2016. All rights reserved.
 *************************************************************************/
 
-// jQuery to Collapse Navbar on Scroll:
+// Script to Collapse Navbar on Scroll:
 $(window).scroll(function () {
     if ($(".navbar").offset().top > 70) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
@@ -12,7 +12,7 @@ $(window).scroll(function () {
 });
 
 
-// jQuery to Add More Textboxes for Items to Bring, Includes & Excludes Lists:
+// Script to Add More Textboxes for Items to Bring, Includes & Excludes Lists:
 $(function () {
     $('#addItems').click(function () {
         var li = $('.items-list li:first').clone().appendTo($('.items-list'));
@@ -56,7 +56,7 @@ $(function () {
 });
 
 
-// JavaScript for Anchor Link Scroll Animations:
+// Script for Anchor Link Scroll Animations:
 $(function () {
     $('a[href*=#]:not([href=#])').click(function () {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {

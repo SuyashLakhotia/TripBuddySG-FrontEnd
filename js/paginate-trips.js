@@ -11,7 +11,7 @@ $(document).ready(function () {
     $('#current_page').val(0);
     $('#show_per_page').val(show_per_page);
 
-    
+
     // Creating the navigation buttons:
     var navigation_html = '<ul class="pagination pagination-lg">';
     var current_link = 0;
@@ -26,17 +26,13 @@ $(document).ready(function () {
     // Add "active" class to first page link:
     $('#trip_page_nav li:first').addClass('active');
 
-    
+
     // Hide all elements inside grid:
     $('#trips-grid').children().css('display', 'none');
 
     // Show the first n (show_per_page) elements:
     $('#trips-grid').children().slice(0, show_per_page).css('display', 'block');
 });
-
-function scroll_to_start() {
-    $(document).scrollTop($("#trips-grid").offset().top);
-}
 
 function go_to_page(page_num) {
     // Get the number of items shown per page:
@@ -56,4 +52,8 @@ function go_to_page(page_num) {
     $('#current_page').val(page_num);
 
     scroll_to_start();
+}
+
+function scroll_to_start() {
+    $(document).scrollTop($("#trips-grid").offset().top);
 }

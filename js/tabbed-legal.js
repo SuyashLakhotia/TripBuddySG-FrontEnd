@@ -9,7 +9,7 @@ jQuery(document).ready(function () {
         // Show & Hide Tabs:
         jQuery('.legal-content ' + currentAttrValue).show().siblings().hide();
 
-        // Change & Remove current tab to active:
+        // Change .active Tab:
         jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
 
         e.preventDefault();

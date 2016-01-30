@@ -58,10 +58,10 @@
         </div>
 
 
-        <!-- FEEDBACK FORM -->
+        <!-- FEEDBACK FORM & CONTACT DETAILS -->
         <div class="container-fluid feedback-content">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-8 feedback-form">
                     <h1>WE WANT TO HEAR YOU</h1>
                     <form name="feedbackForm" class="form-horizontal" role="form" onsubmit="return validateForm()" action="" method="post" novalidate>
                         <div class="form-group">
@@ -88,17 +88,21 @@
                             </div>
                         </div>
                     </form>
-                    <div class="alert alert-danger form-empty" role="alert">
-                        <strong>Oops!</strong> All fields are required.
-                    </div>
-                    <div class="alert alert-warning form-invalid-email" role="alert">
-                        <strong>Oops!</strong> Not a valid e-mail address.
-                    </div>
-                    <div class="alert alert-success form-success" role="alert">
-                        <strong>Success!</strong> Your feedback has been recorded.
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="alert alert-danger form-empty" role="alert">
+                                <strong>Oops!</strong> All fields are required.
+                            </div>
+                            <div class="alert alert-warning form-invalid-email" role="alert">
+                                <strong>Oops!</strong> Not a valid e-mail address.
+                            </div>
+                            <div class="alert alert-success form-success" role="alert">
+                                <strong>Success!</strong> Your feedback has been recorded.
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 feedback-contact">
                     <h1>GET IN TOUCH</h1>
                     <h3><i class="fa fa-phone"></i> +65 9380 8437</h3>
                     <h3><i class="fa fa-envelope"></i> contact@tripbuddy.sg</h3>

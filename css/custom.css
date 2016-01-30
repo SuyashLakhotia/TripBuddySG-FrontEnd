@@ -3,11 +3,11 @@ TripBuddy.sg (c) 2016. All rights reserved.
 *************************************************************************/
 
 
-/**************************** Values Used ********************************
-Blue: #25b0e9;
+/*************************** Values Used *********************************
+TripBuddy Blue: #25b0e9;
 Dark Blue (for button hover): #159cd1;
 Light Blue (for background): #e8f7fd;
-Green: #78be5d;
+TripBuddy Green: #78be5d;
 Dark Green (for button hover): #5da441;
 Font 1: 'Open Sans', sans-serif;
 Font 2: 'Raleway', sans-serif;
@@ -546,8 +546,8 @@ Home Page
 Trip & New Trip Pages
 ************************************************************************/
 
-.trip-banner,
-.new-trip-banner {
+.trip-jumbotron,
+.new-trip-jumbotron {
     height: 80%;
     margin-bottom: 30px;
     padding: 1px 40px;
@@ -557,73 +557,73 @@ Trip & New Trip Pages
     background-size: cover;
 }
 
-.trip-banner h1,
-.new-trip-banner h1 {
+.trip-jumbotron h1,
+.new-trip-jumbotron h1 {
     font-family: 'Raleway', sans-serif;
     font-size: 85px;
     letter-spacing: 4.5px;
 }
 
-.new-trip-banner h3 {
+.new-trip-jumbotron h3 {
     font-size: 34px;
     line-height: 50px;
 }
 
-.trip-banner h3 {
+.trip-jumbotron h3 {
     font-size: 28px;
     line-height: 35px;
 }
 
-.trip-banner h4 {
+.trip-jumbotron h4 {
     font-size: 22px;
     margin-top: 30px;
 }
 
-.trip-banner .btn-join,
-.new-trip-banner .btn-join,
-.trip-banner .btn-joined {
+.trip-jumbotron .btn-join,
+.trip-jumbotron .btn-joined,
+.new-trip-jumbotron .btn-join {
     font-size: 20px;
     margin-top: 30px;
     padding: 10px 30px;
 }
 
-.trip-banner .btn-joined {
+.trip-jumbotron .btn-joined {
     background: #5da441;
 }
 
 @media (max-width: 767px) {
-    .trip-banner,
-    .new-trip-banner {
+    .trip-jumbotron,
+    .new-trip-jumbotron {
         height: 100%;
         padding-right: 15px;
         padding-left: 15px;
     }
-    .trip-banner h1,
-    .new-trip-banner h1 {
+    .trip-jumbotron h1,
+    .new-trip-jumbotron h1 {
         font-size: 40px;
     }
-    .trip-banner h3,
-    .new-trip-banner h3 {
+    .trip-jumbotron h3,
+    .new-trip-jumbotron h3 {
         font-size: 20px;
         line-height: normal;
     }
-    .trip-banner h4 {
+    .trip-jumbotron h4 {
         font-size: 18px;
         margin-top: 20px;
     }
-    .trip-banner .btn-join,
-    .new-trip-banner .btn-join,
-    .trip-banner .btn-joined {
+    .trip-jumbotron .btn-join,
+    .trip-jumbotron .btn-joined,
+    .new-trip-jumbotron .btn-join {
         font-size: 18px;
     }
 }
 
 
 /************************************************************************
-Trip Added Page
+New Trip Added Page
 ************************************************************************/
 
-.trip-added-banner {
+.trip-added-jumbotron {
     height: 100%;
     padding-top: 1px;
     text-align: center;
@@ -633,13 +633,13 @@ Trip Added Page
     background-size: cover;
 }
 
-.trip-added-banner h1 {
+.trip-added-jumbotron h1 {
     font-family: 'Raleway', sans-serif;
     font-size: 95px;
     letter-spacing: 4.5px;
 }
 
-.trip-added-banner .btn {
+.trip-added-jumbotron .btn {
     font-size: 20px;
     margin-top: 60px;
     margin-right: 20px;
@@ -648,12 +648,12 @@ Trip Added Page
 }
 
 @media (max-width: 767px) {
-    .trip-added-banner h1 {
+    .trip-added-jumbotron h1 {
         font-size: 40px;
         margin-bottom: 30px;
         letter-spacing: 3px;
     }
-    .trip-added-banner .btn {
+    .trip-added-jumbotron .btn {
         font-size: 16px;
         width: 70%;
         margin-top: 30px;
@@ -662,7 +662,7 @@ Trip Added Page
 
 
 /************************************************************************
-Trips Grid, Hosts Grid, About Us, Feedback, Legal, Testimonial & 
+View All Trips, View All Hosts, About Us, Feedback, Legal, Testimonial & 
 Why Host Pages
 ************************************************************************/
 
@@ -726,7 +726,7 @@ Why Host Pages
 
 
 /************************************************************************
-Registration & Host Profile Pages
+Host Registration & Host Profile Pages
 ************************************************************************/
 
 .registration-jumbotron,
@@ -1597,11 +1597,11 @@ FEEDBACK PAGE STYLES
     padding: 30px 30px 50px 30px;
 }
 
-.feedback-content .col-md-8 {
+.feedback-content .feedback-form {
     border-right: 2px dashed #25b0e9;
 }
 
-.feedback-content .col-md-4 {
+.feedback-content .feedback-contact {
     padding-left: 30px;
 }
 
@@ -1613,11 +1613,11 @@ FEEDBACK PAGE STYLES
     color: #25b0e9;
 }
 
-.feedback-content .col-md-4 h1 {
+.feedback-content .feedback-contact h1 {
     text-align: left;
 }
 
-.feedback-content .col-md-4 h3 {
+.feedback-content .feedback-contact h3 {
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
     text-align: left;
@@ -1634,15 +1634,15 @@ FEEDBACK PAGE STYLES
 }
 
 @media (max-width: 768px) {
-    .feedback-content .col-md-8 {
+    .feedback-content .feedback-form {
         margin-bottom: 80px;
         border-right: none;
     }
-    .feedback-content .col-md-4 {
+    .feedback-content .feedback-contact {
         padding-left: 0;
     }
-    .feedback-content .col-md-4 h1,
-    .feedback-content .col-md-4 h3 {
+    .feedback-content .feedback-contact h1,
+    .feedback-content .feedback-contact h3 {
         text-align: center;
     }
 }

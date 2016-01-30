@@ -2,7 +2,7 @@
 TripBuddy.sg (c) 2016. All rights reserved.
 *************************************************************************/
 
-function validateForm(formName) {
+function validateForm() {
     $('.form-empty').css('display', 'none');
     $('.form-invalid-email').css('display', 'none');
     $('#university').removeClass('form-error');
@@ -14,16 +14,16 @@ function validateForm(formName) {
     $('#tagline').removeClass('form-error');
     $('#descr').removeClass('form-error');
 
-    var university = document.forms[formName]["university"].value;
-    var school = document.forms[formName]["school"].value;
-    var course = document.forms[formName]["course"].value;
-    var study_year = document.forms[formName]["study_year"].value;
-    var email = document.forms[formName]["univ_email"].value;
+    var university = document.forms["editProfileForm"]["university"].value;
+    var school = document.forms["editProfileForm"]["school"].value;
+    var course = document.forms["editProfileForm"]["course"].value;
+    var study_year = document.forms["editProfileForm"]["study_year"].value;
+    var email = document.forms["editProfileForm"]["univ_email"].value;
     var email_atpos = email.indexOf("@");
     var email_dotpos = email.lastIndexOf(".");
-    var matric = document.forms[formName]["univ_matric"].value;
-    var tagline = document.forms[formName]["tagline"].value;
-    var descr = document.forms[formName]["descr"].value;
+    var matric = document.forms["editProfileForm"]["univ_matric"].value;
+    var tagline = document.forms["editProfileForm"]["tagline"].value;
+    var descr = document.forms["editProfileForm"]["descr"].value;
     var valid = true;
 
 
@@ -32,7 +32,7 @@ function validateForm(formName) {
         $('.form-empty').css('display', 'block');
         valid = false;
     }
-    
+
     if (school == null || school == "") {
         $('#school').addClass('form-error');
         $('.form-empty').css('display', 'block');

@@ -44,7 +44,7 @@
     <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- NOTE: Add 'content' for meta tags below. -->
+    <!-- TODO: Add 'content' for meta tags below. -->
     <meta property="og:url" content="<<Trip URL>>" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="TripBuddy.sg" />
@@ -101,8 +101,8 @@
         </nav>
 
 
-        <!-- TRIP BANNER -->
-        <div class="trip-banner">
+        <!-- JUMBOTRON -->
+        <div class="trip-jumbotron">
             <div class="jumbotron-content">
                 <h1>East vs West</h1>
                 <h3>A night where the question of who are better drinkers will forever be answered.</h3>
@@ -119,8 +119,8 @@
 
                 <!-- NOTE: When user has already joined the trip. -->
                 <!--
-            <button class="btn btn-success btn-joined"><i class="fa fa-check-circle"></i> JOINED</button>
-            -->
+                <button class="btn btn-success btn-joined"><i class="fa fa-check-circle"></i> JOINED</button>
+                -->
             </div>
         </div>
 
@@ -155,10 +155,10 @@
                     </div>
                     <!-- NOTE: When nobody's joined the trip yet. -->
                     <!--
-                <div class="row err-search">
-                    <p>Nobody's joined this trip yet.<br>Be the <a href="#trip_join">first one</a>!</p>
-                </div>
-                -->
+                    <div class="row err-search">
+                        <p>Nobody's joined this trip yet.<br>Be the <a href="#trip_join">first one</a>!</p>
+                    </div>
+                    -->
                     <div class="row trip-user-list">
                         <div class="col-md-3 col-xs-3">
                             <a href="http://www.facebook.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Olivia Wilde"><img src="/img/sample-avatar.png" class="img-responsive trip-user-img"></a>
@@ -314,45 +314,46 @@
         </div>
 
 
-        <!-- JOIN TRIP PAYMENT -->
+        <!-- JOIN TRIP + PAYMENT -->
         <div class="container-fluid trip-join" id="trip_join">
             <div class="row">
                 <h1>JOIN THIS TRIP</h1>
-                <!-- NOTE: Add payment button here. -->
 
+                <!-- NOTE: Add payment button here. -->
+                <!-- -->
 
                 <!-- NOTE: When user has not signed in yet. -->
                 <!--
-            <a href="sign-in.html">
-                <button class="btn btn-primary">SIGN IN</button>
-            </a>
-            -->
+                <a href="sign-in.html">
+                    <button class="btn btn-primary">SIGN IN</button>
+                </a>
+                -->
 
-                <!-- NOTE: When it is less than 6 hours for the trip to start. -->
+                <!-- NOTE: When it is less than 8 hours for the trip to start. -->
                 <!--
-            <h3>Sorry, you can no longer join this trip.</h3>
-            <h4>It is less than eight hours before the trip starts. You can check out more trips <a href="view-all-trips.html">here</a>, though!</h4>
-            -->
+                <h3>Sorry, you can no longer join this trip.</h3>
+                <h4>It is less than eight hours before the trip starts. You can check out more trips <a href="view-all-trips.html">here</a>, though!</h4>
+                -->
 
-                <!-- NOTE: When the max group size is exceeded. -->
+                <!-- NOTE: When the max group size is met. -->
                 <!--
-            <h3>Sorry, you can no longer join this trip.</h3>
-            <h4>The maximum group size has been met. You can check out more trips <a href="view-all-trips.html">here</a>, though!</h4>
-            -->
+                <h3>Sorry, you can no longer join this trip.</h3>
+                <h4>The maximum group size has been met. You can check out more trips <a href="view-all-trips.html">here</a>, though!</h4>
+                -->
 
                 <!-- NOTE: When user is hosting the trip. -->
                 <!--
-            <h3>YOU ARE HOSTING THIS TRIP!</h3>
-            <h4>If you can't make it and would like to cancel this trip, please <a href="mailto:contact@tripbuddy.sg?Subject=Cancellation%20of%20Trip">contact us</a><strong>immediately</strong>.</h4>
-            -->
+                <h3>YOU ARE HOSTING THIS TRIP!</h3>
+                <h4>If you can't make it and would like to cancel this trip, please <a href="mailto:contact@tripbuddy.sg?Subject=Cancellation%20of%20Trip">contact us</a><strong>immediately</strong>.</h4>
+                -->
 
                 <!-- NOTE: When user has already joined the trip. -->
                 <!-- NOTE: Refund only applicable if earlier than 00:00 day before trip. -->
                 <!--
-            <h3>YOU HAVE ALREADY JOINED THIS TRIP!</h3>
-            <h4>If you can't make it and would like a partial refund, please <a href="feedback.html">contact us</a>.</h4>
-            <h4>Enjoy your trip and <a href="mailto:contact@tripbuddy.sg">let us know</a> if you have any questions!</h4>
-            -->
+                <h3>YOU HAVE ALREADY JOINED THIS TRIP!</h3>
+                <h4>If you can't make it and would like a partial refund, please <a href="feedback.html">contact us</a>.</h4>
+                <h4>Enjoy your trip and <a href="mailto:contact@tripbuddy.sg">let us know</a> if you have any questions!</h4>
+                -->
             </div>
         </div>
 

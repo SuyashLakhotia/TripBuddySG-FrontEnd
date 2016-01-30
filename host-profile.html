@@ -50,7 +50,7 @@
         <div id="navbarQuery"></div>
 
 
-        <!-- HOST PROFILE JUMBOTRON -->
+        <!-- JUMBOTRON -->
         <div class="container-fluid host-profile-jumbotron">
             <div class="jumbotron-content">
                 <h1>EDIT YOUR PROFILE</h1>
@@ -58,7 +58,7 @@
         </div>
 
 
-        <!-- HOST PROFILE CONTENT -->
+        <!-- HOST PROFILE -->
         <div class="container-fluid host-profile">
             <div class="row">
                 <!-- User Details -->
@@ -75,7 +75,7 @@
 
                 <!-- Edit Profile Form -->
                 <div class="col-md-10 col-md-offset-1 hostForm">
-                    <form name="editProfileForm" class="form-horizontal" role="form" onsubmit="return validateForm('editProfileForm')" action="" method="post" novalidate>
+                    <form name="editProfileForm" class="form-horizontal" role="form" onsubmit="return validateForm()" action="" method="post" novalidate>
                         <div class="form-group">
                             <label class="control-label col-md-2" for="university">University:</label>
                             <div class="col-md-9">
@@ -150,14 +150,18 @@
                             </div>
                         </div>
                     </form>
-                    <div class="alert alert-danger form-empty" role="alert">
-                        <strong>Oops!</strong> All fields are required.
-                    </div>
-                    <div class="alert alert-warning form-invalid-email" role="alert">
-                        <strong>Oops!</strong> Not a valid .edu.sg e-mail address.
-                    </div>
-                    <div class="alert alert-success form-success" role="alert">
-                        <strong>Success!</strong> You have been registered as a host.
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="alert alert-danger form-empty" role="alert">
+                                <strong>Oops!</strong> All fields are required.
+                            </div>
+                            <div class="alert alert-warning form-invalid-email" role="alert">
+                                <strong>Oops!</strong> Not a valid .edu.sg e-mail address.
+                            </div>
+                            <div class="alert alert-success form-success" role="alert">
+                                <strong>Success!</strong> You have been registered as a host.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
