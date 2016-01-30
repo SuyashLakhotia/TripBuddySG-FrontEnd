@@ -5,7 +5,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css" />
 
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
@@ -65,12 +65,12 @@
                     <!-- Modal Header -->
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Olivia Wilde</h4>
+                        <h4 class="modal-title">Would you like to change your e-mail?</h4>
                     </div>
                     <!-- Modal Body -->
                     <div class="modal-body">
                         <div class="row">
-                            <div class="col-md-2 col-md-offset-5">
+                            <div class="col-sm-4 col-sm-offset-4">
                                 <img src="/img/sample-avatar.png" class="img-responsive img-thumbnail">
                             </div>
                         </div>
@@ -78,33 +78,33 @@
                             <div class="col-md-10 col-md-offset-1">
                                 <h1>Welcome, Olivia Wilde!</h1>
                                 <h2>Your current e-mail address is olivia@wilde.com. Would you like to change it?</h2>
-                                <form name="emailForm" class="form-horizontal" role="form" onsubmit="return validateForm()" action="" method="post" novalidate>
-                                    <div class="form-group">
-                                        <label class="control-label col-md-2" for="email">E-Mail:</label>
-                                        <div class="col-md-10">
-                                            <input type="email" class="form-control" id="email" name="email" value="olivia@wilde.com" placeholder="e.g. john@doe.com" required>
-                                        </div>
-                                        <hr>
-                                        <div class="row btn-row">
-                                            <div class="col-md-3 col-md-offset-3">
-                                                <button type="submit" class="btn btn-success">CHANGE</button>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <button class="btn btn-success" data-dismiss="modal">NOPE</button>
-                                            </div>
-                                        </div>
+                            </div>
+                        </div>
+                        <form name="emailForm" class="form-horizontal" role="form" onsubmit="return validateForm()" action="" method="post" novalidate>
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="col-sm-8 col-sm-offset-2">
+                                        <input type="email" class="form-control" id="email" name="email" value="olivia@wilde.com" placeholder="e.g. john@doe.com" required>
                                     </div>
-                                </form>
-                                <div class="alert alert-danger form-empty" role="alert">
-                                    <strong>Oops!</strong> You haven't entered an e-mail address.
-                                </div>
-                                <div class="alert alert-warning form-invalid-email" role="alert">
-                                    <strong>Oops!</strong> Not a valid e-mail address.
-                                </div>
-                                <div class="alert alert-success form-success" role="alert">
-                                    <strong>Success!</strong> E-mail successfully changed.
                                 </div>
                             </div>
+                            <div class="row btn-row">
+                                <div class="col-md-3 col-md-offset-3">
+                                    <button type="submit" class="btn btn-success">CHANGE</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <button class="btn btn-success" data-dismiss="modal">NOPE</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="alert alert-danger form-empty" role="alert">
+                            <strong>Oops!</strong> You haven't entered an e-mail address.
+                        </div>
+                        <div class="alert alert-warning form-invalid-email" role="alert">
+                            <strong>Oops!</strong> Not a valid e-mail address.
+                        </div>
+                        <div class="alert alert-success form-success" role="alert">
+                            <strong>Success!</strong> E-mail successfully changed.
                         </div>
                     </div>
                 </div>
@@ -121,9 +121,11 @@
 
         <!-- JUMBOTRON -->
         <div class="container-fluid home-jumbotron">
-            <h1>EXCHANGE YOUR WORLD</h1>
-            <h2>A truly local experience with local student guides, see Singapore like it was meant to be seen.</h2>
-            <button class="btn btn-primary btn-jumbotron">HOW DOES IT WORK?</button>
+            <div class="jumbotron-content">
+                <h1>EXCHANGE YOUR WORLD</h1>
+                <h2>A truly local experience with local student guides, see Singapore like it was meant to be seen.</h2>
+                <button class="btn btn-primary btn-jumbotron">HOW DOES IT WORK?</button>
+            </div>
         </div>
 
 
@@ -135,60 +137,64 @@
                     <h1>HAPPENING SOON <i class="fa fa-plus"></i></h1>
                 </a>
 
-                <div class="container-fluid row">
-                    <!-- NOTE: When there are no trips happening soon. -->
-                    <!--
-                    <div class="err-search">
-                        <p>Sorry, no trips happening soon.</p>
-                    </div>
-                    -->
-                    <div class="col-md-4">
-                        <div class="row">
-                            <div class="col-md-10 col-md-offset-1">
-                                <a href="/trip.html">
-                                    <div class="trip-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-trip.png) no-repeat center center; background-size: cover;">
-                                        <p class="theme">Nightlife</p>
-                                        <p class="title">East vs West</p>
-                                        <p class="tagline">A night where the question of who are better drinkers will forever be answered.</p>
-                                    </div>
-                                </a>
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- NOTE: When there are no trips happening soon. -->
+                        <!--
+                        <div class="err-search">
+                            <p>Sorry, no trips happening soon.</p>
+                        </div>
+                        -->
+                        <div class="col-sm-6 col-md-4">
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <a href="/trip.html">
+                                        <div class="trip-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/sample-trip.png') no-repeat center center; background-size: cover;">
+                                            <p class="theme">Nightlife</p>
+                                            <p class="title">East vs West</p>
+                                            <p class="tagline">A night where the question of who are better drinkers will forever be answered.</p>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="row">
-                            <div class="col-md-10 col-md-offset-1">
-                                <a href="/trip.html">
-                                    <div class="trip-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-trip.png) no-repeat center center; background-size: cover;">
-                                        <p class="theme">Nightlife</p>
-                                        <p class="title">East vs West</p>
-                                        <p class="tagline">A night where the question of who are better drinkers will forever be answered.</p>
-                                    </div>
-                                </a>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <a href="/trip.html">
+                                        <div class="trip-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/sample-trip.png') no-repeat center center; background-size: cover;">
+                                            <p class="theme">Nightlife</p>
+                                            <p class="title">East vs West</p>
+                                            <p class="tagline">A night where the question of who are better drinkers will forever be answered.</p>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="row">
-                            <div class="col-md-10 col-md-offset-1">
-                                <a href="/trip.html">
-                                    <div class="trip-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-trip.png) no-repeat center center; background-size: cover;">
-                                        <p class="theme">Nightlife</p>
-                                        <p class="title">East vs West</p>
-                                        <p class="tagline">A night where the question of who are better drinkers will forever be answered.</p>
-                                    </div>
-                                </a>
+                        <div class="hidden-sm col-md-4">
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <a href="/trip.html">
+                                        <div class="trip-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/sample-trip.png') no-repeat center center; background-size: cover;">
+                                            <p class="theme">Nightlife</p>
+                                            <p class="title">East vs West</p>
+                                            <p class="tagline">A night where the question of who are better drinkers will forever be answered.</p>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- View All Trips Button -->
-                <div class="container-fluid row view-all">
-                    <div class="col-md-6 col-md-offset-3">
-                        <a href="/view-all-trips.html">
-                            <button class="btn btn-primary btn-view-all">VIEW ALL TRIPS</button>
-                        </a>
+                <div class="container-fluid view-all">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <a href="/view-all-trips.html">
+                                <button class="btn btn-primary btn-view-all">VIEW ALL TRIPS</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -196,69 +202,101 @@
             <!-- Themes Grid -->
             <div class="grid-themes">
                 <h1>THEMES <i class="fa fa-plus"></i></h1>
-                <div class="container-fluid row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="row">
-                            <a href="#">
-                                <div class="col-md-2">
-                                    <button class="btn btn-primary btn-theme">Spa/Relax</button>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="col-md-2">
-                                    <button class="btn btn-primary btn-theme">Beach/Sun</button>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="col-md-2">
-                                    <button class="btn btn-primary btn-theme">Adventure</button>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="col-md-2">
-                                    <button class="btn btn-primary btn-theme">Backpacking</button>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="col-md-2">
-                                    <button class="btn btn-primary btn-theme">Nature/Trekking</button>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="col-md-2">
-                                    <button class="btn btn-primary btn-theme">Photography</button>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="col-md-2">
-                                    <button class="btn btn-primary btn-theme">Art/Culture</button>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="col-md-2">
-                                    <button class="btn btn-primary btn-theme">History</button>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="col-md-2">
-                                    <button class="btn btn-primary btn-theme">Spiritual</button>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="col-md-2">
-                                    <button class="btn btn-primary btn-theme">Nightlife</button>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="col-md-2">
-                                    <button class="btn btn-primary btn-theme">F&B</button>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="col-md-2">
-                                    <button class="btn btn-primary btn-theme">Home/Family</button>
-                                </div>
-                            </a>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="row">
+                                <a href="#">
+                                    <div class="col-md-2 col-sm-6">
+                                        <button class="btn btn-primary btn-theme">Spa/Relax</button>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="col-md-2 col-sm-6">
+                                        <button class="btn btn-primary btn-theme">Beach/Sun</button>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="col-md-2 col-sm-6">
+                                        <button class="btn btn-primary btn-theme">Nature/Green</button>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="col-md-2 col-sm-6">
+                                        <button class="btn btn-primary btn-theme">Spiritual</button>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="col-md-2 col-sm-6">
+                                        <button class="btn btn-primary btn-theme">Photography</button>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="col-md-2 col-sm-6">
+                                        <button class="btn btn-primary btn-theme">Adventure</button>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="col-md-2 col-sm-6">
+                                        <button class="btn btn-primary btn-theme">Backpacker</button>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="col-md-2 col-sm-6">
+                                        <button class="btn btn-primary btn-theme">Sports</button>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="col-md-2 col-sm-6">
+                                        <button class="btn btn-primary btn-theme">Romantic</button>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="col-md-2 col-sm-6">
+                                        <button class="btn btn-primary btn-theme">Nightlife</button>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="col-md-2 col-sm-6">
+                                        <button class="btn btn-primary btn-theme">High Life</button>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="col-md-2 col-sm-6">
+                                        <button class="btn btn-primary btn-theme">F&amp;B</button>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="col-md-2 col-sm-6">
+                                        <button class="btn btn-primary btn-theme">Vegetarian</button>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="col-md-2 col-sm-6">
+                                        <button class="btn btn-primary btn-theme">Budget</button>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="col-md-2 col-sm-6">
+                                        <button class="btn btn-primary btn-theme">Art &amp; Culture</button>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="col-md-2 col-sm-6">
+                                        <button class="btn btn-primary btn-theme">History</button>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="col-md-2 col-sm-6">
+                                        <button class="btn btn-primary btn-theme">LGBT</button>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="col-md-2 col-sm-6">
+                                        <button class="btn btn-primary btn-theme">Home/Family</button>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -269,10 +307,12 @@
                 <a href="testimonials.html">
                     <h1>PAST EVENTS <i class="fa fa-plus"></i></h1>
                 </a>
-                <div class="container-fluid row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/oNWBCNTzsMQ?controls=0;modestbranding=1;rel=0;showinfo=0" allowfullscreen></iframe>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/oNWBCNTzsMQ?controls=0;modestbranding=1;rel=0;showinfo=0" allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -282,54 +322,58 @@
             <div class="grid-hosts">
                 <a href="/view-all-hosts.html"><h1>OUR HOSTS <i class="fa fa-plus"></i></h1></a>
 
-                <div class="container-fluid row">
-                    <!-- NOTE: When there are no hosts registered. -->
-                    <!--
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- NOTE: When there are no hosts registered. -->
+                        <!--
                     <div class="err-search">
                         <p>Sorry, we have no active hosts at the moment.</p>
                     </div>
                     -->
-                    <div class="col-md-4">
-                        <div class="row">
-                            <div class="col-md-10 col-md-offset-1">
-                                <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-host.png) no-repeat center center; background-size: cover;">
-                                    <p class="tag">Host</p>
-                                    <p class="name">Olivia</p>
-                                    <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/sample-host.png') no-repeat center center; background-size: cover;">
+                                        <p class="tag">Host</p>
+                                        <p class="name">Olivia</p>
+                                        <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="row">
-                            <div class="col-md-10 col-md-offset-1">
-                                <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-host.png) no-repeat center center; background-size: cover;">
-                                    <p class="tag">Host</p>
-                                    <p class="name">Olivia</p>
-                                    <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/sample-host.png') no-repeat center center; background-size: cover;">
+                                        <p class="tag">Host</p>
+                                        <p class="name">Olivia</p>
+                                        <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="row">
-                            <div class="col-md-10 col-md-offset-1">
-                                <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-host.png) no-repeat center center; background-size: cover;">
-                                    <p class="tag">Host</p>
-                                    <p class="name">Olivia</p>
-                                    <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
+                        <div class="hidden-sm col-md-4">
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/sample-host.png') no-repeat center center; background-size: cover;">
+                                        <p class="tag">Host</p>
+                                        <p class="name">Olivia</p>
+                                        <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- View All Hosts Button -->
-                <div class="container-fluid row view-all">
-                    <div class="col-md-6 col-md-offset-3">
-                        <a href="/view-all-hosts.html">
-                            <button class="btn btn-primary btn-view-all">VIEW ALL HOSTS</button>
-                        </a>
+                <div class="container-fluid view-all">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <a href="/view-all-hosts.html">
+                                <button class="btn btn-primary btn-view-all">VIEW ALL HOSTS</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

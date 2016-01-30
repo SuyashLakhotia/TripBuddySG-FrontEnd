@@ -5,7 +5,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css" />
 
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
@@ -51,52 +51,58 @@
 
         <!-- JUMBOTRON -->
         <div class="container-fluid feedback-jumbotron">
-            <h1>FEEDBACK</h1>
-            <h2>Got a suggestion? Or a complaint? Let us know!</h2>
+            <div class="jumbotron-content">
+                <h1>FEEDBACK</h1>
+                <h2>Got a suggestion? Or a complaint? Let us know!</h2>
+            </div>
         </div>
 
 
         <!-- FEEDBACK FORM -->
-        <div class="container-fluid row feedback-content">
-            <div class="col-md-8">
-                <h1>WE WANT TO HEAR YOU</h1>
-                <form name="feedbackForm" class="form-horizontal" role="form" onsubmit="return validateForm()" action="" method="post" novalidate>
-                    <div class="form-group">
-                        <label class="control-label col-md-2" for="name">Name:</label>
-                        <div class="col-md-9">
-                            <input type="text" class="form-control" id="name" name="name" placeholder="e.g. John Doe" required>
+        <div class="container-fluid feedback-content">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1>WE WANT TO HEAR YOU</h1>
+                    <form name="feedbackForm" class="form-horizontal" role="form" onsubmit="return validateForm()" action="" method="post" novalidate>
+                        <div class="form-group">
+                            <label class="control-label col-md-2" for="name">Name:</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="e.g. John Doe" required>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-2" for="email">E-Mail:</label>
-                        <div class="col-md-9">
-                            <input type="email" class="form-control" id="email" name="email" placeholder="e.g. john@doe.com" required>
+                        <div class="form-group">
+                            <label class="control-label col-md-2" for="email">E-Mail:</label>
+                            <div class="col-md-9">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="e.g. john@doe.com" required>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-2" for="feedback">Feedback:</label>
-                        <div class="col-md-9">
-                            <textarea type="text" rows="5" class="form-control" id="feedback" name="feedback" required></textarea>
+                        <div class="form-group">
+                            <label class="control-label col-md-2" for="feedback">Feedback:</label>
+                            <div class="col-md-9">
+                                <textarea type="text" rows="5" class="form-control" id="feedback" name="feedback" required></textarea>
+                            </div>
                         </div>
+                        <div class="container-fluid feedback-send">
+                            <div class="row">
+                                <button type="submit" class="btn btn-success btn-feedback">SEND FEEDBACK</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="alert alert-danger form-empty" role="alert">
+                        <strong>Oops!</strong> All fields are required.
                     </div>
-                    <div class="container-fluid row feedback-send">
-                        <button type="submit" class="btn btn-success btn-feedback">SEND FEEDBACK</button>
+                    <div class="alert alert-warning form-invalid-email" role="alert">
+                        <strong>Oops!</strong> Not a valid e-mail address.
                     </div>
-                </form>
-                <div class="alert alert-danger form-empty" role="alert">
-                    <strong>Oops!</strong> All fields are required.
+                    <div class="alert alert-success form-success" role="alert">
+                        <strong>Success!</strong> Your feedback has been recorded.
+                    </div>
                 </div>
-                <div class="alert alert-warning form-invalid-email" role="alert">
-                    <strong>Oops!</strong> Not a valid e-mail address.
+                <div class="col-md-4">
+                    <h1>GET IN TOUCH</h1>
+                    <h3><i class="fa fa-phone"></i> +65 9380 8437</h3>
+                    <h3><i class="fa fa-envelope"></i> contact@tripbuddy.sg</h3>
                 </div>
-                <div class="alert alert-success form-success" role="alert">
-                    <strong>Success!</strong> Your feedback has been recorded.
-                </div>
-            </div>
-            <div class="col-md-4">
-                <h1>GET IN TOUCH</h1>
-                <h3><i class="fa fa-phone"></i> +65 9380 8437</h3>
-                <h3><i class="fa fa-envelope"></i> contact@tripbuddy.sg</h3>
             </div>
         </div>
 

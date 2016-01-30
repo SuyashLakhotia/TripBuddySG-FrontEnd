@@ -3,7 +3,7 @@ TripBuddy.sg (c) 2016. All rights reserved.
 *************************************************************************/
 
 jQuery(document).ready(function () {
-    jQuery('.legal-pills .nav-pills a').on('click', function (e) {
+    jQuery('.legal-pills a').on('click', function (e) {
         var currentAttrValue = jQuery(this).attr('href');
 
         // Show & Hide Tabs:

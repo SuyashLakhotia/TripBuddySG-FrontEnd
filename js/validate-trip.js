@@ -24,6 +24,7 @@ function validateForm() {
     $('#min_group').removeClass('form-error');
     $('#max_group').removeClass('form-error');
     $('#price').removeClass('form-error');
+    $('[id=items]').removeClass('form-error');
     $('[id=includes]').removeClass('form-error');
     $('[id=excludes]').removeClass('form-error');
     $('#theme').removeClass('form-error');
@@ -41,6 +42,7 @@ function validateForm() {
     var min_group = document.forms["tripForm"]["min_group"].value;
     var max_group = document.forms["tripForm"]["max_group"].value;
     var price = document.forms["tripForm"]["price"].value;
+    var items = $('#items').first().val();
     var includes = $('#includes').first().val();
     var excludes = $('#excludes').first().val();
     var theme = document.forms["tripForm"]["theme"].value;
@@ -118,6 +120,12 @@ function validateForm() {
 
     if (price == null || price == "") {
         $('#price').addClass('form-error');
+        $('.form-empty').css('display', 'block');
+        valid = false;
+    }
+    
+    if (items == null || items == "") {
+        $('#items').first().addClass('form-error');
         $('.form-empty').css('display', 'block');
         valid = false;
     }

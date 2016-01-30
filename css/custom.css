@@ -46,24 +46,28 @@ a:active {
     text-decoration: none;
 }
 
+.clickable {
+    cursor: pointer;
+}
+
 .btn-primary {
-    background: #25b0e9;
     border: #25b0e9;
+    background: #25b0e9;
 }
 
 .btn-primary:hover {
-    background: #159cd1;
     border: #159cd1;
+    background: #159cd1;
 }
 
 .btn-success {
-    background: #78be5d;
     border: #78be5d;
+    background: #78be5d;
 }
 
 .btn-success:hover {
-    background: #5da441;
     border: #5da441;
+    background: #5da441;
 }
 
 textarea {
@@ -71,16 +75,16 @@ textarea {
 }
 
 .form-empty,
-div[class^="form-invalid-"],
-div[class*="form-invalid-"],
+div[class^='form-invalid-'],
+div[class*='form-invalid-'],
 .form-success {
+    display: none;
     margin-top: 30px;
     text-align: center;
-    display: none;
 }
 
 .form-error {
-    border: 1px solid #ff0000;
+    border: 1px solid #f00;
 }
 
 .err-search {
@@ -88,16 +92,16 @@ div[class*="form-invalid-"],
 }
 
 .err-search p {
-    text-align: center;
-    font-weight: 700;
     font-size: 30px;
+    font-weight: 700;
+    text-align: center;
     letter-spacing: 1px;
-    color: rgba(82, 82, 82, 0.75);
+    color: rgba(82, 82, 82, .75);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .err-search {
-        margin-top: 0px;
+        margin-top: 0;
     }
     .err-search p {
         font-size: 20px;
@@ -113,46 +117,46 @@ NAVBAR STYLES
 
 .navbar {
     text-transform: uppercase;
+    border-bottom: 1px solid #fff;
     background-color: #25b0e9;
-    border-bottom: 1px solid #ffffff;
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: #ffffff;
-    line-height: 25px;
     font-size: 15px;
+    line-height: 25px;
+    color: #fff;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-    background-color: #159cd1;
-    color: #ffffff;
     -webkit-transition: background .2s ease-in-out;
     -moz-transition: background .2s ease-in-out;
     -o-transition: background .2s ease-in-out;
     transition: background .2s ease-in-out;
+    color: #fff;
+    background-color: #159cd1;
 }
 
 .navbar-default .navbar-nav > li > a:focus {
-    color: #ffffff;
+    color: #fff;
 }
 
 .navbar-default .navbar-nav > li > .dropdown-menu {
-    background-color: #25b0e9;
     border: #159cd1;
+    background-color: #25b0e9;
 }
 
 .navbar-default .navbar-nav > li > .dropdown-menu > li > a {
-    color: #ffffff;
+    color: #fff;
 }
 
 .navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
 .navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
-    color: #ffffff;
-    background-color: #159cd1;
     -webkit-transition: background .2s ease-in-out;
     -moz-transition: background .2s ease-in-out;
     -o-transition: background .2s ease-in-out;
     transition: background .2s ease-in-out;
+    color: #fff;
+    background-color: #159cd1;
 }
 
 .navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
@@ -162,28 +166,28 @@ NAVBAR STYLES
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-    color: #ffffff;
-    background-color: #159cd1;
     -webkit-transition: background .2s ease-in-out;
     -moz-transition: background .2s ease-in-out;
     -o-transition: background .2s ease-in-out;
     transition: background .2s ease-in-out;
+    color: #fff;
+    background-color: #159cd1;
 }
 
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-    color: #ffffff;
-    background-color: #159cd1;
     -webkit-transition: background .2s ease-in-out;
     -moz-transition: background .2s ease-in-out;
     -o-transition: background .2s ease-in-out;
     transition: background .2s ease-in-out;
+    color: #fff;
+    background-color: #159cd1;
 }
 
 .navbar-img {
     height: 55px;
-    padding: 5px 10px 5px 0px;
+    padding: 5px 10px 5px 0;
 }
 
 .navbar-default .navbar-toggle {
@@ -196,24 +200,24 @@ NAVBAR STYLES
 }
 
 .navbar .navbar-toggle .icon-bar {
-    background: #ffffff;
+    background: #fff;
 }
 
 @media (min-width: 1200px) {
     .navbar {
-        padding: 20px 0px 0px 0px;
-        border-bottom: 0;
-        letter-spacing: 1px;
-        background-color: transparent;
+        padding: 20px 0 0 0;
         -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
         -o-transition: background .5s ease-in-out, padding .5s ease-in-out;
         transition: background .5s ease-in-out, padding .5s ease-in-out;
+        letter-spacing: 1px;
+        border-bottom: 0;
+        background-color: transparent;
     }
     .top-nav-collapse {
         padding: 0;
-        background-color: #25b0e9;
         border-bottom: 1px solid #25b0e9;
+        background-color: #25b0e9;
     }
     #nav_host_trip,
     #nav_join_trip {
@@ -226,22 +230,19 @@ NAVBAR STYLES
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-        color: #ffffff;
+        color: #fff;
     }
     .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
     .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-        color: #ffffff;
+        color: #fff;
     }
     .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
     .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
     .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-        color: #ffffff;
+        color: #fff;
         background-color: #159cd1;
-    }
-    .nav .fa {
-        display: none;
     }
     .navbar-img {
         height: 50px;
@@ -257,34 +258,34 @@ FOOTER STYLES
 ************************************************************************/
 
 .footer {
-    background: #25b0e9 url(../img/footprints.png) repeat;
     width: 100%;
-    color: #ffffff;
-    text-align: center;
-    padding: 15px 15px 0px 15px;
     margin-top: 30px;
+    padding: 15px 15px 0 15px;
+    text-align: center;
+    color: #fff;
+    background: #25b0e9 url('../img/footprints.png') repeat;
 }
 
 .footer hr {
     width: 80%;
-    border: 1.5px solid #ffffff;
+    border: 1.5px solid #fff;
 }
 
 .footer h7 {
     font-size: 16px;
     font-weight: bold;
     line-height: 45px;
-    text-transform: uppercase;
     letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .footer .footer-links a p {
     font-size: 14px;
     line-height: 30px;
+    margin: 0 0;
+    padding: 0 0;
     text-decoration: none;
-    color: #ffffff;
-    padding: 0px 0px;
-    margin: 0px 0px;
+    color: #fff;
 }
 
 .footer .footer-links a:hover {
@@ -292,15 +293,16 @@ FOOTER STYLES
 }
 
 .footer .icon-button {
-    background-color: #ffffff;
-    border-radius: 100%;
     font-size: 24px;
-    height: 50px;
     width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+    border-radius: 100%;
+    background-color: #fff;
 }
 
 .footer .icon-button .fa-facebook {
-    color: #3B5998;
+    color: #3b5998;
 }
 
 .footer .icon-button .fa-twitter {
@@ -324,63 +326,57 @@ FOOTER STYLES
 .footer .icon-button:hover .fa-instagram,
 .footer .icon-button:hover .fa-youtube-play,
 .footer .icon-button:hover .fa-envelope {
-    color: #ffffff;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
+    color: #fff;
 }
 
 .footer .icon-button:hover.facebook {
-    background-color: #3B5998;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+    background-color: #3b5998;
 }
 
 .footer .icon-button:hover.twitter {
-    background-color: #4099ff;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+    background-color: #4099ff;
 }
 
 .footer .icon-button:hover.instagram {
-    background-color: #125688;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+    background-color: #125688;
 }
 
 .footer .icon-button:hover.youtube {
-    background-color: #e52d27;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+    background-color: #e52d27;
 }
 
 .footer .icon-button:hover.email {
-    background-color: #ffa500;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
-    -o-transiton: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+    background-color: #ffa500;
+    -o-transiton: all .3s ease-in-out;
 }
 
 .footer > p {
     font-size: 12px;
-    letter-spacing: 2px;
     margin-top: 20px;
-}
-
-@media (max-width: 768px) {
-    .footer .icon-button {
-        margin-bottom: 15px;
-    }
+    letter-spacing: 2px;
 }
 
 
@@ -398,23 +394,23 @@ Trip Grid Link
 .trip-grid-link {
     width: 100%;
     height: 0;
-    padding-bottom: 120%;
     margin-bottom: 40px;
+    padding-bottom: 120%;
 }
 
 .trip-grid-link p {
-    color: #ffffff;
     text-align: center;
+    color: #fff;
 }
 
 .trip-grid-link .theme {
+    padding: 10px 0 10px 0;
     background: #25b0e9;
-    padding: 10px 0px 10px 0px;
 }
 
 .trip-grid-link .title {
-    margin-top: 90px;
     font-size: 36px;
+    margin-top: 90px;
     padding: 10px 10px 10px 10px;
 }
 
@@ -422,6 +418,15 @@ Trip Grid Link
     font-size: 16px;
     margin-top: 80px;
     padding: 10px 10px 60px 10px;
+}
+
+@media (max-width: 767px) {
+    .trip-grid-link .title {
+        margin-top: 50px;
+    }
+    .trip-grid-link .tagline {
+        margin-top: 20px;
+    }
 }
 
 
@@ -432,23 +437,23 @@ Host Grid Link
 .host-grid-link {
     width: 100%;
     height: 0;
-    padding-bottom: 100%;
     margin-bottom: 40px;
+    padding-bottom: 100%;
 }
 
 .host-grid-link p {
-    color: #ffffff;
     text-align: center;
+    color: #fff;
 }
 
 .host-grid-link .tag {
+    padding: 10px 0 10px 0;
     background: #78be5d;
-    padding: 10px 0px 10px 0px;
 }
 
 .host-grid-link .name {
-    margin-top: 60px;
     font-size: 36px;
+    margin-top: 60px;
     padding: 10px 10px 10px 10px;
 }
 
@@ -458,9 +463,9 @@ Host Grid Link
     padding: 10px 10px 60px 10px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 767px) {
     .host-grid-link .name {
-        margin-top: 28%;
+        top: 50%;
     }
     .host-grid-link .tagline {
         display: none;
@@ -474,18 +479,27 @@ JUMBOTRON STYLES
 
 ************************************************************************/
 
+.jumbotron-content {
+    position: relative;
+    top: 50%;
+    right: 0;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
 
 /************************************************************************
 Home Page
 ************************************************************************/
 
 .home-jumbotron {
-    padding-top: 9%;
-    color: #ffffff;
+    height: 80%;
     text-align: center;
-    display: block;
-    height: 75%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/jumbotron_img.jpg) no-repeat;
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../img/jumbotron.jpg') no-repeat;
     background-size: cover;
 }
 
@@ -496,36 +510,34 @@ Home Page
 
 .home-jumbotron h2 {
     font-size: 30px;
-    padding: 0px 160px;
     line-height: 40px;
+    padding: 0 80px;
 }
 
 .home-jumbotron .btn-jumbotron {
     font-size: 18px;
     margin-top: 45px;
     padding: 15px 40px;
-    box-shadow: 0px 0px 10px 5px #78be5d;
+    box-shadow: 0 0 10px 5px #78be5d;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .home-jumbotron {
-        height: 70%;
+        height: 100%;
     }
     .home-jumbotron h1 {
-        padding-top: 20px;
         font-size: 45px;
         letter-spacing: 2px;
     }
     .home-jumbotron h2 {
         font-size: 20px;
-        padding: 0px 2px;
         line-height: 25px;
+        padding: 0 2px;
     }
     .home-jumbotron .btn-jumbotron {
         font-size: 16px;
-        margin-top: 25px;
+        margin-top: 20px;
         padding: 10px 20px;
-        box-shadow: 0px 0px 10px 5px #78be5d;
     }
 }
 
@@ -536,20 +548,13 @@ Trip & New Trip Pages
 
 .trip-banner,
 .new-trip-banner {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/trip_main.jpg) no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
     height: 80%;
-    padding-left: 40px;
-    padding-right: 40px;
     margin-bottom: 30px;
-    color: #ffffff;
+    padding: 1px 40px;
     text-align: center;
-}
-
-.trip-banner,
-.new-trip-banner {
-    padding-top: 11%;
+    color: #fff;
+    background: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../img/trip_jumbotron.jpg') no-repeat;
+    background-size: cover;
 }
 
 .trip-banner h1,
@@ -570,32 +575,32 @@ Trip & New Trip Pages
 }
 
 .trip-banner h4 {
-    margin-top: 20px;
-    font-size: 24px;
+    font-size: 22px;
+    margin-top: 30px;
 }
 
 .trip-banner .btn-join,
 .new-trip-banner .btn-join,
 .trip-banner .btn-joined {
     font-size: 20px;
-    padding: 10px 30px;
     margin-top: 30px;
+    padding: 10px 30px;
 }
 
 .trip-banner .btn-joined {
     background: #5da441;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .trip-banner,
     .new-trip-banner {
-        padding-top: 24%;
-        padding-left: 15px;
+        height: 100%;
         padding-right: 15px;
+        padding-left: 15px;
     }
     .trip-banner h1,
     .new-trip-banner h1 {
-        font-size: 45px;
+        font-size: 40px;
     }
     .trip-banner h3,
     .new-trip-banner h3 {
@@ -603,6 +608,12 @@ Trip & New Trip Pages
         line-height: normal;
     }
     .trip-banner h4 {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    .trip-banner .btn-join,
+    .new-trip-banner .btn-join,
+    .trip-banner .btn-joined {
         font-size: 18px;
     }
 }
@@ -613,13 +624,13 @@ Trip Added Page
 ************************************************************************/
 
 .trip-added-banner {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/trip_main.jpg) no-repeat;
+    height: 100%;
+    padding-top: 1px;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../img/trip_jumbotron.jpg') no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 100%;
-    padding-top: 16%;
-    color: #ffffff;
-    text-align: center;
 }
 
 .trip-added-banner h1 {
@@ -630,59 +641,52 @@ Trip Added Page
 
 .trip-added-banner .btn {
     font-size: 20px;
-    padding: 15px 40px;
     margin-top: 60px;
-    margin-left: 20px;
     margin-right: 20px;
+    margin-left: 20px;
+    padding: 15px 40px;
 }
 
-@media (max-width: 768px) {
-    .trip-added-banner {
-        padding-top: 30%;
-    }
+@media (max-width: 767px) {
     .trip-added-banner h1 {
-        font-size: 70px;
-        letter-spacing: 3px;
+        font-size: 40px;
         margin-bottom: 30px;
+        letter-spacing: 3px;
     }
     .trip-added-banner .btn {
-        padding: 12px 25px;
+        font-size: 16px;
+        width: 70%;
         margin-top: 30px;
     }
 }
 
 
 /************************************************************************
-Trips Grid, Hosts Grid, About Us, Why Host, Legal, Feedback
-& Testimonial Pages
+Trips Grid, Hosts Grid, About Us, Feedback, Legal, Testimonial & 
+Why Host Pages
 ************************************************************************/
 
 .trips-jumbotron,
 .hosts-jumbotron,
 .about-us-jumbotron,
-.why-host-jumbotron,
-.legal-jumbotron,
 .feedback-jumbotron,
-.testimonials-jumbotron {
-    padding-top: 12%;
-    padding-left: 60px;
-    padding-right: 60px;
-    color: #ffffff;
-    text-align: center;
-    vertical-align: center;
-    display: block;
+.legal-jumbotron,
+.testimonials-jumbotron,
+.why-host-jumbotron {
     height: 65%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/jumbotron_img.jpg) no-repeat;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../img/jumbotron.jpg') no-repeat;
     background-size: cover;
 }
 
 .trips-jumbotron h1,
 .hosts-jumbotron h1,
 .about-us-jumbotron h1,
-.why-host-jumbotron h1,
-.legal-jumbotron h1,
 .feedback-jumbotron h1,
-.testimonials-jumbotron h1 {
+.legal-jumbotron h1,
+.testimonials-jumbotron h1,
+.why-host-jumbotron h1 {
     font-size: 75px;
     letter-spacing: 4px;
 }
@@ -690,43 +694,33 @@ Trips Grid, Hosts Grid, About Us, Why Host, Legal, Feedback
 .trips-jumbotron h2,
 .hosts-jumbotron h2,
 .about-us-jumbotron h2,
-.why-host-jumbotron h2,
-.legal-jumbotron h2,
 .feedback-jumbotron h2,
-.testimonials-jumbotron h2 {
+.legal-jumbotron h2,
+.testimonials-jumbotron h2,
+.why-host-jumbotron h2 {
     font-size: 30px;
 }
 
-@media (max-width: 768px) {
-    .trips-jumbotron,
-    .hosts-jumbotron {
-        padding-top: 18%;
-    }
-    .about-us-jumbotron,
-    .why-host-jumbotron,
-    .legal-jumbotron,
-    .feedback-jumbotron,
-    .testimonials-jumbotron {
-        padding-top: 30%;
-    }
+@media (max-width: 767px) {
     .trips-jumbotron h1,
     .hosts-jumbotron h1,
     .about-us-jumbotron h1,
-    .why-host-jumbotron h1,
-    .legal-jumbotron h1,
     .feedback-jumbotron h1,
-    .testimonials-jumbotron h1 {
+    .legal-jumbotron h1,
+    .testimonials-jumbotron h1,
+    .why-host-jumbotron h1 {
         font-size: 42px;
         letter-spacing: 1px;
     }
     .trips-jumbotron h2,
     .hosts-jumbotron h2,
     .about-us-jumbotron h2,
-    .why-host-jumbotron h2,
-    .legal-jumbotron h2,
     .feedback-jumbotron h2,
-    .testimonials-jumbotron h2 {
-        font-size: 25px;
+    .legal-jumbotron h2,
+    .testimonials-jumbotron h2,
+    .why-host-jumbotron h2 {
+        font-size: 20px;
+        line-height: 25px;
     }
 }
 
@@ -737,13 +731,10 @@ Registration & Host Profile Pages
 
 .registration-jumbotron,
 .host-profile-jumbotron {
-    padding-top: 11%;
-    color: #ffffff;
-    text-align: center;
-    vertical-align: center;
-    display: block;
     height: 50%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/jumbotron_img.jpg) no-repeat;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../img/jumbotron.jpg') no-repeat;
     background-size: cover;
 }
 
@@ -753,14 +744,10 @@ Registration & Host Profile Pages
     letter-spacing: 4px;
 }
 
-@media (max-width: 768px) {
-    .registration-jumbotron,
-    .host-profile-jumbotron {
-        padding-top: 27%;
-    }
+@media (max-width: 767px) {
     .registration-jumbotron h1,
     .host-profile-jumbotron h1 {
-        font-size: 45px;
+        font-size: 42px;
         letter-spacing: 1px;
     }
 }
@@ -773,13 +760,13 @@ HOME PAGE STYLES
 ************************************************************************/
 
 #emailModal h1 {
-    text-align: center;
     font-size: 24px;
+    text-align: center;
 }
 
 #emailModal h2 {
-    text-align: center;
     font-size: 18px;
+    text-align: center;
 }
 
 #emailModal form {
@@ -789,21 +776,38 @@ HOME PAGE STYLES
 
 #emailModal .btn-row {
     padding-top: 30px;
+    text-align: center;
 }
 
 #emailModal .btn-success {
-    text-align: center;
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    #emailModal .btn-row {
+        margin-top: 10px;
+        padding: 0 10px;
+    }
+    #emailModal .btn-success {
+        width: 50%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    #emailModal form {
+        margin-top: 10px;
+        padding: 0 10px;
+    }
 }
 
 .home-grid {
     margin-top: -20px;
     margin-bottom: 50px;
-    top: 100%;
 }
 
 .home-grid .err-search {
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 35px;
 }
 
@@ -813,18 +817,18 @@ HOME PAGE STYLES
 
 .home-grid .grid-trips-soon,
 .home-grid .grid-themes,
-.home-grid .grid-hosts,
-.home-grid #youtube_embed {
+.home-grid #promotional_video,
+.home-grid .grid-hosts {
     margin-top: 70px;
     margin-bottom: 70px;
 }
 
 .home-grid h1 {
-    color: #25b0e9;
     font-size: 36px;
+    margin-bottom: 35px;
     text-align: center;
     letter-spacing: 4px;
-    margin-bottom: 35px;
+    color: #25b0e9;
 }
 
 .home-grid h1 .fa-plus {
@@ -836,20 +840,19 @@ HOME PAGE STYLES
 }
 
 .home-grid .btn-view-all {
-    font-size: 20px;
-    padding: 15px 30px 15px 30px;
+    font-size: 17px;
+    padding: 15px 40px 15px 40px;
 }
 
 .home-grid .grid-themes .col-md-2 {
-    padding: 15px 0px 15px 0px;
+    padding: 15px 0 15px 0;
     text-align: center;
 }
 
 .home-grid .grid-themes .btn-theme {
     font-size: 17px;
-    text-align: center;
-    width: 95%;
-    height: 60px;
+    width: 90%;
+    height: 50px;
 }
 
 .home-grid #promotional_video iframe {
@@ -859,27 +862,27 @@ HOME PAGE STYLES
 
 @media (max-width: 768px) {
     .home-grid {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        padding-left: 10px;
         padding-right: 10px;
-        top: 80%;
+        padding-left: 10px;
     }
+}
+
+@media (max-width: 767px) {
     .home-grid h1 {
-        margin-top: 50px;
+        font-size: 30px;
     }
     .home-grid .grid-trips-soon,
     .home-grid .grid-themes,
-    .home-grid .grid-hosts,
-    .home-grid #youtube_embed {
-        margin-top: 30px;
-        margin-bottom: 0px;
-    }
+    .home-grid #promotional_video,
     .home-grid .grid-hosts {
-        margin-bottom: -20px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .home-grid .grid-themes {
+        margin-bottom: -10px;
     }
     .home-grid .grid-themes .col-md-2 {
-        padding: 0px 0px 15px 0px;
+        padding: 0 0 10px 0;
     }
 }
 
@@ -897,15 +900,23 @@ TRIP PAGE STYLES
     padding-bottom: 20px;
 }
 
+.trip-overview h1,
+.trip-itinerary h1,
+.trip-host h1,
+.trip-join h1 {
+    font-size: 36px;
+    letter-spacing: 3px;
+    color: #25b0e9;
+}
+
 .trip-overview img {
     margin-bottom: 30px;
 }
 
 .trip-overview h1 {
-    margin-top: 0px;
-    text-align: left;
-    letter-spacing: 3px;
+    margin-top: 0;
     padding-bottom: 10px;
+    text-align: left;
 }
 
 .trip-overview p {
@@ -914,18 +925,18 @@ TRIP PAGE STYLES
     text-align: justify;
 }
 
-#trip_separator {
-    border: 1px solid #C4C4C4;
-    width: 85%;
+.trip-separator {
+    width: 88%;
+    border: 1px solid #c4c4c4;
 }
 
 .trip-details .row > h3 {
-    text-align: center;
     font-size: 28px;
-    line-height: 16px;
     font-weight: 200;
-    letter-spacing: 3px;
+    line-height: 16px;
     margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 3px;
 }
 
 .trip-details .err-search p {
@@ -934,7 +945,7 @@ TRIP PAGE STYLES
 
 .trip-details .err-search p a {
     color: inherit;
-    border-bottom: 2px solid rgba(82, 82, 82, 0.75);
+    border-bottom: 2px solid rgba(82, 82, 82, .75);
 }
 
 .trip-details .trip-user-list {
@@ -946,10 +957,10 @@ TRIP PAGE STYLES
 }
 
 .trip-details .field-name h3 {
-    text-align: left;
     font-size: 14px;
-    line-height: 16px;
     font-weight: 600;
+    line-height: 16px;
+    text-align: left;
     letter-spacing: 3px;
 }
 
@@ -967,18 +978,22 @@ TRIP PAGE STYLES
 
 .trip-host h1,
 .trip-join h1 {
-    text-align: center;
-    letter-spacing: 3px;
     padding-bottom: 20px;
+    text-align: center;
+}
+
+.trip-host h3 {
+    margin-top: 0;
 }
 
 .trip-host p {
     font-size: 15px;
-    text-align: justify;
     padding-top: 20px;
+    text-align: justify;
 }
 
 .trip-join {
+    padding: 0 50px;
     text-align: center;
 }
 
@@ -991,30 +1006,30 @@ TRIP PAGE STYLES
 }
 
 .trip-join .btn-primary {
-    padding: 10px 35px;
     font-size: 20px;
+    padding: 10px 35px;
 }
 
 #trip_overview {
-    padding-top: 70px;
     margin-top: -30px;
+    padding-top: 70px;
 }
 
 #trip_itinerary {
-    padding-top: 70px;
     margin-top: -70px;
+    padding-top: 70px;
 }
 
 #trip_join {
-    padding-top: 70px;
     margin-top: -50px;
     margin-bottom: 30px;
+    padding-top: 70px;
 }
 
 #trip_details,
 #trip_host {
-    padding-top: 100px;
     margin-top: -100px;
+    padding-top: 100px;
 }
 
 @media (max-width: 768px) {
@@ -1023,7 +1038,6 @@ TRIP PAGE STYLES
     .trip-host h1,
     .trip-join h1 {
         text-align: center;
-        font-size: 30px;
     }
     .trip-details .field-name h3 {
         text-align: center;
@@ -1032,8 +1046,17 @@ TRIP PAGE STYLES
         text-align: center;
     }
     .trip-details .field-content .incl-excl {
+        padding: 0 0;
         list-style: none;
-        padding: 0px 0px;
+    }
+}
+
+@media (max-width: 767px) {
+    .trip-overview h1,
+    .trip-itinerary h1,
+    .trip-host h1,
+    .trip-join h1 {
+        font-size: 30px;
     }
 }
 
@@ -1045,14 +1068,15 @@ NEW TRIP PAGE STYLES
 ************************************************************************/
 
 #trip_form {
-    padding-top: 60px;
     margin-top: -60px;
+    padding-top: 60px;
 }
 
 #trip_form h1 {
+    padding-bottom: 20px;
     text-align: center;
     letter-spacing: 3px;
-    padding-bottom: 20px;
+    color: #25b0e9;
 }
 
 #trip_form .general-info,
@@ -1061,25 +1085,25 @@ NEW TRIP PAGE STYLES
 }
 
 #trip_form .mid-label {
+    padding-top: 5px;
     text-align: center;
-    padding-top: 0.5%;
 }
 
-#trip_form .items-list,
+#trip_form .items-arr,
 #trip_form .includes-arr,
 #trip_form .excludes-arr,
-#trip_form .items-list li,
+#trip_form .items-arr li,
 #trip_form .includes-arr li,
 #trip_form .excludes-arr li {
-    list-style: none;
-    padding: 0 0;
     margin: 0 0;
+    padding: 0 0;
+    list-style: none;
 }
 
 #trip_form .publish {
-    text-align: center;
     margin-top: 10px;
     margin-bottom: 30px;
+    text-align: center;
 }
 
 #trip_form .btn-publish {
@@ -1090,9 +1114,15 @@ NEW TRIP PAGE STYLES
 
 @media (max-width: 768px) {
     #trip_form {
-        padding-left: 40px;
         padding-right: 40px;
+        padding-left: 40px;
     }
+    #trip_form label {
+        text-align: left;
+    }
+}
+
+@media (max-width: 767px) {
     #trip_form h1 {
         font-size: 27px;
     }
@@ -1101,14 +1131,14 @@ NEW TRIP PAGE STYLES
 
 /************************************************************************
 
-VIEW TRIPS PAGE STYLES
+VIEW ALL TRIPS PAGE STYLES
 
 ************************************************************************/
 
 .trips-view {
+    top: 100%;
     margin-top: 30px;
     margin-bottom: 50px;
-    top: 100%;
 }
 
 .trips-view .trips-filters {
@@ -1121,8 +1151,8 @@ VIEW TRIPS PAGE STYLES
 }
 
 .trips-view #trips-grid {
-    padding-top: 150px;
     margin-top: -150px;
+    padding-top: 150px;
 }
 
 .trips-view .trip-nav-row {
@@ -1130,74 +1160,78 @@ VIEW TRIPS PAGE STYLES
 }
 
 .trip-nav-row .pagination li a {
+    margin: 0 5px;
     border-radius: 20px;
-    margin: 0px 5px;
 }
 
 .trip-nav-row .pagination li.active a {
-    background: #25b0e9;
     border: #25b0e9;
+    background: #25b0e9;
 }
 
 
 /************************************************************************
 
-VIEW HOSTS PAGE STYLES
+VIEW ALL HOSTS PAGE STYLES
 
 ************************************************************************/
 
-[id^="hostModal"] .modal-body p {
+[id^='hostModal'] .modal-body p {
     margin-top: 25px;
     text-align: justify;
 }
 
-[id^="hostModal"] .modal-body hr {
-    margin: 20px 0px 10px 0px;
+[id^='hostModal'] .modal-body hr {
+    margin: 20px 0 10px 0;
 }
 
-[id^="hostModal"] .modal-body h6 {
+[id^='hostModal'] .modal-body h3 {
+    margin-top: 0;
+}
+
+[id^='hostModal'] .modal-body h6 {
     font-size: 20px;
     margin-left: 30px;
 }
 
-[id^="hostModal"] .err-host p {
-    text-align: center;
-    font-weight: 800;
+[id^='hostModal'] .err-host p {
     font-size: 20px;
-    letter-spacing: 1px;
-    color: rgba(82, 82, 82, 0.75);
-}
-
-[id^="hostModal"] .trip-grid-link {
-    margin-top: -10px;
-    margin-bottom: 0px;
-}
-
-[id^="hostModal"] .trip-grid-link p {
-    color: #ffffff;
+    font-weight: 800;
     text-align: center;
+    letter-spacing: 1px;
+    color: rgba(82, 82, 82, .75);
 }
 
-[id^="hostModal"] .trip-grid-link .theme {
+[id^='hostModal'] .trip-grid-link {
+    margin-top: -10px;
+    margin-bottom: 0;
+}
+
+[id^='hostModal'] .trip-grid-link p {
+    text-align: center;
+    color: #fff;
+}
+
+[id^='hostModal'] .trip-grid-link .theme {
     font-size: 12px;
+    padding: 10px 0 10px 0;
     background: #25b0e9;
-    padding: 10px 0px 10px 0px;
 }
 
-[id^="hostModal"] .trip-grid-link .title {
-    margin-top: 60px;
+[id^='hostModal'] .trip-grid-link .title {
     font-size: 24px;
-    padding: 10px 0px 10px 0px;
+    margin-top: 50px;
+    padding: 10px 0 10px 0;
 }
 
-[id^="hostModal"] .btn-primary {
+[id^='hostModal'] .btn-primary {
     padding: 5px 20px;
 }
 
 .hosts-view {
+    top: 100%;
     margin-top: 30px;
     margin-bottom: 50px;
-    top: 100%;
 }
 
 .hosts-view .hosts-filters {
@@ -1207,12 +1241,12 @@ VIEW HOSTS PAGE STYLES
 .hosts-view .hosts-filters select {
     min-width: 100%;
     border: 2px solid #25b0e9;
-    background: #ffffff;
+    background: #fff;
 }
 
 .hosts-view #hosts-grid {
-    padding-top: 150px;
     margin-top: -150px;
+    padding-top: 150px;
 }
 
 .hosts-view .host-nav-row {
@@ -1220,13 +1254,27 @@ VIEW HOSTS PAGE STYLES
 }
 
 .host-nav-row .pagination li a {
+    margin: 0 5px;
     border-radius: 20px;
-    margin: 0px 5px;
 }
 
 .host-nav-row .pagination li.active a {
-    background: #25b0e9;
     border: #25b0e9;
+    background: #25b0e9;
+}
+
+@media (max-width: 767px) {
+    [id^='hostModal'] .modal-body h3,
+    [id^='hostModal'] .modal-body h4,
+    [id^='hostModal'] .modal-body h6 {
+        text-align: center;
+    }
+    [id^='hostModal'] .modal-body h6 {
+        margin-left: 0;
+    }
+    [id^='hostModal'] .modal-body img {
+        margin-bottom: 15px;
+    }
 }
 
 
@@ -1237,27 +1285,28 @@ SIGN IN PAGE STYLES
 ************************************************************************/
 
 .sign-in-content {
-    padding: 30px 30px 30px 30px;
-    height: 100%;
-    background: #e8f7fd;
-}
-
-.sign-in-content .sign-in-logo {
-    padding-top: 7.5%;
+    position: relative;
+    top: 50%;
+    right: 0;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .sign-in-content .sign-in-logo img {
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
 }
 
 .sign-in-content .sign-in-buttons {
     margin-top: 40px;
-    padding: 50px 0px;
+    padding: 50px 0;
     text-align: center;
-    background: #ffffff;
     border-radius: 15px;
-    box-shadow: 0px 0px 10px #888888;
+    background: #fff;
+    box-shadow: 0 0 10px #888;
 }
 
 .sign-in-content .sign-in-buttons .row {
@@ -1265,50 +1314,50 @@ SIGN IN PAGE STYLES
 }
 
 .sign-in-content .sign-in-buttons .btn {
-    width: 70%;
     font-size: 18px;
-    padding: 10px 0px;
+    min-width: 70%;
+    padding: 10px 0;
 }
 
 .sign-in-content .sign-in-buttons .btn-sign-in-fb {
     margin-top: -20px;
-    background: #3B5998;
+    background: #3b5998;
 }
 
 .sign-in-content .sign-in-buttons .btn-sign-in-tw {
-    background: #4099FF;
+    background: #4099ff;
 }
 
 .sign-in-content .sign-in-buttons .btn-sign-in-go {
-    background: #EA4335;
+    background: #ea4335;
 }
 
 .sign-in-content .sign-in-buttons .btn-sign-in-fb:hover {
-    background: #2f4779;
     -webkit-transition: background .2s ease-in-out;
     -moz-transition: background .2s ease-in-out;
     -o-transition: background .2s ease-in-out;
     transition: background .2s ease-in-out;
+    background: #2f4779;
 }
 
 .sign-in-content .sign-in-buttons .btn-sign-in-tw:hover {
-    background: #1f87ff;
     -webkit-transition: background .2s ease-in-out;
     -moz-transition: background .2s ease-in-out;
     -o-transition: background .2s ease-in-out;
     transition: background .2s ease-in-out;
+    background: #1f87ff;
 }
 
 .sign-in-content .sign-in-buttons .btn-sign-in-go:hover {
-    background: #d92717;
     -webkit-transition: background .2s ease-in-out;
     -moz-transition: background .2s ease-in-out;
     -o-transition: background .2s ease-in-out;
     transition: background .2s ease-in-out;
+    background: #d92717;
 }
 
 .sign-in-content .sign-in-buttons p {
-    padding: 50px 15px 0px;
+    padding: 50px 15px 0;
 }
 
 .sign-in-content .sign-in-footer {
@@ -1325,9 +1374,9 @@ SIGN IN PAGE STYLES
     text-decoration: underline;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .sign-in-content .sign-in-buttons .btn {
-        font-size: 15px;
+        font-size: 14px;
     }
 }
 
@@ -1339,22 +1388,21 @@ HOST REGISTRATION PAGE STYLES
 ************************************************************************/
 
 .registration-content {
-    padding: 30px 30px 30px 30px;
     margin-bottom: -30px;
-    background: #e8f7fd;
+    padding: 30px 30px 30px 30px;
 }
 
 .regUser img {
     display: block;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
 }
 
 .regUser h1 {
-    text-align: center;
-    color: #25b0e9;
     font-weight: 600;
+    text-align: center;
     letter-spacing: 1.5px;
+    color: #25b0e9;
 }
 
 .regForm {
@@ -1367,9 +1415,9 @@ HOST REGISTRATION PAGE STYLES
 }
 
 .registration-content .registration-button .btn-register {
-    padding: 10px 35px;
-    font-size: 18px;
     font: 'Raleway', sans-serif;
+    font-size: 18px;
+    padding: 10px 35px;
 }
 
 
@@ -1380,22 +1428,21 @@ HOST PROFILE PAGE STYLES
 ************************************************************************/
 
 .host-profile {
-    padding: 30px 30px 30px 30px;
     margin-bottom: -30px;
-    background: #e8f7fd;
+    padding: 30px 30px 30px 30px;
 }
 
 .hostUser img {
     display: block;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
 }
 
 .hostUser h1 {
-    text-align: center;
-    color: #25b0e9;
     font-weight: 600;
+    text-align: center;
     letter-spacing: 1.5px;
+    color: #25b0e9;
 }
 
 .hostForm {
@@ -1408,9 +1455,9 @@ HOST PROFILE PAGE STYLES
 }
 
 .host-profile .update-profile-button .btn-update-profile {
-    padding: 10px 35px;
-    font-size: 18px;
     font: 'Raleway', sans-serif;
+    font-size: 18px;
+    padding: 10px 35px;
 }
 
 
@@ -1426,58 +1473,63 @@ ABOUT US PAGE STYLES
     background: #e8f7fd;
 }
 
-.about-us-intro {
-    padding-top: 50px;
-}
-
 .about-us-origin,
 .about-us-team {
     padding: 20px 30px 30px 30px;
-    background: #ffffff;
+    background: #fff;
+}
+
+.about-us-intro h1,
+.about-us-origin h1,
+.about-us-mission h1,
+.about-us-team h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    padding-bottom: 25px;
+    text-align: center;
+    color: #25b0e9;
 }
 
 .about-us-intro p,
 .about-us-origin p,
 .about-us-mission p,
 .about-us-team p {
-    text-align: justify;
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
-}
-
-.about-us-origin h1,
-.about-us-mission h1,
-.about-us-team h1 {
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    color: #25b0e9;
-    font-weight: 800;
-    padding-bottom: 25px;
+    text-align: justify;
 }
 
 .about-us-mission h2 {
-    text-align: center;
-    color: #25b0e9;
-    font-weight: 200;
     font-size: 28px;
+    font-weight: 200;
     margin: 0;
     margin-bottom: 20px;
+    text-align: center;
+    color: #25b0e9;
 }
 
 .about-us-mission h3 {
-    text-align: center;
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
     margin: 0;
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .about-us-mission h4 {
-    text-align: center;
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
     margin: 0;
     margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-us-team {
+    margin-bottom: -40px;
+}
+
+.about-us-team .team-member {
+    margin-bottom: 40px;
 }
 
 .about-us-team .team-right {
@@ -1488,10 +1540,17 @@ ABOUT US PAGE STYLES
     text-align: right;
 }
 
+.about-us-team h3 {
+    margin-top: 0;
+}
+
 @media (max-width: 768px) {
     .about-us-intro img {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
+}
+
+@media (max-width: 767px) {
     .about-us-intro p,
     .about-us-origin p,
     .about-us-mission p,
@@ -1512,13 +1571,228 @@ ABOUT US PAGE STYLES
     .about-us-mission h4 {
         font-size: 18px;
     }
-    .about-us-team p {
-        display: none;
+    .about-us-team {
+        margin-bottom: -20px;
+    }
+    .about-us-team .team-member {
+        margin-bottom: 20px;
     }
     .about-us-team h3 {
-        font-size: 24px;
+        font-size: 20px;
     }
     .about-us-team h4 {
+        font-size: 16px;
+    }
+}
+
+
+/************************************************************************
+
+FEEDBACK PAGE STYLES
+
+************************************************************************/
+
+.feedback-content {
+    margin-bottom: -30px;
+    padding: 30px 30px 50px 30px;
+}
+
+.feedback-content .col-md-8 {
+    border-right: 2px dashed #25b0e9;
+}
+
+.feedback-content .col-md-4 {
+    padding-left: 30px;
+}
+
+.feedback-content h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    padding-bottom: 25px;
+    text-align: center;
+    color: #25b0e9;
+}
+
+.feedback-content .col-md-4 h1 {
+    text-align: left;
+}
+
+.feedback-content .col-md-4 h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    text-align: left;
+}
+
+.feedback-content .feedback-send {
+    text-align: center;
+}
+
+.feedback-content .btn-feedback {
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 10px 30px;
+}
+
+@media (max-width: 768px) {
+    .feedback-content .col-md-8 {
+        margin-bottom: 80px;
+        border-right: none;
+    }
+    .feedback-content .col-md-4 {
+        padding-left: 0;
+    }
+    .feedback-content .col-md-4 h1,
+    .feedback-content .col-md-4 h3 {
+        text-align: center;
+    }
+}
+
+
+/************************************************************************
+
+LEGAL PAGE STYLES
+
+************************************************************************/
+
+.legal-pills {
+    padding: 40px 30px;
+    background: #e8f7fd;
+}
+
+.legal-pills ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.legal-pills li {
+    padding: 10px 0;
+    text-align: center;
+    color: #25b0e9;
+    border-radius: 7px;
+}
+
+.legal-pills li a {
+    font-size: 18px;
+    font-weight: 500;
+    color: inherit;
+}
+
+.legal-pills li:hover {
+    color: #fff;
+    background: #78be5d;
+}
+
+.legal-pills li.active {
+    color: #fff;
+    background: #78be5d;
+}
+
+.legal-content {
+    padding: 10px 20px 20px 20px;
+    text-align: center;
+}
+
+.legal-content .legal-tab {
+    display: none;
+}
+
+.legal-content .legal-tab.active {
+    display: block;
+}
+
+.legal-content h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    padding-bottom: 20px;
+    text-align: center;
+    color: #25b0e9;
+}
+
+.legal-content h2 {
+    font-size: 22px;
+    font-weight: 800;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.legal-content p {
+    font-size: 16px;
+    padding-top: 5px;
+    text-align: justify;
+}
+
+@media (max-width: 767px) {
+    .legal-content h1 {
+        font-size: 28px;
+    }
+}
+
+
+/************************************************************************
+
+TESTIMONIALS PAGE STYLES
+
+************************************************************************/
+
+.testimonials-content {
+    margin-bottom: -30px;
+    padding: 0 30px 60px 30px;
+    background: #e8f7fd;
+}
+
+.testimonials-content .testimonial-pic {
+    display: block;
+    width: 90px;
+    height: 90px;
+    margin: 1em 0 1em 1em;
+    -webkit-border-radius: 99em;
+    -moz-border-radius: 99em;
+    border-radius: 99em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.testimonials-content .testimonial-user {
+    margin-top: 50px;
+}
+
+.testimonials-content .testimonial-user h5 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    font-weight: 200;
+    padding-top: 15px;
+    letter-spacing: 2px;
+    color: #25b0e9;
+}
+
+.testimonials-content .testimonial-user h6 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
+.testimonials-content .testimonial-text {
+    padding: 15px 15px 15px 15px;
+    border: 2px solid #78be5d;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.testimonials-content .testimonial-text span {
+    color: #25b0e9;
+}
+
+.testimonials-content .testimonial-text p {
+    padding-left: 35px;
+    text-align: justify;
+}
+
+@media (max-width: 767px) {
+    .testimonials-content .testimonial-user h5 {
+        font-size: 20px;
+    }
+    .testimonials-content .testimonial-user h6 {
         font-size: 18px;
     }
 }
@@ -1531,28 +1805,28 @@ WHY HOST PAGE STYLES
 ************************************************************************/
 
 .why-host-incentives {
-    padding: 20px 30px 30px 30px;
-    background: #e8f7fd;
+    padding: 20px 30px 40px 30px;
     text-align: center;
+    background: #e8f7fd;
 }
 
 .why-host-incentives h1 {
-    text-align: center;
     font-family: 'Raleway', sans-serif;
-    color: #78be5d;
     font-weight: 800;
     padding-bottom: 20px;
+    text-align: center;
+    color: #78be5d;
 }
 
 .why-host-incentives .why-host-awesome {
-    border-bottom: 4px solid #78be5d;
     padding-bottom: 2px;
+    border-bottom: 4px solid #78be5d;
 }
 
-.why-host-incentives [class^="flaticon-"]:before,
-.why-host-incentives [class*=" flaticon-"]:before,
-.why-host-incentives [class^="flaticon-"]:after,
-.why-host-incentives [class*=" flaticon-"]:after {
+.why-host-incentives [class^='flaticon-']:before,
+.why-host-incentives [class*=' flaticon-']:before,
+.why-host-incentives [class^='flaticon-']:after,
+.why-host-incentives [class*=' flaticon-']:after {
     font-family: Flaticon;
     font-size: 120px;
     margin: auto;
@@ -1560,307 +1834,102 @@ WHY HOST PAGE STYLES
 }
 
 .why-host-incentives h2 {
-    color: #000;
     font-size: 18px;
+    margin-bottom: 50px;
     text-align: center;
+    color: #000;
 }
 
 .why-host-incentives .btn-success {
-    margin-top: 50px;
-    margin-bottom: 10px;
-    padding: 15px 0px;
     font-size: 16px;
-    width: 85%;
+    min-width: 75%;
+    margin-bottom: 20px;
+    padding: 15px 10px;
 }
 
 .why-host-instructions {
     padding: 20px 30px 30px 30px;
-    background: #ffffff;
     text-align: center;
+    background: #fff;
 }
 
 .why-host-instructions h1 {
-    text-align: center;
     font-family: 'Raleway', sans-serif;
-    color: #78be5d;
     font-weight: 800;
     padding-bottom: 50px;
+    text-align: center;
+    color: #78be5d;
 }
 
-.why-host-instructions [class^="flaticon-"]:before,
-.why-host-instructions [class*=" flaticon-"]:before,
-.why-host-instructions [class^="flaticon-"]:after,
-.why-host-instructions [class*=" flaticon-"]:after {
+.why-host-instructions [class^='flaticon-']:before,
+.why-host-instructions [class*=' flaticon-']:before,
+.why-host-instructions [class^='flaticon-']:after,
+.why-host-instructions [class*=' flaticon-']:after {
     font-family: Flaticon;
     font-size: 70px;
-    color: #25b0e9;
-    background: #e8f7fd;
-    border-radius: 100%;
-    padding: 40px;
     margin: auto;
+    padding: 40px;
+    color: #25b0e9;
+    border-radius: 100%;
+    background: #e8f7fd;
 }
 
 .why-host-instructions h2 {
-    color: #000;
     font-size: 16px;
-    text-align: center;
     margin-top: 60px;
     margin-bottom: 60px;
+    text-align: center;
+    color: #000;
 }
 
 .why-host-instructions .btn-success {
-    margin-bottom: 20px;
-    padding: 15px 30px;
     font-size: 20px;
+    margin-bottom: 20px;
+    padding: 15px 50px;
 }
 
 .why-host-limits {
-    padding: 20px 30px 60px 30px;
     margin-bottom: -30px;
+    padding: 20px 30px 60px 30px;
     background: #e8f7fd;
 }
 
 .why-host-limits h1 {
-    text-align: center;
     font-family: 'Raleway', sans-serif;
-    color: #78be5d;
     font-weight: 800;
     padding-bottom: 5px;
+    text-align: center;
+    color: #78be5d;
 }
 
 .why-host-limits h3 {
-    text-align: center;
     font-family: 'Raleway', sans-serif;
-    color: #25b0e9;
-    letter-spacing: 8px;
-    font-weight: 800;
     font-size: 40px;
+    font-weight: 800;
     padding-bottom: 5px;
+    text-align: center;
+    letter-spacing: 6px;
+    color: #25b0e9;
 }
 
 .why-host-limits h4 {
-    text-align: center;
     font-family: 'Raleway', sans-serif;
-    color: #000000;
     font-size: 20px;
+    text-align: center;
     text-transform: uppercase;
+    color: #000;
 }
 
 .why-host-limits p {
-    text-align: justify;
     font-family: 'Raleway', sans-serif;
-    color: #000000;
     font-size: 15px;
     padding-top: 20px;
-}
-
-
-/************************************************************************
-
-LEGAL PAGE STYLES
-
-************************************************************************/
-
-.legal-pills {
-    padding: 50px 30px 40px 30px;
-    background: #e8f7fd;
-}
-
-.legal-pills .nav-pills li a {
-    font-size: 18px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.legal-pills .nav-pills li a:hover {
-    background: #25b0e9;
-    color: #ffffff;
-}
-
-.legal-pills .nav-pills li.active a {
-    background: #78be5d;
-}
-
-.legal-content {
-    text-align: center;
-    padding: 10px 10px;
-}
-
-.legal-content .legal-tab {
-    display: none;
-}
-
-.legal-content .legal-tab.active {
-    display: block;
-}
-
-.legal-content h1 {
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    color: #25b0e9;
-    font-weight: 800;
-    padding-bottom: 20px;
-}
-
-.legal-content h2 {
-    text-align: left;
-    font-weight: 800;
-    font-size: 22px;
-    margin-top: 40px;
-}
-
-.legal-content p {
     text-align: justify;
-    font-size: 16px;
-    padding-top: 5px;
-}
-
-@media (max-width: 768px) {
-    .legal-content h1 {
-        font-size: 28px;
-    }
-    .legal-content p {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+    color: #000;
 }
 
 
-/************************************************************************
-
-FEEDBACK PAGE STYLES
-
-************************************************************************/
-
-.feedback-content {
-    padding: 30px 30px 30px 30px;
-    margin-bottom: -30px;
-    background: #e8f7fd;
-}
-
-.feedback-content .col-md-8 {
-    border-right: 2px dashed #25b0e9;
-}
-
-.feedback-content .col-md-4 {
-    padding-left: 30px;
-}
-
-.feedback-content h1 {
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    color: #25b0e9;
-    font-weight: 800;
-    padding-bottom: 25px;
-}
-
-.feedback-content .col-md-4 h1 {
-    text-align: left;
-}
-
-.feedback-content .col-md-4 h3 {
-    text-align: left;
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px;
-}
-
-.feedback-content .feedback-send {
-    text-align: center;
-}
-
-.feedback-content .btn-feedback {
-    margin-top: 10px;
-    padding: 10px 30px;
-    font-size: 15px;
-}
-
-@media (max-width: 768px) {
-    .feedback-content .col-md-8 {
-        border-right: none;
-    }
-    .feedback-content .col-md-4 {
-        padding-left: 0px;
-    }
-    .feedback-content .col-md-4 h1,
-    .feedback-content .col-md-4 h3 {
-        text-align: center;
-    }
-    .feedback-content .col-md-4 {
-        margin-top: 60px;
-        padding-bottom: 25px;
-    }
-}
-
-
-/************************************************************************
-
-TESTIMONIALS PAGE STYLES
-
-************************************************************************/
-
-.testimonials-content {
-    padding: 0px 30px 60px 30px;
-    background: #e8f7fd;
-    margin-bottom: -30px;
-}
-
-.testimonials-content .testimonial-pic {
-    display: block;
-    width: 90px;
-    height: 90px;
-    margin: 1em 0 1em 1em;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    -webkit-border-radius: 99em;
-    -moz-border-radius: 99em;
-    border-radius: 99em;
-    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
-}
-
-.testimonials-content .testimonial-user {
-    margin-top: 50px;
-}
-
-.testimonials-content .testimonial-user h5 {
-    padding-top: 15px;
-    color: #25b0e9;
-    font-family: 'Raleway', sans-serif;
-    font-size: 30px;
-    letter-spacing: 2px;
-    font-weight: 200;
-}
-
-.testimonials-content .testimonial-user h6 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
-}
-
-.testimonials-content .testimonial-text {
-    background: #ffffff;
-    padding: 15px 15px 15px 15px;
-    border: 1px solid #C4C4C4;
-    border-radius: 10px;
-}
-
-.testimonials-content .testimonial-text p {
-    padding-left: 35px;
-    text-align: justify;
-}
-
-@media (max-width: 768px) {
-    .testimonials-content .testimonial-user {
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    .testimonials-content .testimonial-user h5,
-    .testimonials-content .testimonial-user h6 {
-        text-align: center;
-    }
-}
-
-
-/*********************************************
+/**********************************************
 * {
   background: #000 !important;
   color: #0f0 !important;

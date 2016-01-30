@@ -5,7 +5,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css" />
 
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
@@ -51,8 +51,10 @@
 
         <!-- JUMBOTRON -->
         <div class="container-fluid hosts-jumbotron">
-            <h1>OUR AMAZING HOSTS</h1>
-            <h2>They're interesting, passionate and love meeting new people.</h2>
+            <div class="jumbotron-content">
+                <h1>OUR AMAZING HOSTS</h1>
+                <h2>They're interesting, passionate and love meeting new people.</h2>
+            </div>
         </div>
 
 
@@ -68,11 +70,11 @@
                     <!-- Modal Body -->
                     <div class="modal-body">
                         <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-sm-4 col-md-3">
                                 <img src="/img/sample-host.png" class="img-responsive img-thumbnail">
                             </div>
 
-                            <div class="col-md-8">
+                            <div class="col-sm-8 col-md-8">
                                 <h3>Olivia Wilde</h3>
                                 <h4>Computer Science, Year 2</h4>
                                 <h4>School of Computer Engineering</h4>
@@ -85,48 +87,50 @@
                             <h6>Some Trips Hosted by Olivia:</h6>
                         </div>
                         <div class="trip-grid">
-                            <div class="container-fluid row">
-                                <!-- NOTE: When user hasn't hosted any trips yet. -->
-                                <!--
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <!-- NOTE: When user hasn't hosted any trips yet. -->
+                                    <!--
                                 <div class="col-md-12 err-host">
                                     <p>Olivia hasn't hosted any trips yet.</p>
                                 </div>
                                 -->
-                                <div class="col-md-4">
-                                    <a href="/trip.html">
-                                        <div class="row">
-                                            <div class="col-md-10 col-md-offset-1">
-                                                <div class="trip-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-trip.png) no-repeat center center; background-size: cover;">
-                                                    <p class="theme">Nightlife</p>
-                                                    <p class="title">East vs West</p>
+                                    <div class="col-sm-6 col-md-4">
+                                        <a href="/trip.html">
+                                            <div class="row">
+                                                <div class="col-md-10 col-md-offset-1">
+                                                    <div class="trip-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/sample-trip.png') no-repeat center center; background-size: cover;">
+                                                        <p class="theme">Nightlife</p>
+                                                        <p class="title">East vs West</p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-4">
-                                    <a href="/trip.html">
-                                        <div class="row">
-                                            <div class="col-md-10 col-md-offset-1">
-                                                <div class="trip-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-trip.png) no-repeat center center; background-size: cover;">
-                                                    <p class="theme">Nightlife</p>
-                                                    <p class="title">East vs West</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                        <a href="/trip.html">
+                                            <div class="row">
+                                                <div class="col-md-10 col-md-offset-1">
+                                                    <div class="trip-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/sample-trip.png') no-repeat center center; background-size: cover;">
+                                                        <p class="theme">Nightlife</p>
+                                                        <p class="title">East vs West</p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-4">
-                                    <a href="/trip.html">
-                                        <div class="row">
-                                            <div class="col-md-10 col-md-offset-1">
-                                                <div class="trip-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-trip.png) no-repeat center center; background-size: cover;">
-                                                    <p class="theme">Nightlife</p>
-                                                    <p class="title">East vs West</p>
+                                        </a>
+                                    </div>
+                                    <div class="hidden-sm col-md-4">
+                                        <a href="/trip.html">
+                                            <div class="row">
+                                                <div class="col-md-10 col-md-offset-1">
+                                                    <div class="trip-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/sample-trip.png') no-repeat center center; background-size: cover;">
+                                                        <p class="theme">Nightlife</p>
+                                                        <p class="title">East vs West</p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </a>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -142,216 +146,196 @@
 
         <!-- HOSTS GRID -->
         <div class="hosts-view">
-            <div class="container-fluid row hosts-filters">
-                <form class="form-inline" role="form" action="" method="get">
-                    <div class="col-md-3 col-md-offset-3 form-group">
-                        <select class="form-control" id="university" name="university" onchange="this.form.submit()">
-                            <!-- NOTE: Keep the first option. -->
-                            <option>Any University</option>
-                            <option>University 1</option>
-                            <option>University 2</option>
-                            <option>University 3</option>
-                        </select>
-                        <noscript>
-                            <input type="submit" value="Submit">
-                        </noscript>
-                    </div>
-                    <div class="col-md-3 form-group">
-                        <select class="form-control" id="school" name="school" onchange="this.form.submit()">
-                            <!-- NOTE: Populate this dropdown with the list of schools according to the selected university filter. The list of schools can be found in 'populate-schools.js'. -->
-                            <!-- NOTE: Keep the first option. -->
-                            <option>Any School</option>
-                        </select>
-                        <noscript>
-                            <input type="submit" value="Submit">
-                        </noscript>
-                    </div>
-                </form>
+            <div class="container-fluid hosts-filters">
+                <div class="row">
+                    <form class="form-inline" role="form" action="" method="get">
+                        <div class="col-sm-6 col-md-3 col-md-offset-3 form-group">
+                            <select class="form-control" id="university" name="university" onchange="this.form.submit()">
+                                <!-- NOTE: Keep the first option. -->
+                                <option>Any University</option>
+                                <option>University 1</option>
+                                <option>University 2</option>
+                                <option>University 3</option>
+                            </select>
+                            <noscript>
+                                <input type="submit" value="Submit">
+                            </noscript>
+                        </div>
+                        <div class="col-sm-6 col-md-3 form-group">
+                            <select class="form-control" id="school" name="school" onchange="this.form.submit()">
+                                <!-- NOTE: Populate this dropdown with the list of schools according to the selected university filter. The list of schools can be found in 'populate-schools.js'. -->
+                                <!-- NOTE: Keep the first option. -->
+                                <option>Any School</option>
+                            </select>
+                            <noscript>
+                                <input type="submit" value="Submit">
+                            </noscript>
+                        </div>
+                    </form>
+                </div>
             </div>
 
             <input type='hidden' id='current_page' />
             <input type='hidden' id='show_per_page' />
 
-            <div class="container-fluid row" id="hosts-grid">
-                <!-- NOTE: When no hosts match the filter(s). -->
-                <!--
-                <div class="col-md-10 col-md-offset-1 err-search">
-                    <p>Sorry, no hosts match your search.</p>
-                </div>
-                -->
-                <div class="col-md-4">
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-1">
-                            <a data-toggle="modal" data-target="#hostModal">
-                                <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-host.png) no-repeat center center; background-size: cover;">
-                                    <p class="tag">Host</p>
-                                    <p class="name">Olivia</p>
-                                    <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
-                                </div>
-                            </a>
+            <div class="container-fluid">
+                <div class="row" id="hosts-grid">
+                    <!-- NOTE: When no hosts match the filter(s). -->
+                    <!--
+                    <div class="col-md-10 col-md-offset-1 err-search">
+                        <p>Sorry, no hosts match your search.</p>
+                    </div>
+                    -->
+                    <div class="col-sm-6 col-md-4 clickable">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <a data-toggle="modal" data-target="#hostModal">
+                                    <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/sample-host.png') no-repeat center center; background-size: cover;">
+                                        <p class="tag">Host</p>
+                                        <p class="name">Olivia</p>
+                                        <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-1">
-                            <a data-toggle="modal" data-target="#hostModal">
-                                <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-host.png) no-repeat center center; background-size: cover;">
-                                    <p class="tag">Host</p>
-                                    <p class="name">Olivia</p>
-                                    <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
-                                </div>
-                            </a>
+                    <div class="col-sm-6 col-md-4 clickable">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <a data-toggle="modal" data-target="#hostModal">
+                                    <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/sample-host.png') no-repeat center center; background-size: cover;">
+                                        <p class="tag">Host</p>
+                                        <p class="name">Olivia</p>
+                                        <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-1">
-                            <a data-toggle="modal" data-target="#hostModal">
-                                <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-host.png) no-repeat center center; background-size: cover;">
-                                    <p class="tag">Host</p>
-                                    <p class="name">Olivia</p>
-                                    <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
-                                </div>
-                            </a>
+                    <div class="col-sm-6 col-md-4 clickable">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <a data-toggle="modal" data-target="#hostModal">
+                                    <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/sample-host.png') no-repeat center center; background-size: cover;">
+                                        <p class="tag">Host</p>
+                                        <p class="name">Olivia</p>
+                                        <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-1">
-                            <a data-toggle="modal" data-target="#hostModal">
-                                <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-host.png) no-repeat center center; background-size: cover;">
-                                    <p class="tag">Host</p>
-                                    <p class="name">Olivia</p>
-                                    <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
-                                </div>
-                            </a>
+                    <div class="col-sm-6 col-md-4 clickable">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <a data-toggle="modal" data-target="#hostModal">
+                                    <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/sample-host.png') no-repeat center center; background-size: cover;">
+                                        <p class="tag">Host</p>
+                                        <p class="name">Olivia</p>
+                                        <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-1">
-                            <a data-toggle="modal" data-target="#hostModal">
-                                <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-host.png) no-repeat center center; background-size: cover;">
-                                    <p class="tag">Host</p>
-                                    <p class="name">Olivia</p>
-                                    <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
-                                </div>
-                            </a>
+                    <div class="col-sm-6 col-md-4 clickable">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <a data-toggle="modal" data-target="#hostModal">
+                                    <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/sample-host.png') no-repeat center center; background-size: cover;">
+                                        <p class="tag">Host</p>
+                                        <p class="name">Olivia</p>
+                                        <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-1">
-                            <a data-toggle="modal" data-target="#hostModal">
-                                <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-host.png) no-repeat center center; background-size: cover;">
-                                    <p class="tag">Host</p>
-                                    <p class="name">Olivia</p>
-                                    <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
-                                </div>
-                            </a>
+                    <div class="col-sm-6 col-md-4 clickable">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <a data-toggle="modal" data-target="#hostModal">
+                                    <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/sample-host.png') no-repeat center center; background-size: cover;">
+                                        <p class="tag">Host</p>
+                                        <p class="name">Olivia</p>
+                                        <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-1">
-                            <a data-toggle="modal" data-target="#hostModal">
-                                <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-host.png) no-repeat center center; background-size: cover;">
-                                    <p class="tag">Host</p>
-                                    <p class="name">Olivia</p>
-                                    <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
-                                </div>
-                            </a>
+                    <div class="col-sm-6 col-md-4 clickable">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <a data-toggle="modal" data-target="#hostModal">
+                                    <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/sample-host.png') no-repeat center center; background-size: cover;">
+                                        <p class="tag">Host</p>
+                                        <p class="name">Olivia</p>
+                                        <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-1">
-                            <a data-toggle="modal" data-target="#hostModal">
-                                <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-host.png) no-repeat center center; background-size: cover;">
-                                    <p class="tag">Host</p>
-                                    <p class="name">Olivia</p>
-                                    <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
-                                </div>
-                            </a>
+                    <div class="col-sm-6 col-md-4 clickable">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <a data-toggle="modal" data-target="#hostModal">
+                                    <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/sample-host.png') no-repeat center center; background-size: cover;">
+                                        <p class="tag">Host</p>
+                                        <p class="name">Olivia</p>
+                                        <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-1">
-                            <a data-toggle="modal" data-target="#hostModal">
-                                <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-host.png) no-repeat center center; background-size: cover;">
-                                    <p class="tag">Host</p>
-                                    <p class="name">Olivia</p>
-                                    <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
-                                </div>
-                            </a>
+                    <div class="col-sm-6 col-md-4 clickable">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <a data-toggle="modal" data-target="#hostModal">
+                                    <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/sample-host.png') no-repeat center center; background-size: cover;">
+                                        <p class="tag">Host</p>
+                                        <p class="name">Olivia</p>
+                                        <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-1">
-                            <a data-toggle="modal" data-target="#hostModal">
-                                <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-host.png) no-repeat center center; background-size: cover;">
-                                    <p class="tag">Host</p>
-                                    <p class="name">Olivia</p>
-                                    <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
-                                </div>
-                            </a>
+                    <div class="col-sm-6 col-md-4 clickable">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <a data-toggle="modal" data-target="#hostModal">
+                                    <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/sample-host.png') no-repeat center center; background-size: cover;">
+                                        <p class="tag">Host</p>
+                                        <p class="name">Olivia</p>
+                                        <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-1">
-                            <a data-toggle="modal" data-target="#hostModal">
-                                <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-host.png) no-repeat center center; background-size: cover;">
-                                    <p class="tag">Host</p>
-                                    <p class="name">Olivia</p>
-                                    <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-1">
-                            <a data-toggle="modal" data-target="#hostModal">
-                                <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-host.png) no-repeat center center; background-size: cover;">
-                                    <p class="tag">Host</p>
-                                    <p class="name">Olivia</p>
-                                    <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-1">
-                            <a data-toggle="modal" data-target="#hostModal">
-                                <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/sample-host.png) no-repeat center center; background-size: cover;">
-                                    <p class="tag">Host</p>
-                                    <p class="name">Olivia</p>
-                                    <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
-                                </div>
-                            </a>
+                    <div class="col-sm-6 col-md-4 clickable">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <a data-toggle="modal" data-target="#hostModal">
+                                    <div class="host-grid-link" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/sample-host.png') no-repeat center center; background-size: cover;">
+                                        <p class="tag">Host</p>
+                                        <p class="name">Olivia</p>
+                                        <p class="tagline">As an avid reader, she spends her time painting and playing the guitar.</p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="container-fluid row host-nav-row">
-                <div class="col-md-6 col-md-offset-3" id="host_page_nav"></div>
+            <div class="container-fluid host-nav-row">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3" id="host_page_nav"></div>
+                </div>
             </div>
         </div>
 

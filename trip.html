@@ -5,7 +5,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css" />
 
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
@@ -79,7 +79,7 @@
                         </li>
                         <li><a href="#trip_details">DETAILS</a>
                         </li>
-                        <li><a href="#trip_host">ABOUT THE HOST</a>
+                        <li><a href="#trip_host">THE HOST</a>
                         </li>
                         <li><a href="#trip_join" id="nav_join_trip"><i class="fa fa-plus-circle"></i> JOIN TRIP</a>
                         </li>
@@ -103,180 +103,187 @@
 
         <!-- TRIP BANNER -->
         <div class="trip-banner">
-            <h1>East vs West</h1>
-            <h3>A night where the question of who are better drinkers will forever be answered.</h3>
-            <h4>Hosted by Olivia Wilde</h4>
-            <a href="#trip_join">
-                <button class="btn btn-success btn-join"><i class="fa fa-plus-circle"></i> JOIN</button>
-            </a>
-            <!-- TODO: Add FB Share button. -->
-            
-            <!-- NOTE: When user is hosting the trip. -->
-            <!--
-            <button class="btn btn-success btn-joined"><i class="fa fa-group"></i> HOSTING</button>
-            -->
-            
-            <!-- NOTE: When user has already joined the trip. -->
-            <!--
+            <div class="jumbotron-content">
+                <h1>East vs West</h1>
+                <h3>A night where the question of who are better drinkers will forever be answered.</h3>
+                <h4>Hosted by Olivia Wilde</h4>
+                <a href="#trip_join">
+                    <button class="btn btn-success btn-join"><i class="fa fa-plus-circle"></i> JOIN</button>
+                </a>
+                <!-- TODO: Add FB Share button. -->
+
+                <!-- NOTE: When user is hosting the trip. -->
+                <!--
+                <button class="btn btn-success btn-joined"><i class="fa fa-group"></i> HOSTING</button>
+                -->
+
+                <!-- NOTE: When user has already joined the trip. -->
+                <!--
             <button class="btn btn-success btn-joined"><i class="fa fa-check-circle"></i> JOINED</button>
             -->
+            </div>
         </div>
 
 
         <!-- TRIP OVERVIEW -->
-        <div class="container-fluid row trip-overview" id="trip_overview">
-            <div class="col-md-3 col-md-offset-2">
-                <img src="/img/sample-trip.png" class="img-responsive img-thumbnail">
-            </div>
-            <div class="col-md-5">
-                <h1>OVERVIEW</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <h1 id="trip_itinerary">ITINERARY</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="container-fluid trip-overview" id="trip_overview">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3 col-md-3 col-md-offset-2">
+                    <img src="/img/sample-trip.png" class="img-responsive img-thumbnail">
+                </div>
+                <div class="col-sm-10 col-sm-offset-1 col-md-5 col-md-offset-0">
+                    <h1>OVERVIEW</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h1 id="trip_itinerary">ITINERARY</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
             </div>
         </div>
 
 
         <!-- SEPARATOR -->
-        <hr id="trip_separator">
+        <hr class="trip-separator">
 
 
         <!-- TRIP DETAILS -->
-        <div class="container-fluid row trip-details" id="trip_details">
-            <div class="col-md-3 col-md-offset-1">
-                <div class="row">
-                    <h3>WHO'S GOING?</h3>
-                </div>
-                <!-- NOTE: When nobody's joined the trip yet. -->
-                <!--
+        <div class="container-fluid trip-details" id="trip_details">
+            <div class="row">
+                <div class="col-md-3 col-md-offset-1">
+                    <div class="row">
+                        <h3>WHO'S GOING?</h3>
+                    </div>
+                    <!-- NOTE: When nobody's joined the trip yet. -->
+                    <!--
                 <div class="row err-search">
                     <p>Nobody's joined this trip yet.<br>Be the <a href="#trip_join">first one</a>!</p>
                 </div>
                 -->
-                <div class="row trip-user-list">
-                    <div class="col-md-3 col-xs-3">
-                        <a href="http://www.facebook.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Olivia Wilde"><img src="/img/sample-avatar.png" class="img-responsive trip-user-img"></a>
-                    </div>
-                    <div class="col-md-3 col-xs-3">
-                        <a href="http://www.facebook.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Olivia Wilde"><img src="/img/sample-avatar.png" class="img-responsive trip-user-img"></a>
-                    </div>
-                    <div class="col-md-3 col-xs-3">
-                        <a href="http://www.facebook.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Olivia Wilde"><img src="/img/sample-avatar.png" class="img-responsive trip-user-img"></a>
-                    </div>
-                    <div class="col-md-3 col-xs-3">
-                        <a href="http://www.facebook.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Olivia Wilde"><img src="/img/sample-avatar.png" class="img-responsive trip-user-img"></a>
-                    </div>
-                    <div class="col-md-3 col-xs-3">
-                        <a href="http://www.facebook.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Olivia Wilde"><img src="/img/sample-avatar.png" class="img-responsive trip-user-img"></a>
-                    </div>
-                    <div class="col-md-3 col-xs-3">
-                        <a href="http://www.facebook.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Olivia Wilde"><img src="/img/sample-avatar.png" class="img-responsive trip-user-img"></a>
-                    </div>
-                    <div class="col-md-3 col-xs-3">
-                        <a href="http://www.facebook.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Olivia Wilde"><img src="/img/sample-avatar.png" class="img-responsive trip-user-img"></a>
-                    </div>
-                    <div class="col-md-3 col-xs-3">
-                        <a href="http://www.facebook.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Olivia Wilde"><img src="/img/sample-avatar.png" class="img-responsive trip-user-img"></a>
+                    <div class="row trip-user-list">
+                        <div class="col-md-3 col-xs-3">
+                            <a href="http://www.facebook.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Olivia Wilde"><img src="/img/sample-avatar.png" class="img-responsive trip-user-img"></a>
+                        </div>
+                        <div class="col-md-3 col-xs-3">
+                            <a href="http://www.facebook.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Olivia Wilde"><img src="/img/sample-avatar.png" class="img-responsive trip-user-img"></a>
+                        </div>
+                        <div class="col-md-3 col-xs-3">
+                            <a href="http://www.facebook.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Olivia Wilde"><img src="/img/sample-avatar.png" class="img-responsive trip-user-img"></a>
+                        </div>
+                        <div class="col-md-3 col-xs-3">
+                            <a href="http://www.facebook.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Olivia Wilde"><img src="/img/sample-avatar.png" class="img-responsive trip-user-img"></a>
+                        </div>
+                        <div class="col-md-3 col-xs-3">
+                            <a href="http://www.facebook.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Olivia Wilde"><img src="/img/sample-avatar.png" class="img-responsive trip-user-img"></a>
+                        </div>
+                        <div class="col-md-3 col-xs-3">
+                            <a href="http://www.facebook.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Olivia Wilde"><img src="/img/sample-avatar.png" class="img-responsive trip-user-img"></a>
+                        </div>
+                        <div class="col-md-3 col-xs-3">
+                            <a href="http://www.facebook.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Olivia Wilde"><img src="/img/sample-avatar.png" class="img-responsive trip-user-img"></a>
+                        </div>
+                        <div class="col-md-3 col-xs-3">
+                            <a href="http://www.facebook.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Olivia Wilde"><img src="/img/sample-avatar.png" class="img-responsive trip-user-img"></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-7">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="row">
-                            <div class="col-md-4 field-name">
-                                <h3>DATE:</h3>
+                <div class="col-md-7">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="row">
+                                <div class="col-md-4 field-name">
+                                    <h3>DATE:</h3>
+                                </div>
+                                <div class="col-md-8 field-content">
+                                    <h3>27 June 2016</h3>
+                                </div>
                             </div>
-                            <div class="col-md-8 field-content">
-                                <h3>27 June 2016</h3>
+                            <div class="row">
+                                <div class="col-md-4 field-name">
+                                    <h3>TIME:</h3>
+                                </div>
+                                <div class="col-md-8 field-content">
+                                    <h3>5:00 PM - 1:00 AM</h3>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4 field-name">
-                                <h3>TIME:</h3>
+                            <div class="row">
+                                <div class="col-md-4 field-name">
+                                    <h3>LOCATION:</h3>
+                                </div>
+                                <div class="col-md-8 field-content">
+                                    <h3>Temasek Bar & Lounge</h3>
+                                </div>
                             </div>
-                            <div class="col-md-8 field-content">
-                                <h3>5:00 PM - 1:00 AM</h3>
+                            <div class="row">
+                                <div class="col-md-4 field-name">
+                                    <h3>GROUP SIZE:</h3>
+                                </div>
+                                <div class="col-md-8 field-content">
+                                    <h3>15 - 20 pax</h3>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4 field-name">
-                                <h3>LOCATION:</h3>
+                            <div class="row">
+                                <div class="col-md-4 field-name">
+                                    <h3>PRICE / PERSON:</h3>
+                                </div>
+                                <div class="col-md-8 field-content">
+                                    <h3>SGD 55</h3>
+                                </div>
                             </div>
-                            <div class="col-md-8 field-content">
-                                <h3>Temasek Bar & Lounge</h3>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4 field-name">
-                                <h3>GROUP SIZE:</h3>
-                            </div>
-                            <div class="col-md-8 field-content">
-                                <h3>15 - 20 pax</h3>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4 field-name">
-                                <h3>PRICE / PERSON:</h3>
-                            </div>
-                            <div class="col-md-8 field-content">
-                                <h3>SGD 55</h3>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4 field-name">
-                                <h3>ITEMS TO BRING:</h3>
-                            </div>
-                            <div class="col-md-8 field-content">
-                                <h3>
+                            <div class="row">
+                                <div class="col-md-4 field-name">
+                                    <h3>ITEMS TO BRING:</h3>
+                                </div>
+                                <div class="col-md-8 field-content">
+                                    <h3>
                                     <ul class="incl-excl">
                                         <li>Photo ID</li>
                                         <li>Umbrella</li>
                                     </ul>
                                 </h3>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4 field-name">
-                                <h3>INCLUDES:</h3>
-                            </div>
-                            <div class="col-md-8 field-content">
-                                <h3>
+                            <div class="row">
+                                <div class="col-md-4 field-name">
+                                    <h3>INCLUDES:</h3>
+                                </div>
+                                <div class="col-md-8 field-content">
+                                    <h3>
                                     <ul class="incl-excl">
                                         <li>Transport from Temasek Bar & Lounge to campus.</li>
                                         <li>Cover charge at Temasek.</li>
                                         <li>Drinks & finger food at Temasek.</li>
                                     </ul>
                                 </h3>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4 field-name">
-                                <h3>EXCLUDES:</h3>
-                            </div>
-                            <div class="col-md-8 field-content">
-                                <h3>
+                            <div class="row">
+                                <div class="col-md-4 field-name">
+                                    <h3>EXCLUDES:</h3>
+                                </div>
+                                <div class="col-md-8 field-content">
+                                    <h3>
                                     <ul class="incl-excl">
                                         <li>Transport to Temasek Bar & Lounge from campus.</li>
                                         <li>Dinner at Temasek.</li>
                                     </ul>
                                 </h3>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4 field-name">
-                                <h3>THEME:</h3>
+                            <div class="row">
+                                <div class="col-md-4 field-name">
+                                    <h3>THEME:</h3>
+                                </div>
+                                <div class="col-md-8 field-content">
+                                    <h3>Nightlife</h3>
+                                </div>
                             </div>
-                            <div class="col-md-8 field-content">
-                                <h3>Nightlife</h3>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4 field-name">
-                                <h3>TRANSPORTATION:</h3>
-                            </div>
-                            <div class="col-md-8 field-content">
-                                <h3>Public Transportation, Cab</h3>
+                            <div class="row">
+                                <div class="col-md-4 field-name">
+                                    <h3>GETTING THERE:</h3>
+                                </div>
+                                <div class="col-md-8 field-content">
+                                    <h3>Public Transportation, Cab</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -286,63 +293,67 @@
 
 
         <!-- SEPARATOR -->
-        <hr id="trip_separator">
+        <hr class="trip-separator">
 
 
         <!-- TRIP HOST DETAILS -->
-        <div class="container-fluid row trip-host" id="trip_host">
-            <h1>ABOUT THE HOST</h1>
-            <div class="col-md-2 col-md-offset-2 host-pic">
-                <img src="/img/sample-host.png" class="img-responsive img-thumbnail">
-            </div>
-            <div class="col-md-6">
-                <h3>Olivia Wilde</h3>
-                <h4>Computer Science, Year 2</h4>
-                <h4>School of Computer Engineering</h4>
-                <h4>Nanyang Technological University</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="container-fluid trip-host" id="trip_host">
+            <div class="row">
+                <h1>ABOUT THE HOST</h1>
+                <div class="col-sm-3 col-sm-offset-1 col-md-2 col-md-offset-2 host-pic">
+                    <img src="/img/sample-host.png" class="img-responsive img-thumbnail">
+                </div>
+                <div class="col-sm-7 col-md-6">
+                    <h3>Olivia Wilde</h3>
+                    <h4>Computer Science, Year 2</h4>
+                    <h4>School of Computer Engineering</h4>
+                    <h4>Nanyang Technological University</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
             </div>
         </div>
 
 
         <!-- JOIN TRIP PAYMENT -->
-        <div class="container-fluid row trip-join" id="trip_join">
-            <h1>JOIN THIS TRIP</h1>
-            <!-- NOTE: Add payment button here. -->
+        <div class="container-fluid trip-join" id="trip_join">
+            <div class="row">
+                <h1>JOIN THIS TRIP</h1>
+                <!-- NOTE: Add payment button here. -->
 
 
-            <!-- NOTE: When user has not signed in yet. -->
-            <!--
+                <!-- NOTE: When user has not signed in yet. -->
+                <!--
             <a href="sign-in.html">
                 <button class="btn btn-primary">SIGN IN</button>
             </a>
             -->
 
-            <!-- NOTE: When it is less than 6 hours for the trip to start. -->
-            <!--
+                <!-- NOTE: When it is less than 6 hours for the trip to start. -->
+                <!--
             <h3>Sorry, you can no longer join this trip.</h3>
             <h4>It is less than eight hours before the trip starts. You can check out more trips <a href="view-all-trips.html">here</a>, though!</h4>
             -->
 
-            <!-- NOTE: When the max group size is exceeded. -->
-            <!--
+                <!-- NOTE: When the max group size is exceeded. -->
+                <!--
             <h3>Sorry, you can no longer join this trip.</h3>
             <h4>The maximum group size has been met. You can check out more trips <a href="view-all-trips.html">here</a>, though!</h4>
             -->
 
-            <!-- NOTE: When user is hosting the trip. -->
-            <!--
+                <!-- NOTE: When user is hosting the trip. -->
+                <!--
             <h3>YOU ARE HOSTING THIS TRIP!</h3>
             <h4>If you can't make it and would like to cancel this trip, please <a href="mailto:contact@tripbuddy.sg?Subject=Cancellation%20of%20Trip">contact us</a><strong>immediately</strong>.</h4>
             -->
 
-            <!-- NOTE: When user has already joined the trip. -->
-            <!-- NOTE: Refund only applicable if earlier than 00:00 day before trip. -->
-            <!--
+                <!-- NOTE: When user has already joined the trip. -->
+                <!-- NOTE: Refund only applicable if earlier than 00:00 day before trip. -->
+                <!--
             <h3>YOU HAVE ALREADY JOINED THIS TRIP!</h3>
             <h4>If you can't make it and would like a partial refund, please <a href="feedback.html">contact us</a>.</h4>
             <h4>Enjoy your trip and <a href="mailto:contact@tripbuddy.sg">let us know</a> if you have any questions!</h4>
             -->
+            </div>
         </div>
 
 

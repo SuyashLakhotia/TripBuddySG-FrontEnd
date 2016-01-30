@@ -3,7 +3,7 @@ TripBuddy.sg (c) 2016. All rights reserved.
 *************************************************************************/
 
 $(document).ready(function () {
-    var show_per_page = 9; // items to show per page
+    var show_per_page = 6; // items to show per page
     var number_of_items = $('#trips-grid').find('.trip-grid-link').size(); // total number of items
     var number_of_pages = Math.ceil(number_of_items / show_per_page); // total number of pages
 
