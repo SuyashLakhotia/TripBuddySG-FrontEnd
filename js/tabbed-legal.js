@@ -10,7 +10,8 @@ jQuery(document).ready(function () {
         jQuery('.legal-content ' + currentAttrValue).show().siblings().hide();
 
         // Change .active Tab:
-        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+        jQuery('.legal-pills div li').removeClass('active');
+        jQuery(this).parent('li').addClass('active');
 
         e.preventDefault();
     });

@@ -1653,6 +1653,7 @@ LEGAL PAGE STYLES
     text-align: center;
     color: #25b0e9;
     border-radius: 7px;
+    margin: 0 10px;
 }
 
 .legal-pills li a {
