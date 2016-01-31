@@ -662,12 +662,14 @@ New Trip Added Page
 
 
 /************************************************************************
-View All Trips, View All Hosts, About Us, Feedback, Legal, Testimonial & 
-Why Host Pages
+View All Trips, View All Hosts, Host Registration, Host Profile, Host
+Trips, About Us, Feedback, Legal, Testimonial & Why Host Pages
 ************************************************************************/
 
 .trips-jumbotron,
 .hosts-jumbotron,
+.registration-jumbotron,
+.host-profile-jumbotron,
 .about-us-jumbotron,
 .feedback-jumbotron,
 .legal-jumbotron,
@@ -682,6 +684,8 @@ Why Host Pages
 
 .trips-jumbotron h1,
 .hosts-jumbotron h1,
+.registration-jumbotron h1,
+.host-profile-jumbotron h1,
 .about-us-jumbotron h1,
 .feedback-jumbotron h1,
 .legal-jumbotron h1,
@@ -704,6 +708,8 @@ Why Host Pages
 @media (max-width: 767px) {
     .trips-jumbotron h1,
     .hosts-jumbotron h1,
+    .registration-jumbotron h1,
+    .host-profile-jumbotron h1,
     .about-us-jumbotron h1,
     .feedback-jumbotron h1,
     .legal-jumbotron h1,
@@ -721,34 +727,6 @@ Why Host Pages
     .why-host-jumbotron h2 {
         font-size: 20px;
         line-height: 25px;
-    }
-}
-
-
-/************************************************************************
-Host Registration & Host Profile Pages
-************************************************************************/
-
-.registration-jumbotron,
-.host-profile-jumbotron {
-    height: 50%;
-    text-align: center;
-    color: #fff;
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../img/jumbotron.jpg') no-repeat;
-    background-size: cover;
-}
-
-.registration-jumbotron h1,
-.host-profile-jumbotron h1 {
-    font-size: 75px;
-    letter-spacing: 4px;
-}
-
-@media (max-width: 767px) {
-    .registration-jumbotron h1,
-    .host-profile-jumbotron h1 {
-        font-size: 42px;
-        letter-spacing: 1px;
     }
 }
 
@@ -1002,7 +980,12 @@ TRIP PAGE STYLES
 }
 
 .trip-join h3 {
+    font-size: 30px;
     margin-bottom: 18px;
+}
+
+.trip-join h4 {
+    line-height: 25px;
 }
 
 .trip-join .btn-primary {

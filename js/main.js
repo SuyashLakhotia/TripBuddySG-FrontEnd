@@ -15,13 +15,13 @@ $(window).scroll(function () {
 // Script to Add More Textboxes for Items to Bring, Includes & Excludes Lists:
 $(function () {
     $('#addItems').click(function () {
-        var li = $('.items-list li:first').clone().appendTo($('.items-list'));
+        var li = $('.items-arr li:first').clone().appendTo($('.items-arr'));
 
         // empty the value if something is already filled in the cloned copy
         li.children('input').val('');
 
         // disable button if its the 10th that was added
-        if ($('.items-list').children().length == 10) {
+        if ($('.items-arr').children().length == 10) {
             $(this).attr('disabled', true);
         }
     });
