@@ -1706,6 +1706,16 @@ LEGAL PAGE STYLES
     text-align: justify;
 }
 
+.legal-content p.indented {
+    padding-top: 1px;
+    padding-left: 2.5em;
+}
+
+.legal-content p.super-indented {
+    padding-top: 1px;
+    padding-left: 5em;
+}
+
 @media (max-width: 767px) {
     .legal-content h1 {
         font-size: 28px;
